@@ -17,9 +17,9 @@ jobs:
       pages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac900eb94d48b1fc79706e1d457ded32b0a3f # v4
+        uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
@@ -30,9 +30,9 @@ jobs:
       - name: Build
         run: npm run build
       - name: Setup Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+        uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
   deploy:
@@ -47,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@decdde0ac072f6dda1ac1035ea363c6c93b7d61f # v4
+        uses: actions/deploy-pages@v4
