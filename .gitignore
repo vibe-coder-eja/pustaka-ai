@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build and framework output
+dist/
+.astro/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+# Logs and coverage
+*.log
+coverage/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Hermes local artifacts
+.hermes/
+
+# Deployment metadata
+.vercel/

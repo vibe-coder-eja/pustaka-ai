@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import catalog from '../data/fal-models.json';
+const categories = [...new Set(catalog.map((row) => row.category))].sort();
+const PAGE_SIZE = 24;
+---
+<BaseLayout title="Katalog Model Fal AI" description={`Telusuri ${catalog.length} model Fal AI berdasarkan nama, deskripsi, tag, dan kategori.`}>
+  <header class="page-hero shell compact">
+    <p class="kicker">Snapshot katalog publik</p>
+    <h1>Katalog Model Fal AI</h1>
+    <p>Telusuri <strong>{catalog.length.toLocaleString('id-ID')}</strong> model tanpa memuat seluruh baris ke DOM sekaligus. Informasi dapat berubah; verifikasi ketersediaan di sumber resmi Fal AI.</p>
+  </header>
+  <section class="catalog-panel shell" aria-labelledby="catalog-controls-title">
+    <h2 id="catalog-controls-title" class="sr-only">Pencarian dan filter katalog</h2>
+    <form class="catalog-controls" id="catalog-form">
+      <label><span>Cari model</span><input id="catalog-query" type="search" placeholder="Nama, deskripsi, atau tag…" autocomplete="off" /></label>
+      <label><span>Kategori</span><select id="catalog-category"><option value="">Semua kategori</option>{categories.map((category) => <option value={category}>{category}</option>)}</select></label>
+      <button class="button secondary" type="reset">Atur ulang</button>
+    </form>
+    <div class="catalog-summary"><p id="catalog-count" aria-live="polite"></p><p>24 hasil per halaman</p></div>
+    <div id="catalog-list" class="catalog-list"></div>
+    <nav id="catalog-pagination" class="pagination" aria-label="Halaman katalog"></nav>
+    <noscript><p class="notice">Aktifkan JavaScript untuk pencarian dan pagination katalog. Data lengkap tetap tersedia dalam sumber proyek.</p></noscript>
+  </section>
+  <script is:inline id="catalog-data" type="application/json" set:html={JSON.stringify(catalog).replace(/</g, '\\u003c')} />
+  <script is:inline define:vars={{ pageSize: PAGE_SIZE }}>
+    const data = JSON.parse(document.querySelector('#catalog-data').textContent);
+    const form = document.querySelector('#catalog-form'); const queryInput = document.querySelector('#catalog-query'); const categoryInput = document.querySelector('#catalog-category');
+    const list = document.querySelector('#catalog-list'); const count = document.querySelector('#catalog-count'); const pagination = document.querySelector('#catalog-pagination');
+    let page = 1;
+    const normalize = (v) => String(v || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('id-ID');
+    function button(label, target, disabled = false, current = false) { const el = document.createElement('button'); el.type = 'button'; el.textContent = label; el.disabled = disabled; if (current) el.setAttribute('aria-current', 'page'); el.addEventListener('click', () => { page = target; render(); document.querySelector('.catalog-summary').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }); return el; }
+    function render() {
+      const needle = normalize(queryInput.value.trim()); const category = categoryInput.value;
+      const filtered = data.filter((row) => (!category || row.category === category) && (!needle || normalize(`${row.model} ${row.category} ${row.description} ${row.tags}`).includes(needle)));
+      const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize)); page = Math.min(page, totalPages);
+      const visible = filtered.slice((page - 1) * pageSize, page * pageSize); const fragment = document.createDocumentFragment();
+      for (const row of visible) { const card = document.createElement('article'); card.className = 'model-card'; const top = document.createElement('div'); const tag = document.createElement('span'); tag.className = 'model-category'; tag.textContent = row.category; const number = document.createElement('small'); number.textContent = `#${row.page}`; top.append(tag, number); const h = document.createElement('h3'); h.textContent = row.model; const d = document.createElement('p'); d.textContent = row.description || 'Deskripsi belum tersedia pada snapshot ini.'; const tags = document.createElement('small'); tags.textContent = row.tags || 'Tanpa tag'; const a = document.createElement('a'); a.href = row.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = 'Lihat di Fal AI ↗'; card.append(top, h, d, tags, a); fragment.append(card); }
+      list.replaceChildren(fragment);
+      count.textContent = `${filtered.length.toLocaleString('id-ID')} model ditemukan · halaman ${page} dari ${totalPages}`; pagination.replaceChildren(); pagination.append(button('← Sebelumnya', page - 1, page === 1));
+      const start = Math.max(1, Math.min(page - 2, totalPages - 4)); const end = Math.min(totalPages, start + 4); for (let i = start; i <= end; i++) pagination.append(button(String(i), i, false, i === page)); pagination.append(button('Berikutnya →', page + 1, page === totalPages));
+      const params = new URLSearchParams(); if (queryInput.value.trim()) params.set('q', queryInput.value.trim()); if (category) params.set('kategori', category); if (page > 1) params.set('halaman', String(page)); history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
+    }
+    const params = new URLSearchParams(location.search); queryInput.value = params.get('q') || ''; categoryInput.value = params.get('kategori') || ''; page = Math.max(1, Number(params.get('halaman')) || 1);
+    let catalogTimer = 0;
+    queryInput.addEventListener('input', () => { clearTimeout(catalogTimer); catalogTimer = setTimeout(() => { page = 1; render(); }, 200); });
+    categoryInput.addEventListener('change', () => { page = 1; render(); });
+    form.addEventListener('reset', () => setTimeout(() => { page = 1; render(); })); render();
+  </script>
+</BaseLayout>

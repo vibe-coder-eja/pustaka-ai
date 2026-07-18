@@ -1,0 +1,15 @@
+---
+import type { BookMeta } from '../lib/books';
+import { withBase } from '../lib/site';
+interface Props { book: BookMeta; index: number; }
+const { book, index } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<a class={`book-card tone-${book.tone}`} href={withBase(base, `buku/${book.slug}/`)}>
+  <span class="book-number">0{index + 1}</span>
+  <span class="book-spine" aria-hidden="true"></span>
+  <span class="eyebrow">{book.eyebrow}</span>
+  <strong>{book.title}</strong>
+  <p>{book.description}</p>
+  <span class="text-link">Mulai membaca <span aria-hidden="true">→</span></span>
+</a>

@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/site';
+const base = import.meta.env.BASE_URL;
+Astro.response.status = 404;
+---
+<BaseLayout title="Halaman tidak ditemukan" noindex>
+  <section class="not-found shell"><p class="error-code">404</p><p class="kicker">Terselip di antara halaman</p><h1>Catatan ini belum ada.</h1><p>Tautannya mungkin berubah, atau halaman yang dicari belum masuk ke rak pustaka.</p><div><a class="button" href={withBase(base)}>Kembali ke pustaka</a><button class="button secondary" id="find-something" type="button">Cari sesuatu</button></div></section>
+  <script>document.querySelector('#find-something')?.addEventListener('click', () => document.querySelector<HTMLButtonElement>('#search-open')?.click());</script>
+</BaseLayout>

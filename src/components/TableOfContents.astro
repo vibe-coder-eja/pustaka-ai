@@ -1,0 +1,11 @@
+---
+import type { Chapter } from '../lib/content';
+interface Props { chapters: Chapter[]; label?: string; }
+const { chapters, label = 'Daftar isi' } = Astro.props;
+---
+<nav class="toc" aria-label={label}>
+  <p class="toc-title">{label}</p>
+  <ol>
+    {chapters.map((chapter) => <li class={`depth-${chapter.depth}`}><a href={`#${chapter.id}`}>{chapter.title}</a></li>)}
+  </ol>
+</nav>
