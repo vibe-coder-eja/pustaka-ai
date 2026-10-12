@@ -14,6 +14,13 @@ describe('release gate privasi dan kredensial', () => {
     expect(findings.map((finding) => finding.rule)).toEqual(expect.arrayContaining(['private-workflow', 'local-user-path', 'credential-assignment']));
   });
 
+  it('menerapkan penanda privat pemilik tanpa mencetak nilainya', () => {
+    const findings = scanPublicText('Laporan untuk Acme Rahasia', 'fixture.txt', ['Acme Rahasia']);
+    expect(findings).toEqual([{ file: 'fixture.txt', line: 1, rule: 'owner-private-marker' }]);
+    expect(JSON.stringify(findings)).not.toContain('Acme');
+    expect(scanPublicText('Laporan umum', 'fixture.txt', ['Acme Rahasia'])).toEqual([]);
+  });
+
   it('mengizinkan istilah edukasional serta atribusi publik yang disetujui', () => {
     const text = 'Token dan password adalah istilah keamanan. Reza Syahputra · https://github.com/vibe-coder-eja · https://rezasyahputra.com';
     expect(scanPublicText(text, 'fixture.txt')).toEqual([]);

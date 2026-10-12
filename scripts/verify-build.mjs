@@ -8,14 +8,16 @@ const required = [
   'index.html', '404.html', 'katalog-fal/index.html', 'tentang/index.html',
   'buku/glosarium-agentic-ai/index.html', 'buku/hermes-cli/index.html',
   'buku/katalog-skills-hermes/index.html', 'buku/nous-portal-models/index.html',
-  'robots.txt', 'sitemap-index.xml'
+  'robots.txt', 'sitemap-index.xml', 'search-index.json', 'data/fal-models.json'
 ];
+const MAX_HTML_BYTES = 400_000;
 const failures = [];
 for (const path of required) if (!statSafe(join(root, path))) failures.push(`Artefak wajib hilang: ${path}`);
 
 const htmlFiles = walk(root).filter((path) => path.endsWith('.html'));
 for (const file of htmlFiles) {
   const html = readFileSync(file, 'utf8');
+  if (statSync(file).size > MAX_HTML_BYTES) failures.push(`HTML terlalu besar (${statSync(file).size} byte, batas ${MAX_HTML_BYTES}): ${relative(root, file)}`);
   if (!/<html lang="id"/.test(html)) failures.push(`Bahasa dokumen tidak ada: ${relative(root, file)}`);
   if (!/<meta name="description"/.test(html)) failures.push(`Meta description tidak ada: ${relative(root, file)}`);
   if (!/<link rel="canonical"/.test(html)) failures.push(`Canonical tidak ada: ${relative(root, file)}`);

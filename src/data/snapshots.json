@@ -1,0 +1,19 @@
+{
+  "nous": {
+    "fetchedAt": "2026-10-12T15:01:17.288Z",
+    "source": "inference-api.nousresearch.com/v1/models",
+    "count": 422,
+    "companies": 50
+  },
+  "skills": {
+    "fetchedAt": "2026-10-12T15:01:16.917Z",
+    "source": "github.com/NousResearch/hermes-agent",
+    "count": 210,
+    "commit": "7cc3fb8cb55898747dd1dfa56fda3e16ebba028e"
+  },
+  "fal": {
+    "fetchedAt": "2026-10-12T15:03:09.200Z",
+    "source": "https://api.fal.ai/v1/models",
+    "count": 1514
+  }
+}

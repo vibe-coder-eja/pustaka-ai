@@ -31,3 +31,8 @@ desktop.ini
 
 # Deployment metadata
 .vercel/
+
+# Penanda privat pemilik (jangan di-commit)
+.private-markers.json
+data-update.log
+pr-body.md
