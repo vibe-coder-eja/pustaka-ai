@@ -6,6 +6,7 @@ Ensiklopedia mini berbahasa Indonesia tentang kecerdasan buatan (AI, atau akal i
 
 ## Fitur
 
+- Peta interaktif `/ensiklopedia/peta-si/`: linimasa tonggak AI menuju superintelligence (saring per jalur, loncat masa, tautan langsung ke tiap tonggak, navigasi keyboard) dan panel progres ensiklopedia; ringan, tanpa library pihak ketiga, dengan versi daftar untuk pembaca layar.
 - Ensiklopedia: satu halaman per istilah dengan definisi, status tinjauan, sumber rujukan, istilah terkait, kategori, indeks A–Z, dan data terstruktur schema.org (`DefinedTerm`).
 
 - Empat reader dengan daftar isi, deep link stabil, navigasi bagian, progres lokal, tema, dan ukuran teks.
@@ -67,6 +68,7 @@ Kebijakan kurasi skills:
 - `src/content/istilah/` — **ensiklopedia**: satu berkas Markdown per istilah (koleksi konten Astro). Nama berkas adalah slug dan menjadi URL `/ensiklopedia/<slug>/`.
 - `src/content/books/` — tiga naskah referensi. Hermes CLI berasal dari catatan lokal; katalog Skills dan Nous Portal dihasilkan oleh `npm run data:update`.
 - `src/data/` — data katalog dan snapshot.
+- `src/data/peta/tonggak.json` — tonggak untuk peta interaktif (tanggal, jalur, ringkasan, tokoh dan lembaga, sumber, entri terkait). Tiap tonggak wajib punya sumber `https` dan tanggal valid; diperiksa `npm test`. Jalankan `npm run check:links` untuk memeriksa seluruh URL sumber.
 - `src/lib/taxonomy.ts` — kelompok dan kategori ensiklopedia, label status, label tingkat.
 - `scripts/update-data.ts` — pipeline pembaruan katalog dari sumber publik.
 - `scripts/update-content.ts` — menyalin Hermes CLI dari folder sumber lokal (`npm run content:update -- --source-dir <folder>`); tidak dijalankan saat build.

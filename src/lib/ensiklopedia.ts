@@ -7,3 +7,4 @@ export const termUrl = (slug: string) => withBase(base, `ensiklopedia/${slug}/`)
 export const categoryUrl = (slug: string) => withBase(base, `ensiklopedia/kategori/${slug}/`);
 export const indexUrl = () => withBase(base, 'ensiklopedia/');
 export const alphabetUrl = () => withBase(base, 'ensiklopedia/abjad/');
+export const petaUrl = () => withBase(base, 'ensiklopedia/peta-si/');
