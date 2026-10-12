@@ -1,5 +1,10 @@
 import { extractChapters, renderBookMarkdown } from './content';
 import { normalizeHermesCliMarkdown } from './transform';
+import snapshots from '../data/snapshots.json';
+import { formatDateId } from './catalog';
+
+const skillsDate = formatDateId(snapshots.skills.fetchedAt);
+const nousDate = formatDateId(snapshots.nous.fetchedAt);
 
 const bookSources = import.meta.glob('../content/books/*.md', {
   eager: true,
@@ -34,14 +39,14 @@ export const books: BookMeta[] = [
   {
     slug: 'katalog-skills-hermes', file: 'katalog-skills-hermes.md',
     title: 'Katalog Skills Hermes Agent', shortTitle: 'Skills Hermes',
-    description: 'Katalog kemampuan Hermes yang telah digeneralisasi tanpa potret konfigurasi mesin pribadi.',
-    eyebrow: 'Snapshot 17 Juli 2026', snapshot: '17 Juli 2026', tone: 'plum'
+    description: `${snapshots.skills.count} skill resmi Hermes Agent dari repositori Nous Research, dengan deskripsi berbahasa Indonesia dan tautan ke kode sumber.`,
+    eyebrow: `Snapshot ${skillsDate}`, snapshot: skillsDate, tone: 'plum'
   },
   {
     slug: 'nous-portal-models', file: 'nous-portal-models.md',
     title: 'Model AI di Nous Portal', shortTitle: 'Nous Portal Models',
-    description: 'Snapshot 264 model dari 40 perusahaan yang tersedia melalui Nous Portal.',
-    eyebrow: 'Snapshot 9 Juli 2026', snapshot: '9 Juli 2026', tone: 'indigo'
+    description: `Snapshot ${snapshots.nous.count} model dari ${snapshots.nous.companies} perusahaan yang tersedia melalui Nous Portal, lengkap dengan konteks dan harga.`,
+    eyebrow: `Snapshot ${nousDate}`, snapshot: nousDate, tone: 'indigo'
   }
 ];
 

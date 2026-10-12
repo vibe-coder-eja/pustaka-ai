@@ -10,18 +10,24 @@ const RULES: ReadonlyArray<{ rule: string; pattern: RegExp }> = [
   { rule: 'credential-url', pattern: /https?:\/\/[^\s/:@]+:[^\s/@]+@/i },
   { rule: 'credential-assignment', pattern: /\b(?:api[_-]?(?:key|token)|access[_-]?token|auth[_-]?token|client[_-]?secret|secret|password|passwd|allowed_users|home_channel)\b\s*[:=]\s*["']?[^\s"']{8,}/i },
   { rule: 'local-user-path', pattern: /(?:[A-Za-z]:\\Users\\[^\\\s]+|\/Users\/[^/\s]+|Documents[\\/]Yola)\b/i },
-  { rule: 'private-workflow', pattern: /\b(?:Yola|Mas Dika|Andika Kusuma|Cyber Digital|Brighton Champion|ALLOWED_USERS|HOME_CHANNEL)\b/i },
+  { rule: 'private-workflow', pattern: /\b(?:Yola|ALLOWED_USERS|HOME_CHANNEL)\b/i },
   { rule: 'private-contact', pattern: /\b(?:\+?62|0)8\d{8,11}\b/ }
 ];
 
-export function scanPublicText(text: string, file: string): PublicSafetyFinding[] {
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** `extraTerms`: penanda privat milik pemilik dari berkas lokal; nilainya tidak pernah dicetak. */
+export function scanPublicText(text: string, file: string, extraTerms: string[] = []): PublicSafetyFinding[] {
   const findings: PublicSafetyFinding[] = [];
+  const terms = extraTerms.filter(Boolean).map(escapeRegExp);
+  const extra = terms.length ? new RegExp(`(?<![\\w-])(?:${terms.join('|')})(?![\\w-])`, 'i') : null;
   const lines = text.split(/\r?\n/);
   for (const [index, line] of lines.entries()) {
     for (const { rule, pattern } of RULES) {
       pattern.lastIndex = 0;
       if (pattern.test(line)) findings.push({ file, line: index + 1, rule });
     }
+    if (extra?.test(line)) findings.push({ file, line: index + 1, rule: 'owner-private-marker' });
   }
   return findings;
 }

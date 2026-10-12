@@ -1,10 +1,9 @@
 export interface CatalogRow {
-  page: number;
+  id: string;
+  name: string;
   category: string;
-  model: string;
-  url: string;
   description: string;
-  tags: string;
+  tags: string[];
 }
 
 export function normalizeSearchText(value: unknown): string {
@@ -20,7 +19,7 @@ export function filterCatalog<T extends CatalogRow>(rows: T[], query: string, ca
   return rows.filter((row) => {
     if (category && row.category !== category) return false;
     if (!needle) return true;
-    return normalizeSearchText(`${row.model} ${row.category} ${row.description} ${row.tags}`).includes(needle);
+    return normalizeSearchText(`${row.name} ${row.id} ${row.category} ${row.description} ${row.tags.join(' ')}`).includes(needle);
   });
 }
 

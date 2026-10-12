@@ -148,3 +148,4 @@
     .site-header,.site-footer,.reader-aside,.reader-tools,.mobile-toc,.chapter-nav,.reading-progress{display:none!important}.reader-shell{display:block}.prose{max-width:none;font-size:11pt}.shell{width:100%}body{background:#fff;color:#000}
   }
 }
+.model-card .model-id{display:block;margin:-.2rem 0 .6rem;color:var(--muted);font-size:.75rem;overflow-wrap:anywhere}

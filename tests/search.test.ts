@@ -2,14 +2,19 @@ import { describe, expect, it } from 'vitest';
 import { filterCatalog, paginate, searchAll } from '../src/lib/search';
 
 const rows = [
-  { model: 'Crème Voice', category: 'audio-to-audio', description: 'Clone a voice', url: '/a', page: 1, tags: '' },
-  { model: 'Aurora Image', category: 'text-to-image', description: 'Generate an image', url: '/b', page: 2, tags: 'fast' },
-  { model: 'Echo', category: 'audio-to-audio', description: '', url: '/c', page: 3, tags: '' }
+  { id: 'fal-ai/creme-voice', name: 'Crème Voice', category: 'audio-to-audio', description: 'Clone a voice', tags: [] },
+  { id: 'fal-ai/aurora', name: 'Aurora Image', category: 'text-to-image', description: 'Generate an image', tags: ['fast'] },
+  { id: 'fal-ai/echo', name: 'Echo', category: 'audio-to-audio', description: '', tags: [] }
 ];
 
 describe('filterCatalog', () => {
   it('mencari tanpa peka aksen/huruf besar dan menerapkan filter kategori', () => {
-    expect(filterCatalog(rows, 'CREME', 'audio-to-audio').map((row) => row.model)).toEqual(['Crème Voice']);
+    expect(filterCatalog(rows, 'CREME', 'audio-to-audio').map((row) => row.name)).toEqual(['Crème Voice']);
+  });
+
+  it('mencocokkan ID endpoint dan tag', () => {
+    expect(filterCatalog(rows, 'fal-ai/echo', '').map((row) => row.name)).toEqual(['Echo']);
+    expect(filterCatalog(rows, 'fast', '').map((row) => row.name)).toEqual(['Aurora Image']);
   });
 
   it('mengembalikan semua kategori ketika filter bernilai kosong', () => {

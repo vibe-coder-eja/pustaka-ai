@@ -1,0 +1,57 @@
+name: Perbarui data katalog
+
+# Menarik ulang katalog Skills Hermes (repo resmi), model Nous Portal, dan model Fal AI,
+# memverifikasinya, lalu membuka pull request untuk ditinjau. Tidak pernah men-deploy langsung.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 1 * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Ambil data terbaru
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run data:update | tee data-update.log
+      - name: Verifikasi
+        run: npm run verify
+      - name: Buka pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard -- src)" ]; then
+            echo "Tidak ada perubahan data."
+            exit 0
+          fi
+          branch="data/update-$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add src/data src/content/books
+          git commit -m "Perbarui data katalog ($(date -u +%Y-%m-%d))"
+          git push origin "$branch"
+          {
+            echo "Pembaruan otomatis data katalog dari sumber publik."
+            echo
+            echo '```'
+            cat data-update.log
+            echo '```'
+            echo
+            echo "Tinjau perubahan, khususnya skill baru: deskripsi yang belum diterjemahkan ditampilkan dalam bahasa Inggris sampai ditambahkan ke \`src/data/skills-id.json\`, dan skill yang tidak layak publik dapat ditambahkan ke \`src/data/skills-denylist.json\`."
+          } > pr-body.md
+          gh pr create --base main --head "$branch" --title "Perbarui data katalog ($(date -u +%Y-%m-%d))" --body-file pr-body.md
