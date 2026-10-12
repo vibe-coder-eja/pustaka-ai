@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTerms, render } from '../../lib/terms';
+import { LEVEL_LABELS, STATUS_LABELS, getCategory, getGroup } from '../../lib/taxonomy';
+import { RESERVED_SLUGS, metaDescription, resolveRelated, termJsonLd } from '../../lib/glossary';
+import { categoryUrl, ENSIKLOPEDIA_NAME, indexUrl, termUrl } from '../../lib/ensiklopedia';
+import { formatDateId } from '../../lib/catalog';
+import { SITE } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const terms = await getTerms();
+  return terms
+    .filter((term) => !(RESERVED_SLUGS as readonly string[]).includes(term.slug))
+    .map((term) => ({ params: { slug: term.slug }, props: { term } }));
+}
+
+const { term } = Astro.props;
+const all = await getTerms();
+const { data } = term;
+const category = getCategory(term.category)!;
+const group = getGroup(category.group);
+const status = STATUS_LABELS[data.status];
+const related = resolveRelated(term, all);
+const { Content } = await render(term.entry);
+const hasBody = Boolean(term.entry.body?.trim());
+const canonical = new URL(termUrl(term.slug), Astro.site).href;
+const jsonLd = termJsonLd({
+  title: data.title, summary: data.summary, aliases: data.aliases, url: canonical,
+  setName: ENSIKLOPEDIA_NAME, setUrl: new URL(indexUrl(), Astro.site).href
+});
+const editUrl = `${SITE.repo}/edit/main/src/content/istilah/${term.slug}.md`;
+const issueUrl = `${SITE.repo}/issues/new?title=${encodeURIComponent(`Koreksi entri: ${data.title}`)}`;
+---
+<BaseLayout title={data.title} description={metaDescription(data.summary)} jsonLd={jsonLd}>
+  <article class="term-page shell">
+    <ol class="crumbs">
+      <li><a href={indexUrl()}>Ensiklopedia</a></li>
+      <li><a href={categoryUrl(category.slug)}>{category.title}</a></li>
+      <li aria-current="page">{data.title}</li>
+    </ol>
+    <p class="kicker">{category.title}</p>
+    <h1>{data.title}</h1>
+    {data.aliases.length > 0 && <p class="term-aliases">Juga dikenal sebagai: {data.aliases.join(' · ')}</p>}
+    <ul class="term-badges">
+      <li><span class={`badge status-${data.status}`}>{status.label}</span></li>
+      {data.level && <li><span class="badge">Tingkat: {LEVEL_LABELS[data.level]}</span></li>}
+    </ul>
+
+    <p class="term-summary">{data.summary}</p>
+
+    {!group.core && <p class="term-notice scope">Istilah ini termasuk kelompok <strong>{group.title.toLowerCase()}</strong>, di luar inti AI dan SI, dan dimuat sebagai pendukung.</p>}
+    {data.status === 'catatan' && <p class="term-notice">{status.note}</p>}
+
+    {hasBody && <div class="prose"><Content /></div>}
+
+    {related.length > 0 && (
+      <section class="term-block" aria-labelledby="terkait">
+        <h2 id="terkait">Istilah terkait</h2>
+        <ul class="chips">{related.map((item) => <li><a href={termUrl(item.slug)}>{item.title}</a></li>)}</ul>
+      </section>
+    )}
+
+    {data.sources.length > 0 && (
+      <section class="term-block" aria-labelledby="sumber">
+        <h2 id="sumber">Sumber rujukan</h2>
+        <ul>{data.sources.map((source) => <li><a href={source.url} rel="noopener noreferrer">{source.title}</a></li>)}</ul>
+      </section>
+    )}
+
+    <footer class="term-block term-meta">
+      <span>Diperbarui {formatDateId(data.updated.toISOString())}</span>
+      <span><a href={editUrl} rel="noopener noreferrer">Usulkan perbaikan</a> · <a href={issueUrl} rel="noopener noreferrer">Laporkan kesalahan</a></span>
+    </footer>
+  </article>
+</BaseLayout>

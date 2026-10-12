@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { books } from '../lib/books';
+import catalog from '../data/fal-models.json';
+import snapshots from '../data/snapshots.json';
+import { formatDateId } from '../lib/catalog';
+import { withBase } from '../lib/site';
+
+const base = import.meta.env.BASE_URL;
+const falDate = formatDateId(snapshots.fal.fetchedAt);
+---
+<BaseLayout title="Referensi Hermes dan katalog model" description="Referensi pendukung: perintah Hermes CLI, katalog skills resmi Hermes Agent, model Nous Portal, dan katalog model Fal AI.">
+  <header class="enc-hero shell">
+    <p class="kicker">Referensi pendukung</p>
+    <h1>Referensi Hermes dan katalog model</h1>
+    <p class="lede">Rujukan teknis yang bersifat snapshot. Isinya cepat berubah, jadi setiap halaman mencantumkan tanggal pengambilan datanya.</p>
+  </header>
+  <section class="enc-section shell" aria-label="Daftar referensi">
+    <div class="ref-grid">
+      {books.map((book) => (
+        <a class="ref-card" href={withBase(base, `buku/${book.slug}/`)}>
+          <small class="kicker">{book.eyebrow}</small>
+          <strong>{book.title}</strong>
+          <p>{book.description}</p>
+          <small>Buka referensi →</small>
+        </a>
+      ))}
+      <a class="ref-card" href={withBase(base, 'katalog-fal/')}>
+        <small class="kicker">Snapshot {falDate}</small>
+        <strong>Katalog Model Fal AI</strong>
+        <p>{catalog.length.toLocaleString('id-ID')} model aktif yang dapat disaring menurut nama, kategori, dan tag.</p>
+        <small>Buka katalog →</small>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TermList from '../../components/TermList.astro';
+import { getTerms } from '../../lib/terms';
+import { groupByLetter } from '../../lib/glossary';
+import { indexUrl } from '../../lib/ensiklopedia';
+
+const terms = await getTerms();
+const groups = groupByLetter(terms);
+const anchor = (letter: string) => `huruf-${letter === '#' ? 'angka' : letter.toLowerCase()}`;
+---
+<BaseLayout title="Indeks A–Z" description={`Indeks abjad seluruh ${terms.length} entri Ensiklopedia AI dan SI.`}>
+  <div class="shell enc-hero">
+    <ol class="crumbs"><li><a href={indexUrl()}>Ensiklopedia</a></li><li aria-current="page">Indeks A–Z</li></ol>
+    <p class="kicker">Indeks abjad</p>
+    <h1>Semua entri, A–Z</h1>
+    <p class="lede">{terms.length.toLocaleString('id-ID')} entri, diurutkan menurut abjad.</p>
+  </div>
+  <nav class="shell" aria-label="Loncat ke huruf">
+    <ul class="az-strip">
+      {groups.map((group) => <li><a href={`#${anchor(group.letter)}`}>{group.letter}</a></li>)}
+    </ul>
+  </nav>
+  <div class="shell enc-section" style="max-width: 860px">
+    {groups.map((group) => (
+      <section class="letter-block" id={anchor(group.letter)} aria-labelledby={`${anchor(group.letter)}-judul`}>
+        <h2 id={`${anchor(group.letter)}-judul`}>{group.letter}</h2>
+        <TermList terms={group.terms} showCategory />
+      </section>
+    ))}
+  </div>
+</BaseLayout>

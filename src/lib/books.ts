@@ -25,12 +25,6 @@ export interface BookMeta {
 
 export const books: BookMeta[] = [
   {
-    slug: 'glosarium-agentic-ai', file: 'glosarium-agentic-ai.md',
-    title: 'Glosarium Agentic AI & Website Modern', shortTitle: 'Glosarium Agentic AI',
-    description: '296 istilah tentang AI agentik, pengembangan web, keamanan, dan operasi perangkat lunak.',
-    eyebrow: 'Glosarium · 296 istilah', tone: 'violet'
-  },
-  {
     slug: 'hermes-cli', file: 'hermes-cli.md',
     title: 'Referensi Perintah Hermes CLI', shortTitle: 'Hermes CLI',
     description: 'Peta perintah terminal Hermes Agent yang disusun per kelompok untuk rujukan cepat.',

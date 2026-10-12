@@ -1,0 +1,19 @@
+---
+import { getCategory } from '../lib/taxonomy';
+import { termUrl } from '../lib/ensiklopedia';
+import { metaDescription, type TermLite } from '../lib/glossary';
+
+interface Props { terms: TermLite[]; showCategory?: boolean; }
+const { terms, showCategory = false } = Astro.props;
+---
+<ul class="term-list">
+  {terms.map((term) => (
+    <li>
+      <a href={termUrl(term.slug)}>
+        {showCategory && <small>{getCategory(term.category)?.title}</small>}
+        <strong>{term.title}</strong>
+        <span>{metaDescription(term.summary, 140)}</span>
+      </a>
+    </li>
+  ))}
+</ul>

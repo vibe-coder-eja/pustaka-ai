@@ -6,7 +6,8 @@ const root = dist.pathname.replace(/^\/(?:[A-Za-z]:)/, (value) => value.slice(1)
 const base = '/pustaka-akal-imitasi/';
 const required = [
   'index.html', '404.html', 'katalog-fal/index.html', 'tentang/index.html',
-  'buku/glosarium-agentic-ai/index.html', 'buku/hermes-cli/index.html',
+  'ensiklopedia/index.html', 'ensiklopedia/abjad/index.html', 'referensi/index.html',
+  'ensiklopedia/ai/index.html', 'buku/glosarium-agentic-ai/index.html', 'buku/hermes-cli/index.html',
   'buku/katalog-skills-hermes/index.html', 'buku/nous-portal-models/index.html',
   'robots.txt', 'sitemap-index.xml', 'search-index.json', 'data/fal-models.json'
 ];
@@ -17,6 +18,12 @@ for (const path of required) if (!statSafe(join(root, path))) failures.push(`Art
 const htmlFiles = walk(root).filter((path) => path.endsWith('.html'));
 for (const file of htmlFiles) {
   const html = readFileSync(file, 'utf8');
+  if (/http-equiv="refresh"/i.test(html)) { // halaman redirect statis tidak memerlukan metadata penuh
+    const target = /http-equiv="refresh"[^>]*url=([^"]+)"/i.exec(html)?.[1] ?? '';
+    if (!target.startsWith(base)) failures.push(`Redirect keluar base pada ${relative(root, file)}: ${target}`);
+    else if (!statSafe(join(root, target.slice(base.length), 'index.html'))) failures.push(`Redirect menuju halaman yang tidak ada pada ${relative(root, file)}: ${target}`);
+    continue;
+  }
   if (statSync(file).size > MAX_HTML_BYTES) failures.push(`HTML terlalu besar (${statSync(file).size} byte, batas ${MAX_HTML_BYTES}): ${relative(root, file)}`);
   if (!/<html lang="id"/.test(html)) failures.push(`Bahasa dokumen tidak ada: ${relative(root, file)}`);
   if (!/<meta name="description"/.test(html)) failures.push(`Meta description tidak ada: ${relative(root, file)}`);
@@ -32,6 +39,12 @@ for (const file of htmlFiles) {
     if (!candidates.some(statSafe)) failures.push(`Tautan internal rusak pada ${relative(root, file)}: ${url}`);
   }
 }
+const posix = (file) => relative(root, file).split(/[\\/]/).join('/');
+const termPages = htmlFiles.filter((file) => /^ensiklopedia\/[^/]+\/index\.html$/.test(posix(file)) && posix(file) !== 'ensiklopedia/abjad/index.html');
+if (termPages.length < 100) failures.push(`Halaman istilah terlalu sedikit: ${termPages.length}`);
+for (const file of termPages) {
+  if (!readFileSync(file, 'utf8').includes('application/ld+json')) failures.push(`JSON-LD tidak ada: ${relative(root, file)}`);
+}
 const catalogHtml = readFileSync(join(root, 'katalog-fal/index.html'), 'utf8');
 const staticRows = (catalogHtml.match(/class="model-card"/g) || []).length;
 if (staticRows > 24) failures.push(`DOM katalog awal tidak bounded: ${staticRows} kartu`);
@@ -41,7 +54,7 @@ if (failures.length) {
   console.error(`Verifikasi build gagal (${failures.length}):\n- ${failures.join('\n- ')}`);
   process.exit(1);
 }
-console.log(`Verifikasi build lulus: ${htmlFiles.length} HTML, ${required.length} artefak wajib, ${staticRows} baris katalog awal, seluruh URL internal memakai base ${base}.`);
+console.log(`Verifikasi build lulus: ${htmlFiles.length} HTML (${termPages.length} halaman istilah), ${required.length} artefak wajib, ${staticRows} baris katalog awal, seluruh URL internal memakai base ${base}.`);
 
 function statSafe(path) { try { return statSync(path).isFile(); } catch { return false; } }
 function walk(dir) { return readdirSync(dir).flatMap((name) => { const path = join(dir, name); return statSync(path).isDirectory() ? walk(path) : [path]; }); }

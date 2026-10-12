@@ -12,7 +12,7 @@ const base = import.meta.env.BASE_URL;
 <BaseLayout title={book.meta.title} description={book.meta.description}>
   <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
   <header class="reader-mast shell">
-    <a class="back-link" href={withBase(base)}>← Kembali ke pustaka</a>
+    <a class="back-link" href={withBase(base, 'referensi/')}>← Kembali ke referensi</a>
     <p class="kicker">{book.meta.eyebrow}</p>
     <p class="reader-display-title">{book.meta.title}</p>
     <div class="reader-meta"><span>{book.words.toLocaleString('id-ID')} kata</span><span>± {book.minutes} menit</span><span id="progress-label">Belum dibaca</span></div>
@@ -30,7 +30,7 @@ const base = import.meta.env.BASE_URL;
     <a id="chapter-prev" href="#" hidden><span>Bagian sebelumnya</span><strong></strong></a>
     <a id="chapter-next" href="#" hidden><span>Bagian berikutnya</span><strong></strong></a>
   </nav>
-  <section class="reader-end shell"><p class="kicker">Sampai di sini</p><h2>Catatan terbaik adalah yang kembali dibaca.</h2><a href={withBase(base)}>Lihat koleksi lain →</a></section>
+  <section class="reader-end shell"><p class="kicker">Sampai di sini</p><h2>Catatan terbaik adalah yang kembali dibaca.</h2><a href={withBase(base, 'referensi/')}>Lihat referensi lain →</a></section>
   <script is:inline define:vars={{ chapters: book.chapters, slug: book.meta.slug }}>
     const article = document.querySelector('#book-content');
     const bar = document.querySelector('#progress-bar'); const label = document.querySelector('#progress-label');

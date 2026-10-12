@@ -6,6 +6,8 @@ export default defineConfig({
   base: '/pustaka-akal-imitasi/',
   output: 'static',
   trailingSlash: 'always',
+  // Glosarium lama dipecah menjadi entri ensiklopedia; tautan lama diarahkan ke beranda ensiklopedia.
+  redirects: { '/buku/glosarium-agentic-ai': '/pustaka-akal-imitasi/ensiklopedia/' },
   integrations: [sitemap()],
   vite: {
     test: {
