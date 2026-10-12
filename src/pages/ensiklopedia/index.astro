@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { GROUPS, categoriesOfGroup } from '../../lib/taxonomy';
+import { getTerms } from '../../lib/terms';
+import { alphabetUrl, categoryUrl, ENSIKLOPEDIA_NAME } from '../../lib/ensiklopedia';
+import { groupByLetter } from '../../lib/glossary';
+
+const terms = await getTerms();
+const count = (slug: string) => terms.filter((term) => term.category === slug).length;
+const letters = groupByLetter(terms).map((group) => group.letter);
+const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+---
+<BaseLayout title={ENSIKLOPEDIA_NAME} description="Ensiklopedia mini berbahasa Indonesia tentang kecerdasan buatan (AI, atau akal imitasi) dan superintelligence (SI): istilah, konsep, dan arah perkembangannya.">
+  <header class="enc-hero shell">
+    <p class="kicker">Ensiklopedia mini</p>
+    <h1>Kecerdasan buatan dan superintelligence</h1>
+    <p class="lede">Istilah dan konsep seputar kecerdasan buatan (AI, atau akal imitasi) dan superintelligence (SI), dijelaskan dalam bahasa Indonesia. {terms.length.toLocaleString('id-ID')} entri saat ini, terus bertambah.</p>
+    <p class="si-note"><strong>Catatan istilah:</strong> “SI” di sini berarti <em>superintelligence</em> (kecerdasan super), yaitu AI yang melampaui kemampuan manusia. Ini bukan “Sistem Informasi”.</p>
+    <div class="enc-actions">
+      <button class="button" type="button" id="enc-search">Cari istilah <kbd>/</kbd></button>
+      <a class="button secondary" href={alphabetUrl()}>Indeks A–Z</a>
+    </div>
+  </header>
+
+  <nav class="shell" aria-label="Loncat ke huruf">
+    <ul class="az-strip">
+      {alphabet.map((letter) => letters.includes(letter)
+        ? <li><a href={`${alphabetUrl()}#huruf-${letter.toLowerCase()}`} aria-label={`Istilah berawalan ${letter}`}>{letter}</a></li>
+        : <li><span aria-hidden="true">{letter}</span></li>)}
+    </ul>
+  </nav>
+
+  {GROUPS.map((group) => {
+    const categories = categoriesOfGroup(group.id);
+    return (
+      <section class="enc-section shell" aria-labelledby={`grup-${group.id}`}>
+        <p class="kicker">{group.core ? 'Inti ensiklopedia' : 'Pendukung'}</p>
+        <h2 id={`grup-${group.id}`}>{group.title}</h2>
+        <p>{group.description}</p>
+        <ul class="cat-grid">
+          {categories.map((category) => {
+            const total = count(category.slug);
+            return (
+              <li>
+                {total > 0 ? (
+                  <a class="cat-card" href={categoryUrl(category.slug)}>
+                    <strong>{category.title}</strong>
+                    <p>{category.description}</p>
+                    <small>{total} entri →</small>
+                  </a>
+                ) : (
+                  <div class="cat-card planned">
+                    <strong>{category.title}</strong>
+                    <p>{category.description}</p>
+                    <small>Sedang disusun</small>
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    );
+  })}
+  <script>
+    document.querySelector('#enc-search')?.addEventListener('click', () => document.querySelector<HTMLButtonElement>('#search-open')?.click());
+  </script>
+</BaseLayout>

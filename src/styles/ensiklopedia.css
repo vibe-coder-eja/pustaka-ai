@@ -1,0 +1,80 @@
+@layer pages {
+  .crumbs { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 2rem; padding: 0; color: var(--muted); font-size: .85rem; list-style: none; }
+  .crumbs li + li::before { content: '›'; margin-right: .4rem; }
+  .crumbs a { color: var(--muted); }
+
+  .enc-hero { padding-block: 5rem 2.5rem; }
+  .enc-hero h1 { margin: .5rem 0 1.2rem; font-size: clamp(2.6rem, 6vw, 5rem); }
+  .enc-hero .lede { margin: 0; }
+  .si-note { max-width: 680px; margin: 1.4rem 0 0; padding: .9rem 1.1rem; border-left: 3px solid var(--purple); border-radius: 0 10px 10px 0; background: var(--paper); color: var(--muted); font-size: .92rem; }
+  .enc-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.8rem; }
+
+  .az-strip { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; padding: 0; list-style: none; }
+  .az-strip a, .az-strip span { display: grid; place-items: center; min-width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 9px; background: var(--paper); font-weight: 750; font-size: .85rem; text-decoration: none; }
+  .az-strip span { color: var(--line); background: transparent; }
+  .az-strip a:hover { border-color: var(--purple); color: var(--purple-dark); }
+
+  .enc-section { padding-block: 3rem; }
+  .enc-section > h2 { margin: .4rem 0 .6rem; font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+  .enc-section > p { max-width: 720px; color: var(--muted); }
+  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.6rem; padding: 0; list-style: none; }
+  .cat-card { display: flex; flex-direction: column; height: 100%; padding: 1.3rem; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); text-decoration: none; }
+  a.cat-card:hover { border-color: var(--purple); transform: translateY(-3px); box-shadow: var(--shadow); }
+  .cat-card strong { font-family: var(--serif); font-size: 1.25rem; line-height: 1.2; }
+  .cat-card p { margin: .5rem 0 1rem; color: var(--muted); font-size: .88rem; }
+  .cat-card small { margin-top: auto; color: var(--purple-dark); font-weight: 750; }
+  .cat-card.planned { border-style: dashed; background: transparent; }
+  .cat-card.planned small { color: var(--muted); }
+
+  .term-list { display: grid; gap: 0; margin: 1.2rem 0 0; padding: 0; list-style: none; }
+  .term-list li { border-top: 1px solid var(--line); }
+  .term-list a { display: grid; gap: .15rem; padding: .95rem .2rem; text-decoration: none; }
+  .term-list a:hover strong { color: var(--purple-dark); text-decoration: underline; text-underline-offset: 4px; }
+  .term-list strong { font-family: var(--serif); font-size: 1.12rem; }
+  .term-list span { color: var(--muted); font-size: .9rem; }
+  .term-list small { color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .letter-block { scroll-margin-top: 90px; padding-top: 2rem; }
+  .letter-block > h2 { margin: 0; font-size: clamp(2.2rem, 5vw, 3.6rem); color: var(--purple-dark); }
+
+  .term-page { max-width: 780px; margin-inline: auto; padding-block: 4rem 1rem; }
+  .term-page h1 { margin: .4rem 0 .8rem; font-size: clamp(2.4rem, 6vw, 4.4rem); overflow-wrap: anywhere; }
+  .term-aliases { margin: 0 0 1.2rem; color: var(--muted); font-size: .95rem; }
+  .term-badges { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.6rem; padding: 0; list-style: none; }
+  .badge { display: inline-block; padding: .2rem .65rem; border: 1px solid var(--line); border-radius: 99px; background: var(--paper); color: var(--muted); font-size: .75rem; font-weight: 750; }
+  .badge.status-catatan { border-color: var(--accent); color: var(--accent); }
+  .badge.status-terverifikasi { border-color: var(--purple); color: var(--purple-dark); }
+  .term-summary { margin: 0 0 1.8rem; font-family: var(--serif); font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.55; }
+  .term-notice { margin: 0 0 2rem; padding: .9rem 1.1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); color: var(--muted); font-size: .9rem; }
+  .term-notice.scope { border-color: var(--accent); }
+  .term-page .prose { grid-column: auto; margin-bottom: 2rem; }
+  .term-block { margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+  .term-block h2 { margin: 0 0 .8rem; font-family: var(--sans); font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--purple-dark); }
+  .term-block ul { margin: 0; padding-left: 1.2rem; }
+  .term-block li { margin: .35rem 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
+  .chips a { display: inline-block; padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 99px; background: var(--paper); font-size: .9rem; text-decoration: none; }
+  .chips a:hover { border-color: var(--purple); color: var(--purple-dark); }
+  .term-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem 1.5rem; color: var(--muted); font-size: .85rem; }
+
+  .ref-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.6rem; }
+  .ref-card { display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); text-decoration: none; }
+  a.ref-card:hover { border-color: var(--purple); box-shadow: var(--shadow); }
+  .ref-card strong { font-family: var(--serif); font-size: 1.4rem; line-height: 1.2; }
+  .ref-card p { margin: .5rem 0 1rem; color: var(--muted); font-size: .92rem; }
+  .ref-card small { margin-top: auto; color: var(--accent); font-weight: 750; }
+
+  .home-enc { padding-block: 5rem; }
+  .callout-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-block: 4rem; }
+}
+
+@layer responsive {
+  @media (max-width: 660px) {
+    .enc-hero { padding-block: 2.5rem 1.5rem; }
+    .ref-grid, .callout-pair { grid-template-columns: 1fr; }
+    .term-page { padding-top: 2rem; }
+    .az-strip a, .az-strip span { min-width: 34px; height: 34px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    a.cat-card:hover { transform: none; }
+  }
+}

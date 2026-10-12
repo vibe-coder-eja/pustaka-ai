@@ -1,26 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BookCard from '../components/BookCard.astro';
-import { books } from '../lib/books';
+import { withBase } from '../lib/site';
+import { categoriesOfGroup } from '../lib/taxonomy';
+import { getTerms } from '../lib/terms';
+import { categoryUrl, indexUrl, alphabetUrl } from '../lib/ensiklopedia';
 import catalog from '../data/fal-models.json';
-import { SITE, withBase } from '../lib/site';
+import snapshots from '../data/snapshots.json';
+
 const base = import.meta.env.BASE_URL;
-const categories = new Set(catalog.map((row) => row.category)).size;
+const terms = await getTerms();
+const core = categoriesOfGroup('ai-si');
+const count = (slug: string) => terms.filter((term) => term.category === slug).length;
 ---
 <BaseLayout>
   <section class="hero shell">
     <div class="hero-copy">
-      <p class="kicker">Pustaka digital · Catatan terbuka</p>
-      <h1>Teknologi berubah cepat.<br /><em>Pemahaman</em> perlu dirawat.</h1>
-      <p class="lede">{SITE.tagline} Empat buku referensi dan satu katalog model, dirapikan menjadi ruang baca yang tenang.</p>
+      <p class="kicker">Ensiklopedia mini · Terbuka</p>
+      <h1>Akal imitasi berkembang cepat. <em>Pahami</em> arahnya.</h1>
+      <p class="lede">Ensiklopedia berbahasa Indonesia tentang kecerdasan buatan (AI) dan superintelligence (SI): istilah, konsep, risiko, dan arah perkembangannya.</p>
       <div class="hero-actions">
-        <a class="button" href="#koleksi">Jelajahi koleksi</a>
+        <a class="button" href={indexUrl()}>Jelajahi ensiklopedia</a>
         <button class="button secondary" type="button" id="hero-search">Cari istilah <kbd>/</kbd></button>
       </div>
       <dl class="hero-stats">
-        <div><dt>4</dt><dd>buku referensi</dd></div>
-        <div><dt>{catalog.length.toLocaleString('id-ID')}</dt><dd>model Fal AI</dd></div>
-        <div><dt>{categories}</dt><dd>kategori model</dd></div>
+        <div><dt>{terms.length.toLocaleString('id-ID')}</dt><dd>entri istilah</dd></div>
+        <div><dt>{core.length}</dt><dd>topik inti AI dan SI</dd></div>
+        <div><dt>{(snapshots.skills.count + snapshots.nous.count + catalog.length).toLocaleString('id-ID')}</dt><dd>entri referensi</dd></div>
       </dl>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -30,24 +35,41 @@ const categories = new Set(catalog.map((row) => row.category)).size;
     </div>
   </section>
 
-  <section id="koleksi" class="collection shell" aria-labelledby="collection-title">
-    <div class="section-heading"><div><p class="kicker">Rak utama</p><h2 id="collection-title">Baca dari rasa ingin tahu</h2></div><p>Pilih referensi, lalu lanjutkan membaca dari posisi terakhir di perangkat ini.</p></div>
-    <div class="book-grid">{books.map((book, index) => <BookCard book={book} index={index} />)}</div>
+  <section id="topik" class="home-enc shell" aria-labelledby="topik-title">
+    <div class="section-heading">
+      <div><p class="kicker">Topik inti</p><h2 id="topik-title">Mulai dari mana saja</h2></div>
+      <p>Dari dasar-dasar AI sampai pertanyaan besar tentang superintelligence. Tiap entri menyebut status tinjauan dan sumbernya.</p>
+    </div>
+    <ul class="cat-grid">
+      {core.map((category) => {
+        const total = count(category.slug);
+        return (
+          <li>
+            {total > 0 ? (
+              <a class="cat-card" href={categoryUrl(category.slug)}><strong>{category.title}</strong><p>{category.description}</p><small>{total} entri →</small></a>
+            ) : (
+              <div class="cat-card planned"><strong>{category.title}</strong><p>{category.description}</p><small>Sedang disusun</small></div>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+    <p style="margin-top:1.4rem"><a class="text-link" href={alphabetUrl()}>Lihat semua {terms.length.toLocaleString('id-ID')} entri, A–Z <span aria-hidden="true">→</span></a></p>
   </section>
 
   <section class="catalog-callout shell">
     <div>
-      <p class="kicker">Katalog interaktif</p>
-      <h2>{catalog.length.toLocaleString('id-ID')} model, tanpa menjejalkan semuanya ke layar.</h2>
-      <p>Saring berdasarkan nama, deskripsi, tag, atau kategori. Hasil dibagi per halaman agar tetap ringan di perangkat kecil.</p>
-      <a class="text-link" href={withBase(base, 'katalog-fal/')}>Buka katalog Fal AI <span aria-hidden="true">→</span></a>
+      <p class="kicker">Referensi pendukung</p>
+      <h2>Hermes Agent dan katalog model</h2>
+      <p>Perintah Hermes CLI, skills resmi Hermes Agent, model Nous Portal, dan {catalog.length.toLocaleString('id-ID')} model Fal AI. Semuanya snapshot bertanggal dari sumber publik.</p>
+      <a class="text-link" href={withBase(base, 'referensi/')}>Buka referensi <span aria-hidden="true">→</span></a>
     </div>
-    <div class="catalog-motif" aria-hidden="true"><span>text</span><i>→</i><strong>model</strong><i>→</i><span>media</span></div>
+    <div class="catalog-motif" aria-hidden="true"><span>teks</span><i>→</i><strong>model</strong><i>→</i><span>media</span></div>
   </section>
 
   <section class="principles shell" aria-labelledby="principles-title">
-    <p class="kicker">Cara pustaka ini dirawat</p><h2 id="principles-title">Jernih, lokal, dan tidak mengintai.</h2>
-    <div><article><b>01</b><h3>Catatan yang dapat ditelusuri</h3><p>Heading dan tautan dalam dibuat stabil agar setiap bagian dapat dirujuk langsung.</p></article><article><b>02</b><h3>Privasi sebagai standar</h3><p>Tema dan progres baca disimpan hanya di browser. Tanpa akun, analitik, atau pelacak.</p></article><article><b>03</b><h3>Snapshot yang jujur</h3><p>Katalog yang cepat berubah diberi tanggal akses dan konteks keterbatasannya.</p></article></div>
+    <p class="kicker">Cara ensiklopedia ini dirawat</p><h2 id="principles-title">Jernih, bersumber, dan tidak mengintai.</h2>
+    <div><article><b>01</b><h3>Status yang jujur</h3><p>Setiap entri menyatakan apakah ia baru catatan awal, sudah ditinjau, atau terverifikasi dengan sumber primer.</p></article><article><b>02</b><h3>Dapat dikoreksi siapa saja</h3><p>Ensiklopedia ini terbuka. Usulkan perbaikan atau laporkan kesalahan langsung dari halaman entri.</p></article><article><b>03</b><h3>Privasi sebagai standar</h3><p>Tema dan progres baca disimpan hanya di browser. Tanpa akun, analitik, atau pelacak.</p></article></div>
   </section>
   <script>
     document.querySelector('#hero-search')?.addEventListener('click', () => (document.querySelector<HTMLButtonElement>('#search-open'))?.click());

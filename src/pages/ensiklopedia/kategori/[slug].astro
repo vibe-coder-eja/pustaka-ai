@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TermList from '../../../components/TermList.astro';
+import { CATEGORIES, getGroup } from '../../../lib/taxonomy';
+import { getTerms } from '../../../lib/terms';
+import { indexUrl } from '../../../lib/ensiklopedia';
+
+export async function getStaticPaths() {
+  const terms = await getTerms();
+  return CATEGORIES
+    .filter((category) => terms.some((term) => term.category === category.slug))
+    .map((category) => ({ params: { slug: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const terms = (await getTerms()).filter((term) => term.category === category.slug);
+const group = getGroup(category.group);
+---
+<BaseLayout title={category.title} description={`${category.description} ${terms.length} entri di Ensiklopedia AI dan SI.`}>
+  <div class="shell enc-hero">
+    <ol class="crumbs"><li><a href={indexUrl()}>Ensiklopedia</a></li><li>{group.title}</li><li aria-current="page">{category.title}</li></ol>
+    <p class="kicker">Kategori · {terms.length} entri</p>
+    <h1>{category.title}</h1>
+    <p class="lede">{category.description}</p>
+    {!group.core && <p class="si-note">Kategori ini berada di luar inti AI dan SI. Isinya dipertahankan sebagai istilah pendukung.</p>}
+  </div>
+  <div class="shell enc-section" style="max-width: 860px">
+    <TermList terms={terms} />
+  </div>
+</BaseLayout>

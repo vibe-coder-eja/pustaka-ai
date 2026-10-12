@@ -2,9 +2,11 @@
 
 > Catatan belajar teknologi, disusun untuk dibaca kembali.
 
-Website pustaka digital statis karya **Reza Syahputra**, dibangun dengan Astro dan diterbitkan di GitHub Pages: <https://vibe-coder-eja.github.io/pustaka-akal-imitasi/>. Situs memuat empat buku referensi dan katalog model Fal AI dengan pencarian, filter, serta pagination di browser.
+Ensiklopedia mini berbahasa Indonesia tentang kecerdasan buatan (AI, atau akal imitasi) dan superintelligence (SI), karya **Reza Syahputra**. Dibangun dengan Astro dan diterbitkan di GitHub Pages: <https://vibe-coder-eja.github.io/pustaka-akal-imitasi/>. Selain entri ensiklopedia, situs memuat referensi Hermes Agent dan katalog model dengan pencarian, filter, serta pagination di browser.
 
 ## Fitur
+
+- Ensiklopedia: satu halaman per istilah dengan definisi, status tinjauan, sumber rujukan, istilah terkait, kategori, indeks A–Z, dan data terstruktur schema.org (`DefinedTerm`).
 
 - Empat reader dengan daftar isi, deep link stabil, navigasi bagian, progres lokal, tema, dan ukuran teks.
 - Pencarian global lintas buku, bab, serta katalog model; indeksnya hanya diunduh saat pencarian dibuka.
@@ -62,12 +64,34 @@ Kebijakan kurasi skills:
 
 ## Struktur konten
 
-- `src/content/books/` — empat naskah publik. Dua di antaranya (glosarium dan Hermes CLI) berasal dari catatan kurasi lokal; dua lainnya dihasilkan oleh `npm run data:update`.
+- `src/content/istilah/` — **ensiklopedia**: satu berkas Markdown per istilah (koleksi konten Astro). Nama berkas adalah slug dan menjadi URL `/ensiklopedia/<slug>/`.
+- `src/content/books/` — tiga naskah referensi. Hermes CLI berasal dari catatan lokal; katalog Skills dan Nous Portal dihasilkan oleh `npm run data:update`.
 - `src/data/` — data katalog dan snapshot.
+- `src/lib/taxonomy.ts` — kelompok dan kategori ensiklopedia, label status, label tingkat.
 - `scripts/update-data.ts` — pipeline pembaruan katalog dari sumber publik.
-- `scripts/update-content.ts` — menyalin glosarium dan Hermes CLI dari folder sumber lokal (`npm run content:update -- --source-dir <folder>`); tidak dijalankan saat build.
+- `scripts/update-content.ts` — menyalin Hermes CLI dari folder sumber lokal (`npm run content:update -- --source-dir <folder>`); tidak dijalankan saat build.
 
-Folder sumber lokal berada di luar proyek dan tidak boleh dimodifikasi atau dipublikasikan.
+### Menulis atau menyunting entri
+
+```md
+---
+title: Superintelligence
+aliases: [Kecerdasan Super, ASI]
+summary: Definisi singkat satu atau dua kalimat (20–400 karakter).
+category: menuju-si          # lihat src/lib/taxonomy.ts
+related: [agi, alignment]    # slug entri lain
+level: menengah              # opsional: dasar | menengah | lanjut
+status: ditinjau             # catatan | ditinjau | terverifikasi
+sources:
+  - title: Judul sumber primer
+    url: https://contoh.org/sumber
+updated: 2026-10-12
+---
+
+Isi entri dalam Markdown (opsional).
+```
+
+Aturan: entri berstatus `terverifikasi` wajib punya `sources`; slug rujukan `related` harus ada; nama berkas harus sama dengan slug judul. Semuanya diperiksa oleh `npm test`. Untuk topik yang masih diperdebatkan, tulis sebagai pandangan beserta pihak yang mengajukannya, bukan sebagai fakta.
 
 ## Deployment
 

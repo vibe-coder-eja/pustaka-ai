@@ -3,7 +3,8 @@ import path from 'node:path';
 import { preparePublicBook } from '../src/lib/transform';
 import { loadPrivateMarkers } from './private-markers';
 
-// Hanya untuk dua naskah yang berasal dari catatan lokal (glosarium dan Hermes CLI).
+// Hanya untuk naskah Hermes CLI yang berasal dari catatan lokal.
+// Glosarium kini berupa entri ensiklopedia di src/content/istilah/ dan disunting langsung di sana.
 // Katalog Skills, model Nous Portal, dan Fal AI diambil dari sumber publik: lihat `npm run data:update`.
 const args = process.argv.slice(2);
 const sourceFlag = args.indexOf('--source-dir');
@@ -16,7 +17,6 @@ const sourceDir = path.resolve(args[sourceFlag + 1]);
 const projectDir = path.resolve(import.meta.dirname, '..');
 const booksDir = path.join(projectDir, 'src', 'content', 'books');
 const bookCopies = [
-  ['glosarium-agentic-ai-website-modern.md', 'glosarium-agentic-ai.md'],
   ['Hermes CLI Command.md', 'hermes-cli.md']
 ] as const;
 
