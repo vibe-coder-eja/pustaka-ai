@@ -8,6 +8,10 @@ import { getTerms } from '../../lib/terms';
 import { indexUrl, termUrl } from '../../lib/ensiklopedia';
 import { jsonForScript } from '../../lib/json-script';
 import { SITE } from '../../lib/site';
+import levelsData from '../../data/peta/levels.json';
+import { COLUMN_LABELS, FRONTIER_CELL, type AgiFramework, type Column } from '../../lib/agi-levels';
+import { buildGraph, layoutGraph } from '../../lib/graph';
+import { GROUPS, getCategory, type GroupId } from '../../lib/taxonomy';
 
 const terms = await getTerms();
 const titleOf = new Map(terms.map((term) => [term.slug, term.title]));
@@ -45,6 +49,55 @@ const progressRows = [
 ];
 const totals = countBy(CATEGORIES.map((category) => category.slug));
 const reviewed = totals.status.ditinjau + totals.status.terverifikasi;
+// Matriks tingkat kemampuan (kerangka Levels of AGI).
+const framework = levelsData as AgiFramework;
+const columns: Column[] = ['sempit', 'umum'];
+const lvView = {
+  levels: framework.levels,
+  otonomi: framework.otonomi,
+  penilaian: framework.penilaianPenulis,
+  columnLabels: COLUMN_LABELS
+};
+
+// Grafik konsep: simpul = entri yang punya hubungan, sisi = "istilah terkait".
+// Dua tata letak: "inti" (tanpa istilah perangkat lunak, tampilan awal) dan "penuh" (semua kelompok),
+// supaya titik-titik AI tidak tertekan ke satu sudut oleh puluhan istilah perangkat lunak.
+const graph = buildGraph(terms);
+const termBySlug = new Map(terms.map((term) => [term.slug, term]));
+const GRAPH_W = 1000;
+const GRAPH_H = 640;
+const groupOf = (slug: string) => getCategory(termBySlug.get(slug)!.category)!.group;
+const coreEdges = graph.edges.filter(([a, b]) => groupOf(a) !== 'perangkat-lunak' && groupOf(b) !== 'perangkat-lunak');
+const coreIds = [...new Set(coreEdges.flat())].sort();
+const toLayoutNode = (id: string) => ({ id, cluster: termBySlug.get(id)!.category });
+const layoutFull = layoutGraph(graph.connected.map(toLayoutNode), graph.edges, { width: GRAPH_W, height: GRAPH_H, iterations: 320, seed: 11 });
+const layoutCore = layoutGraph(coreIds.map(toLayoutNode), coreEdges, { width: GRAPH_W, height: GRAPH_H, iterations: 320, seed: 5 });
+const coreSet = new Set(coreIds);
+const initialPoint = (id: string) => layoutCore.get(id) ?? layoutFull.get(id)!;
+const neighbors = new Map<string, string[]>(graph.connected.map((id) => [id, []]));
+for (const [a, b] of graph.edges) { neighbors.get(a)!.push(b); neighbors.get(b)!.push(a); }
+const gnodes = graph.connected.map((id) => {
+  const term = termBySlug.get(id)!;
+  const category = getCategory(term.category)!;
+  const point = initialPoint(id);
+  const degree = graph.degree.get(id)!;
+  return {
+    id, title: term.title, summary: term.summary, href: termUrl(id),
+    categoryTitle: category.title, group: category.group,
+    x: point.x, y: point.y, r: Math.round(Math.min(15, 5 + 2 * Math.sqrt(degree)) * 10) / 10, degree,
+    off: !coreSet.has(id),
+    neighbors: neighbors.get(id)!.sort((x, y) => termBySlug.get(x)!.title.localeCompare(termBySlug.get(y)!.title, 'id'))
+  };
+});
+const groupCounts = Object.fromEntries(GROUPS.map((group) => [group.id, gnodes.filter((node) => node.group === group.id).length])) as Record<GroupId, number>;
+const graphView = gnodes.map(({ id, title, summary, href, categoryTitle, group, neighbors: near }) => ({
+  id, title, summary, href, categoryTitle, group,
+  aliases: termBySlug.get(id)!.aliases,
+  core: layoutCore.get(id) ?? null,
+  full: layoutFull.get(id)!,
+  neighbors: near.map((slug) => ({ id: slug, title: termBySlug.get(slug)!.title }))
+}));
+
 const editData = `${SITE.repo}/edit/main/src/data/peta/tonggak.json`;
 const jumps = [
   { label: '1950-an', percent: 0 },
@@ -64,6 +117,8 @@ const jumps = [
 
   <nav class="shell peta-nav" aria-label="Bagian halaman">
     <a href="#linimasa">Linimasa</a>
+    <a href="#tingkat">Tingkat kemampuan</a>
+    <a href="#graf">Grafik konsep</a>
     <a href="#progres">Progres ensiklopedia</a>
   </nav>
 
@@ -123,6 +178,118 @@ const jumps = [
     </ol>
   </section>
 
+  <section id="tingkat" class="shell peta-section" aria-labelledby="tingkat-judul">
+    <p class="kicker">Kerangka Levels of AGI</p>
+    <h2 id="tingkat-judul">Tingkat kemampuan menuju AGI</h2>
+    <p class="peta-lede">Kerangka ini mengukur dua hal sekaligus: <strong>kinerja</strong> (seberapa baik, dibandingkan orang dewasa yang terampil) dan <strong>generalitas</strong> (seberapa luas rentang tugasnya). Ini satu usulan dari para peneliti Google DeepMind, bukan kesepakatan baku; definisi AGI sendiri masih diperdebatkan (lihat sembilan pendekatan di bawah). Pilih sel untuk melihat contohnya.</p>
+
+    <div class="lv-wrap">
+      <table class="lv-table">
+        <caption class="sr-only">Matriks tingkat kinerja (baris) menurut AI sempit dan AI umum (kolom)</caption>
+        <thead><tr><th scope="col">Tingkat kinerja</th>{columns.map((column) => <th scope="col">{COLUMN_LABELS[column]}</th>)}</tr></thead>
+        <tbody>
+          {framework.levels.map((level) => (
+            <tr>
+              <th scope="row"><span class="lv-num">Level {level.level}</span> <strong>{level.nama}</strong><small>{level.kriteria}</small></th>
+              {columns.map((column) => {
+                const cell = level[column];
+                const frontier = level.level === FRONTIER_CELL.level && column === FRONTIER_CELL.column;
+                return (
+                  <td>
+                    <button type="button" class={`lv-cell${cell.tercapai ? '' : ' is-missing'}${frontier ? ' is-frontier' : ''}`} data-level={level.level} data-column={column} aria-pressed="false">
+                      <strong>{cell.label}</strong>
+                      <span>{cell.tercapai ? (cell.contoh[0] ?? '') : 'Belum tercapai (menurut tabel penulis)'}</span>
+                      {frontier && <em>Posisi model bahasa terdepan, penilaian penulis per September 2023</em>}
+                    </button>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <section class="tl-detail" id="lv-detail" aria-live="polite" aria-label="Detail sel terpilih">
+      <p class="tl-detail-empty">Pilih sebuah sel pada matriks untuk melihat contoh sistemnya.</p>
+    </section>
+    <p class="lv-note">{framework.penilaianPenulis} Sumber: <a href={framework.sumber.url} rel="noopener noreferrer">{framework.sumber.title}</a>.</p>
+
+    <h3 class="sub-title">Tingkat otonomi</h3>
+    <p class="peta-lede">Dimensi terpisah dari kerangka yang sama: seberapa besar kendali diserahkan kepada AI dalam interaksi dengan manusia.</p>
+    <ol class="au-steps">
+      {framework.otonomi.map((item) => (
+        <li><button type="button" class="au-step" data-level={item.level} aria-pressed="false"><span>Level {item.level}</span><strong>{item.nama}</strong></button></li>
+      ))}
+    </ol>
+    <section class="tl-detail" id="au-detail" aria-live="polite" aria-label="Detail tingkat otonomi terpilih">
+      <p class="tl-detail-empty">Pilih sebuah tingkat otonomi untuk melihat deskripsi dan contohnya.</p>
+    </section>
+
+    <h3 class="sub-title">Apa itu AGI? Sembilan pendekatan</h3>
+    <p class="peta-lede">Para penulis kerangka ini meninjau sembilan definisi atau pendekatan yang pernah diajukan. Uraian di bawah merangkum tinjauan mereka, termasuk kritik mereka sendiri, bukan penilaian situs ini. Buka tiap kartu untuk membacanya.</p>
+    <div class="def-grid">
+      {framework.definisi.map((item, index) => (
+        <details class="def-card">
+          <summary><span class="def-no">{index + 1}</span><span><strong>{item.nama}</strong><small>{item.dikaitkan}</small></span></summary>
+          <p><strong>Gagasan:</strong> {item.gagasan}</p>
+          <p><strong>Kritik penulis kerangka:</strong> {item.kritik}</p>
+        </details>
+      ))}
+    </div>
+    <h3 class="sub-title">Enam prinsip penulis untuk mendefinisikan AGI</h3>
+    <ol class="prinsip-list">
+      {framework.prinsip.map((item) => <li><strong>{item.judul}.</strong> {item.isi}</li>)}
+    </ol>
+  </section>
+
+  <section id="graf" class="shell peta-section" aria-labelledby="graf-judul">
+    <p class="kicker">Jaringan istilah</p>
+    <h2 id="graf-judul">Grafik konsep</h2>
+    <p class="peta-lede">Setiap titik adalah satu entri ensiklopedia; setiap garis adalah hubungan “istilah terkait”. Pilih titik atau cari istilah untuk menyorot tetangganya. Saat ini {gnodes.length} dari {terms.length} entri sudah terhubung; {graph.isolated.length} lainnya belum punya hubungan dan akan muncul seiring entri ditinjau.</p>
+
+    <div class="tl-controls">
+      <div class="tl-chips" role="group" aria-label="Tampilkan kelompok">
+        {GROUPS.map((group) => (
+          <button class="tl-chip g-chip" type="button" data-group={group.id} aria-pressed={group.id === 'perangkat-lunak' ? 'false' : 'true'}><span class={`g-key g-key-${group.id}`} aria-hidden="true"></span>{group.title} <small>{groupCounts[group.id]}</small></button>
+        ))}
+      </div>
+      <label class="g-search"><span class="sr-only">Cari istilah di grafik</span>
+        <input id="g-search" type="search" list="g-terms" placeholder="Cari istilah di grafik…" autocomplete="off" />
+        <datalist id="g-terms">{gnodes.flatMap((node) => [node.title, ...termBySlug.get(node.id)!.aliases]).map((name) => <option value={name}></option>)}</datalist>
+      </label>
+    </div>
+
+    <div class="g-scroll" id="g-scroll" tabindex="0" role="region" aria-label="Grafik konsep. Geser ke samping untuk melihat bagian lain.">
+      <svg id="g-svg" class="g-svg" viewBox={`0 0 ${GRAPH_W} ${GRAPH_H}`} role="img" aria-label="Jaringan hubungan antar istilah ensiklopedia. Versi teks tersedia di bawah grafik.">
+        <g class="g-edges">
+          {graph.edges.map(([a, b]) => <line class={`g-edge${coreSet.has(a) && coreSet.has(b) ? '' : ' is-off'}`} data-a={a} data-b={b} x1={initialPoint(a).x} y1={initialPoint(a).y} x2={initialPoint(b).x} y2={initialPoint(b).y}></line>)}
+        </g>
+        <g class="g-nodes">
+          {gnodes.map((node) => (
+            <g class={`g-node${node.degree >= 4 ? ' is-hub' : ''}${node.off || node.group === 'perangkat-lunak' ? ' is-off' : ''}`} data-id={node.id} data-group={node.group} transform={`translate(${node.x} ${node.y})`}>
+              <circle r={node.r}></circle>
+              <text class="g-label" y={node.r + 14} text-anchor="middle">{node.title}</text>
+            </g>
+          ))}
+        </g>
+      </svg>
+    </div>
+    <p class="tl-hint" aria-hidden="true">← geser ke samping →</p>
+
+    <section class="tl-detail" id="g-detail" aria-live="polite" aria-label="Detail istilah terpilih">
+      <p class="tl-detail-empty">Pilih sebuah titik atau cari istilah untuk melihat ringkasannya dan istilah yang terhubung.</p>
+    </section>
+
+    <details class="g-text">
+      <summary>Daftar hubungan (versi teks)</summary>
+      <ul>
+        {gnodes.map((node) => (
+          <li><a href={node.href}>{node.title}</a>: {node.neighbors.map((slug, i) => <>{i > 0 && ', '}<a href={termUrl(slug)}>{termBySlug.get(slug)!.title}</a></>)}</li>
+        ))}
+      </ul>
+    </details>
+  </section>
+
   <section id="progres" class="shell peta-section" aria-labelledby="progres-judul">
     <p class="kicker">Transparansi</p>
     <h2 id="progres-judul">Progres ensiklopedia</h2>
@@ -157,6 +324,154 @@ const jumps = [
     <p class="peta-lede">Kelompok yang berisi 0 entri, seperti <a href={indexUrl()}>“Menuju superintelligence”</a>, sedang disusun.</p>
   </section>
 
+  <script is:inline id="lv-data" type="application/json" set:html={jsonForScript(lvView)}></script>
+  <script is:inline id="g-data" type="application/json" set:html={jsonForScript(graphView)}></script>
+  <script>
+    // Matriks tingkat kemampuan dan tingkat otonomi.
+    interface Cell { label: string; contoh: string[]; tercapai: boolean }
+    interface Level { level: number; nama: string; namaAsli: string; kriteria: string; sempit: Cell; umum: Cell }
+    interface Autonomy { level: number; nama: string; namaAsli: string; deskripsi: string; contoh: string[] }
+    const lv = JSON.parse(document.getElementById('lv-data')!.textContent || '{}') as { levels: Level[]; otonomi: Autonomy[]; penilaian: string; columnLabels: Record<string, string> };
+    const mk = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string, className?: string) => {
+      const node = document.createElement(tag);
+      if (text !== undefined) node.textContent = text;
+      if (className) node.className = className;
+      return node;
+    };
+    const examples = (items: string[]) => { const ul = mk('ul', undefined, 'tl-sources'); for (const item of items) ul.append(mk('li', item)); return ul; };
+
+    const lvPanel = document.getElementById('lv-detail')!;
+    const lvCells = [...document.querySelectorAll<HTMLButtonElement>('.lv-cell')];
+    lvCells.forEach((button) => button.addEventListener('click', () => {
+      const level = lv.levels[Number(button.dataset.level)];
+      const column = button.dataset.column as 'sempit' | 'umum';
+      const cell = level[column];
+      lvCells.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+      lvPanel.replaceChildren(
+        mk('p', `Level ${level.level} · ${level.nama} · ${lv.columnLabels[column]}`, 'tl-meta'),
+        mk('h4', cell.label),
+        mk('p', `Kriteria kinerja: ${level.kriteria}`)
+      );
+      if (cell.tercapai) { lvPanel.append(mk('p', 'Contoh sistem menurut penulis:'), examples(cell.contoh)); }
+      else lvPanel.append(mk('p', 'Menurut tabel penulis, belum ada sistem yang mencapai tingkat ini. Ini penilaian pada saat makalah ditulis, bukan klaim tentang kondisi terkini.'));
+      if (button.classList.contains('is-frontier')) lvPanel.append(mk('p', lv.penilaian, 'tl-actors'));
+    }));
+
+    const auPanel = document.getElementById('au-detail')!;
+    const auSteps = [...document.querySelectorAll<HTMLButtonElement>('.au-step')];
+    auSteps.forEach((button) => button.addEventListener('click', () => {
+      const item = lv.otonomi[Number(button.dataset.level)];
+      auSteps.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+      auPanel.replaceChildren(
+        mk('p', `Level ${item.level} · ${item.namaAsli}`, 'tl-meta'),
+        mk('h4', item.nama),
+        mk('p', item.deskripsi),
+        mk('p', 'Contoh menurut penulis:'),
+        examples(item.contoh)
+      );
+    }));
+  </script>
+  <script>
+    // Grafik konsep.
+    interface Pt { x: number; y: number }
+    interface GNode { id: string; title: string; summary: string; href: string; categoryTitle: string; group: string; aliases: string[]; core: Pt | null; full: Pt; neighbors: { id: string; title: string }[] }
+    const gdata = JSON.parse(document.getElementById('g-data')!.textContent || '[]') as GNode[];
+    const gById = new Map(gdata.map((node) => [node.id, node]));
+    const gByTitle = new Map(gdata.flatMap((node) => [node.title, ...node.aliases].map((name) => [name.toLocaleLowerCase('id-ID'), node.id] as [string, string])));
+    const svg = document.getElementById('g-svg')!;
+    const gScroll = document.getElementById('g-scroll')!;
+    const gPanel = document.getElementById('g-detail')!;
+    const gSearch = document.getElementById('g-search') as HTMLInputElement;
+    const nodeEls = new Map([...svg.querySelectorAll<SVGGElement>('.g-node')].map((el) => [el.dataset.id!, el]));
+    const edgeEls = [...svg.querySelectorAll<SVGLineElement>('.g-edge')];
+    const gChips = [...document.querySelectorAll<HTMLButtonElement>('.g-chip')];
+    const enabled = new Set(gChips.filter((chip) => chip.getAttribute('aria-pressed') === 'true').map((chip) => chip.dataset.group!));
+    const gReduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let selected = '';
+
+    const el = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string, className?: string) => {
+      const node = document.createElement(tag);
+      if (text !== undefined) node.textContent = text;
+      if (className) node.className = className;
+      return node;
+    };
+
+    function focusOn(id: string) {
+      const near = new Set<string>(id ? [id, ...gById.get(id)!.neighbors.map((n) => n.id)] : []);
+      svg.classList.toggle('has-focus', Boolean(id));
+      nodeEls.forEach((node, key) => { node.classList.toggle('is-near', near.has(key)); node.classList.toggle('is-selected', key === id); });
+      edgeEls.forEach((edge) => edge.classList.toggle('is-near', Boolean(id) && (edge.dataset.a === id || edge.dataset.b === id)));
+    }
+
+    // Tampilan awal memakai tata letak "inti"; menyalakan perangkat lunak beralih ke tata letak "penuh".
+    const pointOf = (id: string): Pt | null => { const node = gById.get(id)!; return enabled.has('perangkat-lunak') ? node.full : node.core; };
+
+    function applyGroups() {
+      let visible = 0;
+      nodeEls.forEach((node, id) => {
+        const point = pointOf(id);
+        const on = enabled.has(gById.get(id)!.group) && point !== null;
+        node.classList.toggle('is-off', !on);
+        if (on && point) { node.setAttribute('transform', `translate(${point.x} ${point.y})`); visible++; }
+      });
+      edgeEls.forEach((edge) => {
+        const from = pointOf(edge.dataset.a!); const to = pointOf(edge.dataset.b!);
+        const on = enabled.has(gById.get(edge.dataset.a!)!.group) && enabled.has(gById.get(edge.dataset.b!)!.group) && from !== null && to !== null;
+        edge.classList.toggle('is-off', !on);
+        if (on && from && to) { edge.setAttribute('x1', String(from.x)); edge.setAttribute('y1', String(from.y)); edge.setAttribute('x2', String(to.x)); edge.setAttribute('y2', String(to.y)); }
+      });
+      svg.classList.toggle('labels-all', visible <= 60);
+      gChips.forEach((chip) => chip.setAttribute('aria-pressed', String(enabled.has(chip.dataset.group!))));
+    }
+
+    function renderPanel(node: GNode) {
+      gPanel.replaceChildren(
+        el('p', node.categoryTitle, 'tl-meta'),
+        el('h4', node.title),
+        el('p', node.summary)
+      );
+      const open = el('p'); const link = el('a', 'Buka halaman entri'); link.href = node.href; open.append(link); gPanel.append(open);
+      gPanel.append(el('p', `Terhubung dengan ${node.neighbors.length} istilah:`, 'tl-actors'));
+      const list = el('ul', undefined, 'chips');
+      for (const neighbor of node.neighbors) {
+        const li = el('li'); const button = el('button', neighbor.title, 'chip-button'); button.type = 'button';
+        button.addEventListener('click', () => select(neighbor.id));
+        li.append(button); list.append(li);
+      }
+      gPanel.append(list);
+    }
+
+    function select(id: string) {
+      const node = gById.get(id);
+      if (!node) return;
+      if (!enabled.has(node.group)) enabled.add(node.group);
+      if (pointOf(id) === null) enabled.add('perangkat-lunak');
+      applyGroups();
+      selected = id;
+      focusOn(id);
+      renderPanel(node);
+      const target = nodeEls.get(id)!;
+      const box = target.getBoundingClientRect(); const area = gScroll.getBoundingClientRect();
+      gScroll.scrollTo({ left: Math.max(0, gScroll.scrollLeft + (box.left - area.left) - gScroll.clientWidth / 2), behavior: gReduce ? 'auto' : 'smooth' });
+    }
+
+    nodeEls.forEach((node, id) => {
+      node.addEventListener('click', () => select(id));
+      node.addEventListener('pointerenter', (event) => { if ((event as PointerEvent).pointerType === 'mouse') focusOn(id); });
+      node.addEventListener('pointerleave', (event) => { if ((event as PointerEvent).pointerType === 'mouse') focusOn(selected); });
+    });
+    gChips.forEach((chip) => chip.addEventListener('click', () => {
+      const group = chip.dataset.group!;
+      if (enabled.has(group)) enabled.delete(group); else enabled.add(group);
+      applyGroups();
+      if (selected && !enabled.has(gById.get(selected)!.group)) { selected = ''; focusOn(''); gPanel.replaceChildren(el('p', 'Pilih sebuah titik atau cari istilah untuk melihat ringkasannya dan istilah yang terhubung.', 'tl-detail-empty')); }
+    }));
+    gSearch.addEventListener('input', () => {
+      const id = gByTitle.get(gSearch.value.trim().toLocaleLowerCase('id-ID'));
+      if (id) select(id);
+    });
+    applyGroups();
+  </script>
   <script is:inline id="tl-data" type="application/json" set:html={jsonForScript(view)}></script>
   <script>
     interface Related { title: string; href: string }
