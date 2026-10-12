@@ -13,7 +13,8 @@
     "verify:build": "node scripts/verify-build.mjs",
     "verify:security": "tsx scripts/verify-public-safety.ts",
     "verify": "npm test && npm run check && npm run build && npm run verify:build && npm run verify:security",
-    "data:update": "tsx scripts/update-data.ts"
+    "data:update": "tsx scripts/update-data.ts",
+    "check:links": "tsx scripts/check-links.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",

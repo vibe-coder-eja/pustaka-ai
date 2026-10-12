@@ -1,7 +1,7 @@
 import { slugifyHeading } from './content';
 
 /** Slug yang dipakai rute tetap di bawah /ensiklopedia/; tidak boleh dipakai istilah. */
-export const RESERVED_SLUGS = ['abjad', 'kategori'] as const;
+export const RESERVED_SLUGS = ['abjad', 'kategori', 'peta-si'] as const;
 
 export interface TermLite {
   slug: string;

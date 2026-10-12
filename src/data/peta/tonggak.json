@@ -1,0 +1,633 @@
+[
+  {
+    "id": "turing-1950",
+    "date": "1950-10",
+    "track": "riset",
+    "title": "Turing mengajukan pertanyaan “dapatkah mesin berpikir?”",
+    "summary": "Alan Turing menerbitkan makalah “Computing Machinery and Intelligence” di jurnal Mind. Ia mengganti pertanyaan yang kabur itu dengan uji perilaku yang kemudian dikenal sebagai Turing test (permainan peniruan), dan membahas keberatan-keberatan terhadap kemungkinan mesin cerdas.",
+    "actors": [
+      "Alan Turing"
+    ],
+    "sources": [
+      {
+        "title": "A. M. Turing, “Computing Machinery and Intelligence”, Mind LIX(236), Oktober 1950",
+        "url": "https://academic.oup.com/mind/article/LIX/236/433/986238"
+      }
+    ],
+    "related": [
+      "ai"
+    ]
+  },
+  {
+    "id": "dartmouth-1956",
+    "date": "1956",
+    "track": "riset",
+    "title": "Lokakarya Dartmouth: lahirnya bidang “kecerdasan buatan”",
+    "summary": "Proposal bertanggal 31 Agustus 1955 dari John McCarthy, Marvin Minsky, Nathaniel Rochester, dan Claude Shannon mengusulkan penelitian musim panas 1956 di Dartmouth College dengan dugaan bahwa setiap aspek pembelajaran atau kecerdasan dapat dijelaskan setepat itu sehingga mesin dapat menirunya. Proposal inilah yang memperkenalkan istilah “artificial intelligence”.",
+    "actors": [
+      "John McCarthy",
+      "Marvin Minsky",
+      "Nathaniel Rochester",
+      "Claude Shannon"
+    ],
+    "sources": [
+      {
+        "title": "McCarthy dkk., Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (31 Agustus 1955)",
+        "url": "https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html"
+      }
+    ],
+    "related": [
+      "ai"
+    ]
+  },
+  {
+    "id": "good-1965",
+    "date": "1965",
+    "track": "keselamatan",
+    "title": "I. J. Good: mesin ultracerdas dan “ledakan kecerdasan”",
+    "summary": "I. J. Good menulis bahwa mesin yang melampaui semua kegiatan intelektual manusia juga akan mampu merancang mesin yang lebih baik lagi, sehingga terjadi “ledakan kecerdasan”. Menurutnya mesin ultracerdas pertama adalah penemuan terakhir yang perlu dibuat manusia, asalkan cukup patuh untuk diberi tahu cara mengendalikannya. Ini gagasan awal yang kelak melahirkan perdebatan tentang superintelligence. Makalah dimuat di Advances in Computers vol. 6 (umumnya ditulis 1965; sebagian daftar pustaka mencatat 1966).",
+    "actors": [
+      "I. J. Good"
+    ],
+    "sources": [
+      {
+        "title": "I. J. Good, “Speculations Concerning the First Ultraintelligent Machine”, Advances in Computers, vol. 6",
+        "url": "https://doi.org/10.1016/S0065-2458(08)60418-0"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "vinge-1993",
+    "date": "1993",
+    "track": "keselamatan",
+    "title": "Vernor Vinge memperkenalkan “singularitas teknologi”",
+    "summary": "Dalam makalah untuk simposium Vision-21 milik NASA, Vernor Vinge memperkirakan bahwa kecerdasan melampaui manusia dapat tercipta dalam sekitar tiga puluh tahun, dan menyebut titik sesudahnya sebagai singularitas yang sulit diprediksi. Perkiraan waktu ini adalah pandangan penulisnya pada 1993, bukan fakta.",
+    "actors": [
+      "Vernor Vinge",
+      "NASA Lewis Research Center"
+    ],
+    "sources": [
+      {
+        "title": "V. Vinge, “The Coming Technological Singularity: How to Survive in the Post-Human Era” (NASA, 1993)",
+        "url": "https://ntrs.nasa.gov/citations/19940022856"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "deep-blue-1997",
+    "date": "1997-05",
+    "track": "model",
+    "title": "Deep Blue mengalahkan juara dunia catur Garry Kasparov",
+    "summary": "Pada Mei 1997 sistem catur IBM, Deep Blue, menang 3,5–2,5 atas Garry Kasparov dalam pertandingan enam game berkontrol waktu standar. IBM mencatatnya sebagai kali pertama sebuah sistem komputer mengalahkan juara dunia catur yang sedang bertakhta. Deep Blue memakai 32 prosesor yang mengevaluasi sekitar 200 juta posisi per detik.",
+    "actors": [
+      "IBM",
+      "Garry Kasparov"
+    ],
+    "sources": [
+      {
+        "title": "IBM, Deep Blue (sejarah IBM)",
+        "url": "https://www.ibm.com/history/deep-blue"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "alexnet-2012",
+    "date": "2012",
+    "track": "model",
+    "title": "AlexNet: jaringan saraf dalam unggul di ImageNet",
+    "summary": "Alex Krizhevsky, Ilya Sutskever, dan Geoffrey Hinton melatih jaringan konvolusi besar (sekitar 60 juta parameter) di GPU untuk mengklasifikasikan sekitar 1,3 juta gambar ImageNet ke 1.000 kelas, dengan galat jauh lebih rendah daripada hasil terbaik sebelumnya. Hasil ini sering disebut sebagai titik balik pembelajaran mendalam (deep learning).",
+    "actors": [
+      "Alex Krizhevsky",
+      "Ilya Sutskever",
+      "Geoffrey Hinton"
+    ],
+    "sources": [
+      {
+        "title": "Krizhevsky, Sutskever, Hinton, “ImageNet Classification with Deep Convolutional Neural Networks”, NeurIPS 2012",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+      }
+    ],
+    "related": [
+      "model"
+    ]
+  },
+  {
+    "id": "bostrom-2014",
+    "date": "2014-07",
+    "track": "keselamatan",
+    "title": "Nick Bostrom menerbitkan Superintelligence",
+    "summary": "Buku Nick Bostrom (Future of Humanity Institute, Universitas Oxford) menelaah bagaimana superintelligence bisa tercipta, seperti apa motivasinya, dan mengapa mengendalikannya sulit. Ia juga mengajukan strategi agar tujuan sistem seperti itu bermanfaat bagi manusia. Buku ini menjadi rujukan utama perdebatan risiko AI tingkat lanjut. Terbit di Inggris pada Juli 2014 (di AS sekitar September).",
+    "actors": [
+      "Nick Bostrom",
+      "Future of Humanity Institute",
+      "Oxford University Press"
+    ],
+    "sources": [
+      {
+        "title": "N. Bostrom, Superintelligence: Paths, Dangers, Strategies (Oxford University Press, 2014)",
+        "url": "https://global.oup.com/academic/product/superintelligence-9780199678112"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "alphago-2016",
+    "date": "2016-03",
+    "track": "model",
+    "title": "AlphaGo mengalahkan Lee Sedol dalam permainan Go",
+    "summary": "Makalah DeepMind di Nature (Januari 2016) memperkenalkan AlphaGo yang menggabungkan jaringan saraf dalam, pencarian pohon, pembelajaran dari permainan manusia, dan pembelajaran penguatan dari bermain melawan dirinya sendiri; sistem ini mengalahkan juara Eropa Fan Hui 5–0. Pada 9–15 Maret 2016 di Seoul, AlphaGo menang 4–1 atas Lee Sedol, pemain profesional 9 dan.",
+    "actors": [
+      "DeepMind",
+      "David Silver",
+      "Demis Hassabis",
+      "Lee Sedol"
+    ],
+    "sources": [
+      {
+        "title": "Silver dkk., “Mastering the game of Go with deep neural networks and tree search”, Nature, 2016",
+        "url": "https://doi.org/10.1038/nature16961"
+      },
+      {
+        "title": "British Go Association, laporan pertandingan Lee Sedol v AlphaGo",
+        "url": "https://britgo.org/node/5458"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "concrete-problems-2016",
+    "date": "2016-06",
+    "track": "keselamatan",
+    "title": "“Concrete Problems in AI Safety”",
+    "summary": "Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, dan Dan Mané merumuskan lima masalah keselamatan yang konkret dan dapat diteliti: efek samping yang tak diinginkan, peretasan fungsi imbalan (reward hacking), pengawasan yang dapat diskalakan, eksplorasi yang aman, dan pergeseran distribusi. Makalah ini membantu memindahkan keselamatan AI dari spekulasi ke agenda riset empiris.",
+    "actors": [
+      "Dario Amodei",
+      "Chris Olah",
+      "Jacob Steinhardt",
+      "Paul Christiano",
+      "John Schulman",
+      "Dan Mané"
+    ],
+    "sources": [
+      {
+        "title": "Amodei dkk., “Concrete Problems in AI Safety”, arXiv:1606.06565",
+        "url": "https://arxiv.org/abs/1606.06565"
+      }
+    ],
+    "related": [
+      "alignment"
+    ]
+  },
+  {
+    "id": "transformer-2017",
+    "date": "2017-06",
+    "track": "riset",
+    "title": "Transformer: “Attention Is All You Need”",
+    "summary": "Ashish Vaswani dan tujuh rekan penulis mengusulkan arsitektur Transformer yang hanya memakai mekanisme atensi, tanpa lapisan rekuren atau konvolusi. Arsitektur ini lebih mudah diparalelkan dan lebih cepat dilatih, dan kemudian menjadi dasar sebagian besar model bahasa besar modern.",
+    "actors": [
+      "Ashish Vaswani"
+    ],
+    "sources": [
+      {
+        "title": "Vaswani dkk., “Attention Is All You Need”, arXiv:1706.03762",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ],
+    "related": [
+      "llm"
+    ]
+  },
+  {
+    "id": "asilomar-2017",
+    "date": "2017",
+    "track": "kebijakan",
+    "title": "Prinsip AI Asilomar",
+    "summary": "Future of Life Institute menerbitkan 23 prinsip AI yang dirumuskan pada konferensi Beneficial AI 2017 di Asilomar, dalam tiga kelompok: isu riset, etika dan nilai, serta isu jangka panjang. Kelompok terakhir menyinggung kehati-hatian terhadap batas kemampuan AI, risiko besar, dan pengembangan superintelligence demi kepentingan bersama.",
+    "actors": [
+      "Future of Life Institute"
+    ],
+    "sources": [
+      {
+        "title": "Future of Life Institute, Asilomar AI Principles",
+        "url": "https://futureoflife.org/open-letter/ai-principles/"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "scaling-laws-2020",
+    "date": "2020-01",
+    "track": "riset",
+    "title": "Hukum skala untuk model bahasa",
+    "summary": "Jared Kaplan dkk. menemukan bahwa kinerja model bahasa, yang diukur lewat loss, membaik mengikuti hukum pangkat terhadap ukuran model, ukuran data, dan komputasi pelatihan pada rentang yang sangat lebar. Temuan ini sering dirujuk dalam strategi “memperbesar skala” dan dalam perdebatan apakah skala saja cukup untuk mencapai AGI.",
+    "actors": [
+      "Jared Kaplan",
+      "Sam McCandlish",
+      "Dario Amodei"
+    ],
+    "sources": [
+      {
+        "title": "Kaplan dkk., “Scaling Laws for Neural Language Models”, arXiv:2001.08361",
+        "url": "https://arxiv.org/abs/2001.08361"
+      }
+    ],
+    "related": [
+      "llm",
+      "model"
+    ]
+  },
+  {
+    "id": "gpt3-2020",
+    "date": "2020-05",
+    "track": "model",
+    "title": "GPT-3: model bahasa 175 miliar parameter",
+    "summary": "Tom Brown dkk. (OpenAI) melaporkan GPT-3 dengan 175 miliar parameter yang dapat mengerjakan berbagai tugas hanya dari beberapa contoh di dalam prompt (few-shot), tanpa pelatihan ulang. Pada sejumlah tugas hasilnya mendekati metode fine-tuning terbaik saat itu.",
+    "actors": [
+      "Tom B. Brown",
+      "OpenAI"
+    ],
+    "sources": [
+      {
+        "title": "Brown dkk., “Language Models are Few-Shot Learners”, arXiv:2005.14165",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ],
+    "related": [
+      "llm",
+      "prompt"
+    ]
+  },
+  {
+    "id": "instructgpt-2022",
+    "date": "2022-03",
+    "track": "keselamatan",
+    "title": "InstructGPT: melatih model dengan umpan balik manusia",
+    "summary": "Long Ouyang dkk. (OpenAI) men-fine-tune GPT-3 dengan contoh perilaku dari pelabel, lalu dengan pembelajaran penguatan dari umpan balik manusia (RLHF). Model 1,3 miliar parameter hasilnya lebih disukai penilai manusia daripada GPT-3 175 miliar, lebih jujur, dan lebih jarang toksik, meski masih membuat kesalahan sederhana.",
+    "actors": [
+      "Long Ouyang",
+      "OpenAI"
+    ],
+    "sources": [
+      {
+        "title": "Ouyang dkk., “Training language models to follow instructions with human feedback”, arXiv:2203.02155",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ],
+    "related": [
+      "alignment",
+      "llm"
+    ]
+  },
+  {
+    "id": "chatgpt-2022",
+    "date": "2022-11-30",
+    "track": "model",
+    "title": "ChatGPT dirilis ke publik",
+    "summary": "OpenAI memperkenalkan ChatGPT sebagai pratinjau riset gratis pada 30 November 2022. Antarmuka percakapannya membuat model bahasa besar dapat dipakai langsung oleh publik luas, dan peluncuran ini sering dipandang sebagai titik awal ledakan perhatian publik pada AI generatif.",
+    "actors": [
+      "OpenAI"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI, “Introducing ChatGPT”",
+        "url": "https://openai.com/index/chatgpt/"
+      }
+    ],
+    "related": [
+      "llm"
+    ]
+  },
+  {
+    "id": "constitutional-ai-2022",
+    "date": "2022-12",
+    "track": "keselamatan",
+    "title": "Constitutional AI: umpan balik dari AI berdasarkan prinsip tertulis",
+    "summary": "Yuntao Bai dkk. (Anthropic) mengusulkan pelatihan asisten yang tidak berbahaya tanpa label manusia atas keluaran berbahaya. Pengawasan manusia berupa daftar prinsip: model mengkritik dan merevisi jawabannya sendiri, lalu model lain menilai pasangan jawaban untuk melatih sinyal imbalan (RLAIF).",
+    "actors": [
+      "Yuntao Bai",
+      "Anthropic"
+    ],
+    "sources": [
+      {
+        "title": "Bai dkk., “Constitutional AI: Harmlessness from AI Feedback”, arXiv:2212.08073",
+        "url": "https://arxiv.org/abs/2212.08073"
+      }
+    ],
+    "related": [
+      "alignment"
+    ]
+  },
+  {
+    "id": "planning-for-agi-2023",
+    "date": "2023-02-24",
+    "track": "kebijakan",
+    "title": "OpenAI: “Planning for AGI and beyond”",
+    "summary": "Sam Altman menulis atas nama OpenAI bahwa misi perusahaan adalah memastikan kecerdasan buatan umum (AGI) bermanfaat bagi seluruh umat manusia. Tulisan ini membahas bagaimana dunia dapat bersiap menghadapi AGI dalam jangka pendek dan panjang, dan menyebut transisi ke dunia superintelligence mungkin proyek terpenting umat manusia dengan hasil yang jauh dari terjamin. Seorang kolumnis VentureBeat mengkritik tulisan ini karena tidak memuat definisi AGI, tolok ukur pencapaiannya, atau arti “bermanfaat bagi umat manusia”. Ini pernyataan sikap perusahaan, bukan temuan ilmiah.",
+    "actors": [
+      "Sam Altman",
+      "OpenAI"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI, “Planning for AGI and beyond”",
+        "url": "https://openai.com/index/planning-for-agi-and-beyond/"
+      },
+      {
+        "title": "VentureBeat, “OpenAI has grand ‘plans’ for AGI. Here’s another way to read its manifesto” (kritik)",
+        "url": "https://venturebeat.com/ai/openai-has-grand-plans-for-agi-heres-another-way-to-read-its-manifesto-the-ai-beat"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "gpt4-2023",
+    "date": "2023-03",
+    "track": "model",
+    "title": "GPT-4: model multimodal berkinerja setara manusia pada banyak ujian",
+    "summary": "Laporan teknis OpenAI memperkenalkan GPT-4, model multimodal yang menerima teks dan gambar dan menghasilkan teks. Model ini kurang mampu dibanding manusia di banyak situasi nyata, tetapi setara manusia pada berbagai ujian profesional dan akademik, termasuk simulasi ujian pengacara dengan skor sekitar 10% teratas.",
+    "actors": [
+      "OpenAI"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI, “GPT-4 Technical Report”, arXiv:2303.08774",
+        "url": "https://arxiv.org/abs/2303.08774"
+      }
+    ],
+    "related": [
+      "llm",
+      "multimodal-ai"
+    ]
+  },
+  {
+    "id": "pause-letter-2023",
+    "date": "2023-03-22",
+    "track": "kebijakan",
+    "title": "Surat terbuka: “Pause Giant AI Experiments”",
+    "summary": "Future of Life Institute menerbitkan surat terbuka yang meminta semua laboratorium AI menghentikan, selama sedikitnya enam bulan, pelatihan sistem yang lebih kuat dari GPT-4, dan meminta pemerintah menerapkan moratorium bila jeda tidak dapat segera dijalankan. Halaman surat mencatat lebih dari 31 ribu tanda tangan; Elon Musk disebut sebagai salah satu penandatangannya.",
+    "actors": [
+      "Future of Life Institute",
+      "Elon Musk"
+    ],
+    "sources": [
+      {
+        "title": "Future of Life Institute, “Pause Giant AI Experiments: An Open Letter”",
+        "url": "https://futureoflife.org/open-letter/pause-giant-ai-experiments/"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "cais-statement-2023",
+    "date": "2023-05-30",
+    "track": "kebijakan",
+    "title": "Pernyataan CAIS tentang risiko AI",
+    "summary": "Center for AI Safety merilis pernyataan satu kalimat: mitigasi risiko kepunahan akibat AI hendaknya menjadi prioritas global, setara dengan risiko skala masyarakat lain seperti pandemi dan perang nuklir. Penandatangan yang disebut di halamannya antara lain Geoffrey Hinton, Yoshua Bengio, Demis Hassabis, Sam Altman, Dario Amodei, Ilya Sutskever, Stuart Russell, dan Bill Gates.",
+    "actors": [
+      "Center for AI Safety",
+      "Geoffrey Hinton",
+      "Yoshua Bengio",
+      "Demis Hassabis",
+      "Sam Altman",
+      "Dario Amodei",
+      "Stuart Russell"
+    ],
+    "sources": [
+      {
+        "title": "Center for AI Safety, Statement on AI Risk",
+        "url": "https://safe.ai/work/statement-on-ai-risk"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "superalignment-2023",
+    "date": "2023-07-05",
+    "track": "keselamatan",
+    "title": "OpenAI meluncurkan tim Superalignment",
+    "summary": "OpenAI mengumumkan upaya untuk menyelesaikan masalah teknis inti penyelarasan superintelligence dalam empat tahun, dipimpin bersama oleh Ilya Sutskever dan Jan Leike, dengan komitmen 20% dari komputasi yang telah diamankan perusahaan. Ini salah satu contoh laboratorium besar menamai penyelarasan sistem yang melampaui manusia sebagai agenda kerja tersendiri.",
+    "actors": [
+      "OpenAI",
+      "Ilya Sutskever",
+      "Jan Leike"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI, “Introducing Superalignment”",
+        "url": "https://openai.com/index/introducing-superalignment/"
+      }
+    ],
+    "related": [
+      "alignment"
+    ]
+  },
+  {
+    "id": "bletchley-2023",
+    "date": "2023-11-01",
+    "track": "kebijakan",
+    "title": "Deklarasi Bletchley dari KTT Keselamatan AI",
+    "summary": "Pada KTT Keselamatan AI di Inggris (1–2 November 2023), 28 negara dan Uni Eropa menandatangani deklarasi yang menyebut AI frontier membawa risiko khusus, termasuk penyalahgunaan dan masalah kendali, dan sepakat memperdalam pemahaman ilmiah serta mendorong transparansi dan pengujian keselamatan oleh pengembang.",
+    "actors": [
+      "Pemerintah Inggris",
+      "28 negara",
+      "Uni Eropa"
+    ],
+    "sources": [
+      {
+        "title": "Pemerintah Inggris, The Bletchley Declaration",
+        "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "levels-of-agi-2023",
+    "date": "2023-11",
+    "track": "riset",
+    "title": "“Levels of AGI”: kerangka tingkatan menuju AGI",
+    "summary": "Meredith Ringel Morris, Shane Legg, Allan Dafoe, dan rekan (Google DeepMind) mengusulkan kerangka untuk mengklasifikasikan kemampuan sistem AGI beserta pendahulunya menurut tiga dimensi: kinerja (kedalaman kemampuan), generalitas (keluasan kemampuan), dan otonomi.",
+    "actors": [
+      "Meredith Ringel Morris",
+      "Shane Legg",
+      "Allan Dafoe",
+      "Google DeepMind"
+    ],
+    "sources": [
+      {
+        "title": "Morris dkk., “Levels of AGI for Operationalizing Progress on the Path to AGI”, arXiv:2311.02462",
+        "url": "https://arxiv.org/abs/2311.02462"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "eu-ai-act-2024",
+    "date": "2024-08-01",
+    "track": "kebijakan",
+    "title": "Undang-Undang AI Uni Eropa mulai berlaku",
+    "summary": "Regulation (EU) 2024/1689 (AI Act) dipublikasikan di Official Journal pada 12 Juli 2024 dan berlaku sejak 1 Agustus 2024, dengan penerapan bertahap: larangan praktik tertentu mulai Februari 2025 dan aturan model AI tujuan umum mulai Agustus 2025. Jadwal untuk kewajiban sistem berisiko tinggi sedang menjadi pokok perubahan di tingkat Uni Eropa, jadi periksa teks resmi untuk tanggal terkini.",
+    "actors": [
+      "Uni Eropa"
+    ],
+    "sources": [
+      {
+        "title": "Regulation (EU) 2024/1689, EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "o1-2024",
+    "date": "2024-09-12",
+    "track": "model",
+    "title": "OpenAI o1: model yang “berpikir” sebelum menjawab",
+    "summary": "OpenAI merilis o1-preview, model yang dilatih dengan pembelajaran penguatan skala besar untuk bernalar lewat rantai pemikiran sebelum menjawab. OpenAI melaporkan kinerja meningkat dengan lebih banyak pelatihan dan lebih banyak waktu berpikir saat inferensi (test-time compute), dengan lonjakan pada soal matematika dan pemrograman kompetitif.",
+    "actors": [
+      "OpenAI"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI, “Learning to reason with LLMs”",
+        "url": "https://openai.com/index/learning-to-reason-with-llms/"
+      }
+    ],
+    "related": [
+      "reasoning",
+      "chain-of-thought",
+      "inference"
+    ]
+  },
+  {
+    "id": "nobel-2024",
+    "date": "2024-10-08",
+    "track": "riset",
+    "title": "Nobel 2024 untuk jaringan saraf dan prediksi struktur protein",
+    "summary": "Hadiah Nobel Fisika 2024 diberikan kepada John Hopfield dan Geoffrey Hinton atas penemuan fundamental yang memungkinkan pembelajaran mesin dengan jaringan saraf tiruan. Sehari kemudian, Nobel Kimia diberikan kepada David Baker (desain protein komputasional) serta Demis Hassabis dan John Jumper (prediksi struktur protein lewat AlphaFold).",
+    "actors": [
+      "John Hopfield",
+      "Geoffrey Hinton",
+      "David Baker",
+      "Demis Hassabis",
+      "John Jumper",
+      "Royal Swedish Academy of Sciences"
+    ],
+    "sources": [
+      {
+        "title": "Nobel Prize in Physics 2024, siaran pers",
+        "url": "https://www.nobelprize.org/prizes/physics/2024/press-release/"
+      },
+      {
+        "title": "Nobel Prize in Chemistry 2024, siaran pers",
+        "url": "https://www.nobelprize.org/prizes/chemistry/2024/press-release/"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "deepseek-r1-2025",
+    "date": "2025-01-22",
+    "track": "model",
+    "title": "DeepSeek-R1: penalaran lewat pembelajaran penguatan murni",
+    "summary": "DeepSeek-AI melaporkan bahwa kemampuan bernalar model bahasa dapat didorong lewat pembelajaran penguatan tanpa contoh jalur penalaran berlabel manusia, memunculkan pola seperti refleksi diri dan verifikasi, terutama pada tugas yang hasilnya dapat diperiksa seperti matematika dan pemrograman. Pola penalaran model besar juga dapat disalurkan ke model yang lebih kecil.",
+    "actors": [
+      "DeepSeek-AI"
+    ],
+    "sources": [
+      {
+        "title": "DeepSeek-AI, “DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning”, arXiv:2501.12948",
+        "url": "https://arxiv.org/abs/2501.12948"
+      }
+    ],
+    "related": [
+      "reasoning",
+      "llm"
+    ]
+  },
+  {
+    "id": "iasr-2025",
+    "date": "2025-01",
+    "track": "keselamatan",
+    "title": "Laporan Keselamatan AI Internasional (edisi pertama)",
+    "summary": "Laporan yang dipimpin Yoshua Bengio dan ditulis panel pakar independen internasional ini memberi gambaran ilmiah bersama tentang kemampuan dan risiko AI serbaguna agar pengambil kebijakan di pemerintahan dan pihak lain memiliki pemahaman yang sama. Ini edisi pertama dari laporan tersebut.",
+    "actors": [
+      "Yoshua Bengio"
+    ],
+    "sources": [
+      {
+        "title": "International AI Safety Report 2025",
+        "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2025"
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "context-engineering-2025",
+    "date": "2025-09-29",
+    "track": "riset",
+    "title": "Anthropic menguraikan “context engineering” untuk agen AI",
+    "summary": "Esai teknik Anthropic mendefinisikan context engineering sebagai strategi menyusun dan merawat himpunan token terbaik selama inferensi, dan menampilkannya sebagai kelanjutan wajar dari prompt engineering. Istilahnya sudah beredar sebelumnya, dipopulerkan antara lain lewat unggahan Tobi Lütke dan Andrej Karpathy pada Juni 2025; esai ini memberi definisi formal yang banyak dirujuk.",
+    "actors": [
+      "Anthropic",
+      "Tobi Lütke",
+      "Andrej Karpathy"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic Engineering, “Effective context engineering for AI agents”",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+      }
+    ],
+    "related": [
+      "context",
+      "context-window",
+      "prompt-engineering",
+      "agent"
+    ]
+  },
+  {
+    "id": "mcp-aaif-2025",
+    "date": "2025-12-09",
+    "track": "kebijakan",
+    "title": "MCP diserahkan ke Agentic AI Foundation",
+    "summary": "Anthropic menyerahkan Model Context Protocol (MCP) ke Agentic AI Foundation, dana terarah di bawah Linux Foundation yang didirikan bersama Anthropic, Block, dan OpenAI, sehingga protokol penghubung agen AI dengan alat dan data itu menjadi netral vendor. Pengumuman yang sama menyebut dukungan dari Google, Microsoft, AWS, Cloudflare, dan Bloomberg.",
+    "actors": [
+      "Anthropic",
+      "Block",
+      "OpenAI",
+      "Linux Foundation"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic, “Donating the Model Context Protocol and establishing the Agentic AI Foundation”",
+        "url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"
+      }
+    ],
+    "related": [
+      "mcp",
+      "agentic-ai"
+    ]
+  },
+  {
+    "id": "iasr-2026",
+    "date": "2026-02-03",
+    "track": "keselamatan",
+    "title": "Laporan Keselamatan AI Internasional edisi kedua",
+    "summary": "Edisi kedua laporan yang diketuai Yoshua Bengio terbit pada 3 Februari 2026, dengan dukungan lebih dari 30 negara dan organisasi internasional. Laporan ini memperbarui tinjauan ilmiah atas kemampuan dan risiko AI serbaguna, dan menjadi masukan bagi pembahasan di KTT Dampak AI di India.",
+    "actors": [
+      "Yoshua Bengio",
+      "UK AI Security Institute",
+      "Mila"
+    ],
+    "sources": [
+      {
+        "title": "International AI Safety Report 2026",
+        "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
+      }
+    ],
+    "related": []
+  }
+]
