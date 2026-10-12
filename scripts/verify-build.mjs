@@ -3,7 +3,7 @@ import { join, relative } from 'node:path';
 
 const dist = new URL('../dist/', import.meta.url);
 const root = dist.pathname.replace(/^\/(?:[A-Za-z]:)/, (value) => value.slice(1));
-const base = '/pustaka-akal-imitasi/';
+const base = '/';
 const required = [
   'index.html', '404.html', 'katalog-fal/index.html', 'tentang/index.html',
   'ensiklopedia/index.html', 'ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'referensi/index.html',

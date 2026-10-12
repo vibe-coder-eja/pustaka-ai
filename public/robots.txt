@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vibe-coder-eja.github.io/pustaka-akal-imitasi/sitemap-index.xml
+Sitemap: https://pustakaai.xyz/sitemap-index.xml
