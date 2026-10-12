@@ -4,6 +4,9 @@ summary: Kemampuan AI memanggil alat eksternal seperti terminal, pencarian web, 
 category: ai-agentik
 related:
   - api
+  - tool
+  - mcp
+  - toolset
 status: catatan
 updated: 2026-07-07
 ---

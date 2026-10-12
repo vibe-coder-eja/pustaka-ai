@@ -1,0 +1,84 @@
+{
+  "sumber": {
+    "title": "Morris dkk., “Levels of AGI for Operationalizing Progress on the Path to AGI”, arXiv:2311.02462 (versi pertama 4 November 2023; tabel di bawah mengikuti versi 5)",
+    "url": "https://arxiv.org/abs/2311.02462"
+  },
+  "penilaianPenulis": "Penulis menilai model bahasa terdepan saat itu (ChatGPT, Bard, Llama 2) sebagai Emerging AGI: setara tingkat Competent pada sebagian tugas, tetapi masih Emerging pada banyak tugas lain seperti matematika dan faktualitas. Penilaian ini dibuat per September 2023 dan tidak otomatis berlaku untuk sistem terbaru.",
+  "levels": [
+    {
+      "level": 0,
+      "nama": "Tanpa AI",
+      "namaAsli": "No AI",
+      "kriteria": "Tidak melibatkan AI.",
+      "sempit": { "label": "Narrow Non-AI", "contoh": ["Kalkulator", "Perangkat lunak kompilator"], "tercapai": true },
+      "umum": { "label": "General Non-AI", "contoh": ["Komputasi dengan manusia dalam alur, misalnya Amazon Mechanical Turk"], "tercapai": true }
+    },
+    {
+      "level": 1,
+      "nama": "Emerging",
+      "namaAsli": "Emerging",
+      "kriteria": "Setara atau sedikit lebih baik daripada orang dewasa yang tidak terampil.",
+      "sempit": { "label": "Emerging Narrow AI", "contoh": ["GOFAI (AI simbolik klasik)", "Sistem berbasis aturan sederhana, misalnya SHRDLU"], "tercapai": true },
+      "umum": { "label": "Emerging AGI", "contoh": ["ChatGPT", "Bard", "Llama 2", "Gemini"], "tercapai": true }
+    },
+    {
+      "level": 2,
+      "nama": "Competent",
+      "namaAsli": "Competent",
+      "kriteria": "Sedikitnya persentil ke-50 orang dewasa yang terampil.",
+      "sempit": { "label": "Competent Narrow AI", "contoh": ["Pendeteksi toksisitas seperti Jigsaw", "Asisten suara: Siri, Alexa, Google Assistant", "Sistem tanya-jawab visual seperti PaLI", "Watson", "Model bahasa mutakhir untuk sebagian tugas, misalnya esai pendek dan kode sederhana"], "tercapai": true },
+      "umum": { "label": "Competent AGI", "contoh": [], "tercapai": false }
+    },
+    {
+      "level": 3,
+      "nama": "Expert",
+      "namaAsli": "Expert",
+      "kriteria": "Sedikitnya persentil ke-90 orang dewasa yang terampil.",
+      "sempit": { "label": "Expert Narrow AI", "contoh": ["Pemeriksa ejaan dan tata bahasa seperti Grammarly", "Model gambar generatif seperti Imagen dan DALL-E 2"], "tercapai": true },
+      "umum": { "label": "Expert AGI", "contoh": [], "tercapai": false }
+    },
+    {
+      "level": 4,
+      "nama": "Exceptional",
+      "namaAsli": "Exceptional (semula “Virtuoso”)",
+      "kriteria": "Sedikitnya persentil ke-99 orang dewasa yang terampil.",
+      "sempit": { "label": "Exceptional Narrow AI", "contoh": ["Deep Blue", "AlphaGo"], "tercapai": true },
+      "umum": { "label": "Exceptional AGI", "contoh": [], "tercapai": false }
+    },
+    {
+      "level": 5,
+      "nama": "Superhuman",
+      "namaAsli": "Superhuman",
+      "kriteria": "Mengungguli seluruh manusia (100%).",
+      "sempit": { "label": "Superhuman Narrow AI", "contoh": ["AlphaFold", "AlphaZero", "Stockfish"], "tercapai": true },
+      "umum": { "label": "Artificial Superintelligence (ASI)", "contoh": [], "tercapai": false }
+    }
+  ],
+  "otonomi": [
+    { "level": 0, "nama": "Tanpa AI", "namaAsli": "No AI", "deskripsi": "Manusia mengerjakan semuanya.", "contoh": ["Menggambar sketsa dengan pensil", "Mengetik di editor teks"] },
+    { "level": 1, "nama": "AI sebagai alat", "namaAsli": "AI as a Tool", "deskripsi": "Manusia mengendalikan tugas; AI mengotomatisasi sub-tugas kecil.", "contoh": ["Mesin pencari", "Pemeriksa tata bahasa", "Aplikasi terjemahan"] },
+    { "level": 2, "nama": "AI sebagai konsultan", "namaAsli": "AI as a Consultant", "deskripsi": "AI berperan substantif, tetapi hanya ketika dipanggil manusia.", "contoh": ["Meringkas dokumen dengan model bahasa", "Model pembuat kode", "Sistem rekomendasi"] },
+    { "level": 3, "nama": "AI sebagai kolaborator", "namaAsli": "AI as a Collaborator", "deskripsi": "Kerja sama setara; tujuan dan tugas dikoordinasikan secara interaktif.", "contoh": ["Berlatih catur bersama AI", "Hiburan dengan kepribadian AI"] },
+    { "level": 4, "nama": "AI sebagai ahli", "namaAsli": "AI as an Expert", "deskripsi": "AI memimpin interaksi; manusia memberi arahan, umpan balik, atau sub-tugas.", "contoh": ["AI untuk penemuan ilmiah, misalnya pelipatan protein"] },
+    { "level": 5, "nama": "AI sebagai agen", "namaAsli": "AI as an Agent", "deskripsi": "AI sepenuhnya otonom.", "contoh": ["Asisten pribadi otonom (menurut penulis, belum tersedia saat itu)"] }
+  ],
+  "prinsip": [
+    { "judul": "Fokus pada kemampuan, bukan proses", "isi": "Definisi AGI hendaknya menilai apa yang dapat dicapai sistem, bukan cara kerjanya. Kesadaran atau “berpikir seperti manusia” tidak dijadikan syarat." },
+    { "judul": "Fokus pada generalitas dan kinerja", "isi": "Keluasan kemampuan dan mutu kemampuan sama-sama diperlukan; keduanya menjadi dua sumbu matriks." },
+    { "judul": "Fokus pada tugas kognitif dan metakognitif, bukan fisik", "isi": "Kemampuan belajar keterampilan baru termasuk di dalamnya; kemampuan fisik menambah generalitas tetapi bukan prasyarat." },
+    { "judul": "Fokus pada potensi, bukan penerapan", "isi": "Cukup menunjukkan bahwa sistem mampu mengerjakan tugas; tidak harus sudah dipakai di dunia nyata." },
+    { "judul": "Fokus pada validitas ekologis", "isi": "Tugas uji hendaknya mencerminkan pekerjaan nyata yang dihargai manusia." },
+    { "judul": "Fokus pada jalan menuju AGI, bukan satu titik akhir", "isi": "AGI dipahami sebagai deretan tingkat yang masing-masing punya ukuran, risiko, dan pola interaksi manusia–AI sendiri." }
+  ],
+  "definisi": [
+    { "id": "turing-test", "nama": "Uji Turing", "dikaitkan": "Alan Turing, 1950", "gagasan": "Mesin dianggap cerdas bila penanya manusia tidak dapat membedakan teksnya dari teks manusia (imitation game).", "kritik": "Menurut penulis, uji ini sering hanya menunjukkan betapa mudahnya orang dikelabui, dan model bahasa modern sudah lulus versi tertentu, sehingga tidak memadai." },
+    { "id": "strong-ai", "nama": "Strong AI (mesin yang sadar)", "dikaitkan": "John Searle, 1980", "gagasan": "Komputer yang diprogram dengan tepat benar-benar merupakan sebuah pikiran, dengan pemahaman dan keadaan kognitif.", "kritik": "Tidak ada kesepakatan ilmiah tentang cara menentukan atribut seperti kesadaran, sehingga pendekatan berbasis proses ini dinilai tidak praktis." },
+    { "id": "otak-manusia", "nama": "Analogi dengan otak manusia", "dikaitkan": "Mark Gubrud, 1997 (pemakaian awal istilah “artificial general intelligence”)", "gagasan": "AGI adalah sistem AI yang menyaingi otak manusia dalam kompleksitas dan kecepatan.", "kritik": "Definisi ini menekankan proses. Transformer berhasil tanpa meniru cara belajar manusia, jadi proses berbasis otak tidak mutlak diperlukan." },
+    { "id": "kinerja-kognitif", "nama": "Kinerja setara manusia pada tugas kognitif", "dikaitkan": "Shane Legg dan Ben Goertzel; istilahnya dipopulerkan di kalangan ilmuwan komputer sekitar 2001", "gagasan": "Mesin mampu mengerjakan tugas kognitif yang biasanya dapat dikerjakan manusia.", "kritik": "Ambigu: tugas yang mana, dan manusia yang mana?" },
+    { "id": "belajar-tugas", "nama": "Kemampuan mempelajari tugas", "dikaitkan": "Murray Shanahan, 2015 (The Technological Singularity)", "gagasan": "AI tidak terspesialisasi pada satu tugas, melainkan dapat belajar mengerjakan beragam tugas seperti manusia.", "kritik": "Penulis tidak mengajukan kritik eksplisit; justru menilai nilai lebihnya adalah mencantumkan pembelajaran (metakognisi) sebagai syarat." },
+    { "id": "nilai-ekonomi", "nama": "Pekerjaan bernilai ekonomi", "dikaitkan": "Piagam OpenAI, 2018", "gagasan": "AGI adalah sistem yang sangat otonom dan mengungguli manusia pada sebagian besar pekerjaan bernilai ekonomi.", "kritik": "Berfokus pada kemampuan dan punya ukuran jelas, tetapi tidak menangkap kreativitas artistik atau kecerdasan emosional, dan nilai ekonomi baru terwujud bila sistem diterapkan, yang bisa terhambat faktor hukum, etika, atau sosial." },
+    { "id": "fleksibel-umum", "nama": "Fleksibel dan umum (Coffee Test dan tantangan lain)", "dikaitkan": "Gary Marcus, 2022", "gagasan": "AGI adalah kecerdasan yang fleksibel dan umum, dengan kecakapan dan keandalan setara atau melebihi manusia, diuji lewat lima tugas.", "kritik": "Mencakup generalitas dan kinerja, tetapi tugas seperti memasak di dapur asing menuntut tubuh robotik, berbeda dari definisi lain yang berfokus pada tugas nonfisik." },
+    { "id": "aci", "nama": "Artificial Capable Intelligence (ACI)", "dikaitkan": "Mustafa Suleyman dan Michael Bhaskar, 2023 (The Coming Wave)", "gagasan": "AI yang mampu menuntaskan tugas kompleks bertahap di dunia terbuka; ujinya, “Modern Turing Test”, adalah mengubah modal 100.000 dolar menjadi 1 juta dolar.", "kritik": "Terlalu sempit karena hanya menargetkan keuntungan finansial dan berpotensi menimbulkan risiko penyelarasan; kekuatannya, tugas dunia nyata yang kompleks punya validitas ekologis tinggi." },
+    { "id": "llm-generalis", "nama": "Model bahasa tercanggih sebagai generalis", "dikaitkan": "Blaise Agüera y Arcas dan Peter Norvig, 2023", "gagasan": "Model bahasa tercanggih pada pertengahan 2023 sudah merupakan AGI karena dapat membahas banyak topik, mengerjakan banyak tugas, dan belajar dari sedikit contoh atau tanpa contoh.", "kritik": "Penulis sepakat bahwa generalitas krusial, tetapi harus dipadukan dengan ukuran kinerja: sistem yang bisa menulis kode atau matematika namun tidak andal belum cukup berkinerja." }
+  ]
+}

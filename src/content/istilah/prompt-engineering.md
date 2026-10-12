@@ -4,6 +4,9 @@ aliases:
   - Rekayasa Prompt
 summary: Teknik menyusun instruksi agar AI menghasilkan respons yang lebih tepat, konsisten, dan berguna.
 category: dasar-ai
+related:
+  - chain-of-thought
+  - context
 status: catatan
 updated: 2026-07-07
 ---

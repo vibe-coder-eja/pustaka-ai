@@ -4,6 +4,12 @@ summary: Framework AI agent open-source dari Nous Research yang dapat berjalan d
 category: hermes-agent
 related:
   - framework
+  - agent
+  - mcp
+  - skill
+  - memory
+  - subagent
+  - gateway
 status: catatan
 updated: 2026-07-07
 ---
