@@ -8,6 +8,11 @@ updates:
     groups:
       astro:
         patterns: ['astro', '@astrojs/*']
+    ignore:
+      # @astrojs/check 0.9.10 (terbaru per Oktober 2026) hanya menerima peer typescript ^5 || ^6,
+      # sehingga TypeScript 7 membuat `npm ci` gagal. Hapus aturan ini setelah @astrojs/check mendukung TS 7.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
