@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/tangga.css';
+import { getTerms } from '../../lib/terms';
+import { indexUrl, termUrl } from '../../lib/ensiklopedia';
+import { SITE } from '../../lib/site';
+
+const terms = await getTerms();
+const titleOf = new Map(terms.map((term) => [term.slug, term.title]));
+const links = (slugs: string[]) => slugs.filter((slug) => titleOf.has(slug)).map((slug) => ({ title: titleOf.get(slug)!, href: termUrl(slug) }));
+
+interface Rung {
+  id: string;
+  name: string;
+  question: string;
+  manages: string;
+  analogy: string;
+  anchor: { when: string; what: string };
+  limit: string;
+  entries: string[];
+}
+
+const rungs: Rung[] = [
+  {
+    id: 'prompt',
+    name: 'Prompt',
+    question: 'Apa yang saya minta?',
+    manages: 'Instruksi dan contoh yang ditulis untuk satu kali jalan.',
+    analogy: 'Sebuah kalimat perintah yang jelas kepada orang yang baru Anda temui.',
+    anchor: { when: 'Mei 2020', what: 'Makalah GPT-3 menunjukkan model dapat mengerjakan tugas baru hanya dari instruksi dan beberapa contoh di dalam teks.' },
+    limit: 'Satu kali jalan tidak mengelola informasi di luar teks yang ditulis, dan tidak memeriksa hasilnya sendiri.',
+    entries: ['prompt-engineering', 'few-shot-prompting', 'chain-of-thought', 'self-consistency']
+  },
+  {
+    id: 'context',
+    name: 'Context',
+    question: 'Apa yang dilihat model saat menjawab?',
+    manages: 'Seluruh token yang masuk: instruksi, alat, data yang diambil, dan riwayat pesan.',
+    analogy: 'Isi meja kerja: hanya dokumen yang relevan yang boleh ada di atasnya.',
+    anchor: { when: '29 September 2025', what: 'Anthropic menguraikan context engineering sebagai kurasi himpunan token yang optimal selama inferensi.' },
+    limit: 'Jendela konteks terbatas, sehingga yang masuk harus dipilih dan dirawat sepanjang pekerjaan.',
+    entries: ['context-engineering', 'context-window', 'rag', 'memory', 'agents-md']
+  },
+  {
+    id: 'loop',
+    name: 'Loop',
+    question: 'Bagaimana ia bekerja sampai selesai?',
+    manages: 'Siklus bertindak, mengamati hasil, memeriksa, dan mengulang dengan alat.',
+    analogy: 'Satu pekerja dengan daftar periksa yang tidak berhenti sebelum semua butir terpenuhi.',
+    anchor: { when: 'Oktober 2022', what: 'ReAct menggabungkan penalaran dan tindakan secara berselang-seling; Anthropic (Desember 2024) menyebut agent sebagai model yang memakai alat dalam loop.' },
+    limit: 'Tanpa pemeriksaan independen, loop bisa menganggap pekerjaan selesai padahal belum.',
+    entries: ['agent-loop', 'react-pola-agent', 'tool-calling', 'refleksi-mandiri']
+  },
+  {
+    id: 'graph',
+    name: 'Graph',
+    question: 'Siapa mengerjakan apa, dan bagaimana serah terimanya?',
+    manages: 'Beberapa loop atau agent yang berbagi tugas, alur, dan hasil.',
+    analogy: 'Tim dengan pembagian tugas: ada yang memecah pekerjaan, ada yang mengerjakan, ada yang memeriksa.',
+    anchor: { when: 'Desember 2024', what: 'Anthropic mendeskripsikan pola orchestrator-workers dan evaluator-optimizer; protokol A2A kemudian menetapkan cara agent berbicara satu sama lain.' },
+    limit: 'Tiap agent tambahan menambah biaya dan titik gagal; mulailah dari rancangan yang paling sederhana.',
+    entries: ['sistem-multi-agent', 'workflow-ai-agentik', 'subagent', 'a2a-agent2agent', 'mcp']
+  }
+];
+
+const across = [
+  {
+    id: 'harness',
+    name: 'Harness',
+    text: 'Selubung di sekeliling model yang menyatukan loop, alat, konteks, dan pemeriksaan. Anthropic (26 November 2025) menjelaskannya lewat agent yang bekerja lintas banyak sesi.',
+    entry: 'harness-engineering'
+  },
+  {
+    id: 'evals',
+    name: 'Evals',
+    text: 'Penilaian terukur atas hasil dan jejak kerja agent. Tanpa itu, perubahan tidak bisa dibandingkan dan kemunduran baru terlihat setelah merugikan.',
+    entry: 'evals'
+  },
+  {
+    id: 'keamanan',
+    name: 'Keamanan',
+    text: 'Makin besar kewenangan agent, makin besar akibat instruksi yang tersisip lewat data yang dibacanya.',
+    entry: 'prompt-injection'
+  }
+];
+
+const editPage = `${SITE.repo}/edit/main/src/pages/ensiklopedia/tangga-evolusi.astro`;
+---
+<BaseLayout title="Tangga evolusi: prompt, context, loop, graph" description="Empat tahap cara orang membangun sesuatu dengan model bahasa, dari menulis prompt sampai merancang banyak agent, dengan tonggak bertanggal dan entri sumber primer.">
+  <header class="enc-hero shell">
+    <ol class="crumbs"><li><a href={indexUrl()}>Ensiklopedia</a></li><li aria-current="page">Tangga evolusi</li></ol>
+    <p class="kicker">Gambaran besar</p>
+    <h1>Dari prompt sampai graph</h1>
+    <p class="lede">Cara orang bekerja dengan model bahasa bergeser dari menulis satu perintah menjadi merancang sistem yang bekerja sendiri. Halaman ini memetakan empat tahap itu, masing-masing dengan pertanyaan khasnya.</p>
+    <p class="si-note"><strong>Ini penyederhanaan.</strong> Urutan dan nama tahap adalah cara penulis merangkum wacana yang berkembang cepat, bukan standar resmi. Tonggak bertanggal diambil dari sumber yang tercantum di entri masing-masing, dan tahap lama tidak ditinggalkan: sistem agent yang baik tetap membutuhkan prompt dan konteks yang baik. Ada yang keliru? <a href={editPage} rel="noopener noreferrer">Usulkan perbaikan di GitHub</a>.</p>
+  </header>
+
+  <nav class="shell tg-jump" aria-label="Loncat ke tahap">
+    {rungs.map((rung, index) => <a href={`#${rung.id}`}><span>{index + 1}</span>{rung.name}</a>)}
+    <a href="#lintas"><span>+</span>Lintas tahap</a>
+  </nav>
+
+  <ol class="shell tg-stair">
+    {rungs.map((rung, index) => (
+      <li id={rung.id} class="tg-rung" style={`--i:${index}`}>
+        <div class="tg-step" aria-hidden="true">{index + 1}</div>
+        <article class="tg-card" aria-labelledby={`${rung.id}-judul`}>
+          <p class="kicker">Tahap {index + 1}</p>
+          <h2 id={`${rung.id}-judul`}>{rung.name}</h2>
+          <p class="tg-question">{rung.question}</p>
+          <dl class="tg-facts">
+            <div><dt>Yang diatur</dt><dd>{rung.manages}</dd></div>
+            <div><dt>Perumpamaan</dt><dd>{rung.analogy}</dd></div>
+            <div><dt>Tonggak, {rung.anchor.when}</dt><dd>{rung.anchor.what}</dd></div>
+            <div><dt>Batasnya</dt><dd>{rung.limit}</dd></div>
+          </dl>
+          <p class="tg-entries-label">Entri terkait</p>
+          <ul class="tg-entries">
+            {links(rung.entries).map((link) => <li><a href={link.href}>{link.title}</a></li>)}
+          </ul>
+        </article>
+      </li>
+    ))}
+  </ol>
+
+  <section id="lintas" class="shell tg-across" aria-labelledby="lintas-judul">
+    <p class="kicker">Berlaku di semua tahap</p>
+    <h2 id="lintas-judul">Tiga hal yang melintasi tangga</h2>
+    <ul class="tg-across-list">
+      {across.map((item) => (
+        <li id={item.id}>
+          <h3>{item.name}</h3>
+          <p>{item.text}</p>
+          <a href={termUrl(item.entry)}>Baca entri: {titleOf.get(item.entry)}</a>
+        </li>
+      ))}
+    </ul>
+    <p class="tg-foot">Mencari arti sebutan seperti “prompt engineer” atau “harness engineer”? Lihat <a href={termUrl('keluarga-x-engineer')}>keluarga X Engineer</a>.</p>
+  </section>
+</BaseLayout>

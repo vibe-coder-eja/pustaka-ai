@@ -6,7 +6,7 @@ const root = dist.pathname.replace(/^\/(?:[A-Za-z]:)/, (value) => value.slice(1)
 const base = '/';
 const required = [
   'index.html', '404.html', 'katalog-fal/index.html', 'tentang/index.html',
-  'ensiklopedia/index.html', 'ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'referensi/index.html',
+  'ensiklopedia/index.html', 'ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'ensiklopedia/tangga-evolusi/index.html', 'referensi/index.html',
   'ensiklopedia/ai/index.html', 'buku/glosarium-agentic-ai/index.html', 'buku/hermes-cli/index.html',
   'buku/katalog-skills-hermes/index.html', 'buku/nous-portal-models/index.html',
   'robots.txt', 'sitemap-index.xml', 'search-index.json', 'data/fal-models.json'
@@ -40,7 +40,7 @@ for (const file of htmlFiles) {
   }
 }
 const posix = (file) => relative(root, file).split(/[\\/]/).join('/');
-const termPages = htmlFiles.filter((file) => /^ensiklopedia\/[^/]+\/index\.html$/.test(posix(file)) && !['ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html'].includes(posix(file)));
+const termPages = htmlFiles.filter((file) => /^ensiklopedia\/[^/]+\/index\.html$/.test(posix(file)) && !['ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'ensiklopedia/tangga-evolusi/index.html'].includes(posix(file)));
 if (termPages.length < 100) failures.push(`Halaman istilah terlalu sedikit: ${termPages.length}`);
 for (const file of termPages) {
   if (!readFileSync(file, 'utf8').includes('application/ld+json')) failures.push(`JSON-LD tidak ada: ${relative(root, file)}`);

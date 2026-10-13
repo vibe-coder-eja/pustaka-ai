@@ -8,3 +8,4 @@ export const categoryUrl = (slug: string) => withBase(base, `ensiklopedia/katego
 export const indexUrl = () => withBase(base, 'ensiklopedia/');
 export const alphabetUrl = () => withBase(base, 'ensiklopedia/abjad/');
 export const petaUrl = () => withBase(base, 'ensiklopedia/peta-si/');
+export const tanggaUrl = () => withBase(base, 'ensiklopedia/tangga-evolusi/');
