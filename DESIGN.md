@@ -1,4 +1,4 @@
-# Design Contract — Pustaka Akal Imitasi
+# Design Contract — Pustaka AI
 
 ## Arah visual
 
@@ -34,4 +34,6 @@ Ruang baca editorial yang hangat: latar ivory, tinta navy, aksen ungu tertahan, 
 ## Larangan
 
 - Tidak memakai font CDN, tracking, gambar stok, gradien neon, glassmorphism dominan, atau UI download.
-- Logo adalah SVG buku terbuka + node AI khusus proyek ini; jangan diganti dengan merek pihak ketiga.
+- Logo adalah monogram "P" dari halaman buku + node AI khusus proyek ini (`src/components/LogoMark.astro`, `public/logo-mark.svg`); jangan diganti dengan merek pihak ketiga.
+- Tagline resmi: "Pahami AI, selangkah demi selangkah". Nama tampilan: "Pustaka AI".
+- Lambang di header dan footer berupa SVG inline yang memakai token `--ink` dan `--accent`, sehingga mengikuti tema terang dan gelap.

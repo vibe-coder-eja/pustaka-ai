@@ -1,6 +1,6 @@
 export const SITE = {
-  name: 'Pustaka Akal Imitasi',
-  tagline: 'Ensiklopedia mini kecerdasan buatan dan superintelligence, dalam bahasa Indonesia.',
+  name: 'Pustaka AI',
+  tagline: 'Pahami AI, selangkah demi selangkah',
   author: 'Reza Syahputra',
   description: 'Ensiklopedia mini berbahasa Indonesia tentang kecerdasan buatan (AI, atau akal imitasi) dan superintelligence (SI), dilengkapi referensi Hermes Agent dan katalog model.',
   github: 'https://github.com/vibe-coder-eja',
@@ -10,7 +10,8 @@ export const SITE = {
 } as const;
 
 export function withBase(base: string, path = ''): string {
-  const cleanBase = `/${base.split('/').filter(Boolean).join('/')}/`;
+  const segments = base.split('/').filter(Boolean);
+  const cleanBase = segments.length ? `/${segments.join('/')}/` : '/';
   const cleanPath = path.replace(/^\/+/, '');
   return `${cleanBase}${cleanPath}`;
 }
