@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { GROUPS, categoriesOfGroup } from '../../lib/taxonomy';
 import { getTerms } from '../../lib/terms';
-import { alphabetUrl, categoryUrl, ENSIKLOPEDIA_NAME, petaUrl } from '../../lib/ensiklopedia';
+import { alphabetUrl, categoryUrl, ENSIKLOPEDIA_NAME, petaUrl, tanggaUrl } from '../../lib/ensiklopedia';
 import { groupByLetter } from '../../lib/glossary';
 
 const terms = await getTerms();
@@ -37,6 +37,15 @@ const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
       <p>Linimasa gagasan, model, risiko, dan kebijakan AI dari 1950 sampai 2026, dengan sumber untuk setiap titik.</p>
     </div>
     <a class="button" href={petaUrl()}>Buka peta</a>
+  </aside>
+
+  <aside class="shell peta-banner" aria-labelledby="tangga-banner-judul">
+    <div>
+      <p class="kicker">Gambaran besar</p>
+      <h2 id="tangga-banner-judul">Dari prompt sampai graph</h2>
+      <p>Empat tahap cara membangun sesuatu dengan model bahasa: prompt, context, loop, dan graph, lengkap dengan tonggak bertanggal.</p>
+    </div>
+    <a class="button" href={tanggaUrl()}>Lihat tangga evolusi</a>
   </aside>
 
   {GROUPS.map((group) => {

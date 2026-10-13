@@ -7,6 +7,9 @@ category: dasar-ai
 related:
   - chain-of-thought
   - context
+  - context-engineering
+  - few-shot-prompting
+  - keluarga-x-engineer
 status: catatan
 updated: 2026-07-07
 ---
