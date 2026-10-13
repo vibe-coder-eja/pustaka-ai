@@ -36,3 +36,7 @@ desktop.ini
 .private-markers.json
 data-update.log
 pr-body.md
+
+# Skill desain lokal (hallmark, emilkowalski/skill); tidak ikut repo
+.agents/
+skills-lock.json
