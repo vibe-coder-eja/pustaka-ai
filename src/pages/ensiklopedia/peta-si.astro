@@ -12,6 +12,8 @@ import levelsData from '../../data/peta/levels.json';
 import { COLUMN_LABELS, FRONTIER_CELL, type AgiFramework, type Column } from '../../lib/agi-levels';
 import { buildGraph, layoutGraph } from '../../lib/graph';
 import { GROUPS, getCategory, type GroupId } from '../../lib/taxonomy';
+import pandanganData from '../../data/peta/pandangan.json';
+import { FORECAST_AXIS, POLICY_STANCE_LABELS, SOURCE_KIND_LABELS, forecastBar, yearToAxisPercent, type Pandangan } from '../../lib/pandangan';
 
 const terms = await getTerms();
 const titleOf = new Map(terms.map((term) => [term.slug, term.title]));
@@ -98,7 +100,17 @@ const graphView = gnodes.map(({ id, title, summary, href, categoryTitle, group, 
   neighbors: near.map((slug) => ({ id: slug, title: termBySlug.get(slug)!.title }))
 }));
 
+// Peta pandangan: perkiraan waktu, spektrum sikap, usulan kebijakan, survei.
+const pandangan = pandanganData as Pandangan;
+const forecastRows = pandangan.prakiraan.map((item) => ({ ...item, bar: forecastBar(item) }));
+const barStyle = (bar: ReturnType<typeof forecastBar>) => `--a:${bar.start}%;--b:${bar.end}%`;
+const policyRows = pandangan.kebijakan.usulan.map((proposal) => ({
+  ...proposal,
+  cells: pandangan.kebijakan.kolom.map((column) => proposal.posisi.find((position) => position.tokoh === column) ?? null)
+}));
+const munk = pandangan.survei.munk;
 const editData = `${SITE.repo}/edit/main/src/data/peta/tonggak.json`;
+const editPandangan = `${SITE.repo}/edit/main/src/data/peta/pandangan.json`;
 const jumps = [
   { label: '1950-an', percent: 0 },
   { label: '1990-an', percent: yearToPercent(1993) },
@@ -106,7 +118,7 @@ const jumps = [
   { label: '2020 – kini', percent: yearToPercent(2022) }
 ];
 ---
-<BaseLayout title="Peta menuju superintelligence" description="Dashboard interaktif: linimasa gagasan, model, risiko, dan kebijakan AI dari 1950 hingga 2026, setiap titiknya bertanggal dan bersumber.">
+<BaseLayout title="Peta menuju superintelligence" description="Dashboard interaktif: linimasa gagasan, model, risiko, dan kebijakan AI dari 1950 hingga 2026, peta pandangan para tokoh, dan grafik konsep; setiap titiknya bertanggal dan bersumber.">
   <header class="enc-hero shell">
     <ol class="crumbs"><li><a href={indexUrl()}>Ensiklopedia</a></li><li aria-current="page">Peta menuju SI</li></ol>
     <p class="kicker">Peta interaktif</p>
@@ -118,6 +130,7 @@ const jumps = [
   <nav class="shell peta-nav" aria-label="Bagian halaman">
     <a href="#linimasa">Linimasa</a>
     <a href="#tingkat">Tingkat kemampuan</a>
+    <a href="#pandangan">Peta pandangan</a>
     <a href="#graf">Grafik konsep</a>
     <a href="#progres">Progres ensiklopedia</a>
   </nav>
@@ -240,6 +253,124 @@ const jumps = [
     <ol class="prinsip-list">
       {framework.prinsip.map((item) => <li><strong>{item.judul}.</strong> {item.isi}</li>)}
     </ol>
+  </section>
+
+  <section id="pandangan" class="shell peta-section" aria-labelledby="pandangan-judul">
+    <p class="kicker">Pandangan bertanggal dan bersumber</p>
+    <h2 id="pandangan-judul">Peta pandangan</h2>
+    <p class="peta-lede">Para tokoh dan lembaga tidak sepakat tentang <strong>kapan</strong> AI setingkat manusia tiba, <strong>seberapa besar</strong> risikonya, dan <strong>apa</strong> yang perlu dilakukan. Bagian ini memetakan perbedaan itu tanpa memihak: setiap entri menyebut nama, tanggal, definisi yang dipakai, dan sumbernya. Ini <strong>pandangan pihak tertentu pada tanggal tertentu</strong>, bukan fakta, dan bisa berubah. {pandangan.catatan} Terakhir diperiksa {pandangan.diperiksaPada}. Ada yang keliru? <a href={editPandangan} rel="noopener noreferrer">Usulkan perbaikan di GitHub</a>.</p>
+
+    <h3 class="sub-title">1. Perkiraan waktu</h3>
+    <p class="peta-lede">Angka tahun di bawah <strong>tidak sebanding</strong> satu sama lain: setiap tokoh memakai definisi yang berbeda (AGI, “powerful AI”, singularitas, atau risiko besar). Baca definisinya di tiap baris sebelum membandingkan. Rentang “x tahun lagi” dihitung dari tanggal pernyataannya.</p>
+    <div class="fc-chart" role="group" aria-label="Grafik perkiraan waktu menurut tokoh, 2025 sampai 2050">
+      <div class="fc-axis" aria-hidden="true">
+        {FORECAST_AXIS.ticks.map((year) => <span class="fc-tick" style={`--k:${yearToAxisPercent(year)}%`}>{year}</span>)}
+      </div>
+      <ol class="fc-list">
+        {forecastRows.map((row) => (
+          <li class="fc-row">
+            <div class="fc-head">
+              <strong>{row.tokoh}</strong>
+              <small>{row.lembaga}</small>
+            </div>
+            <div class="fc-track" style={barStyle(row.bar)}>
+              <span class={`fc-mark fc-${row.jenis}${row.bar.clipped ? ' is-clipped' : ''}`} aria-hidden="true"></span>
+            </div>
+            <p class="fc-label"><strong>{row.label}</strong> · dinyatakan {row.tanggal}</p>
+            <details class="fc-more">
+              <summary>Definisi dan sumber</summary>
+              <p><strong>Definisi yang dipakai:</strong> {row.definisi}</p>
+              <p>{row.ringkasan}</p>
+              <p class="src-line">Sumber: <a href={row.sumber.url} rel="noopener noreferrer">{row.sumber.title}</a> <span class={`src-kind kind-${row.sumber.jenis}`}>{SOURCE_KIND_LABELS[row.sumber.jenis]}</span></p>
+            </details>
+          </li>
+        ))}
+      </ol>
+      <p class="fc-legend" aria-hidden="true"><span class="fc-key fc-titik"></span> tahun tertentu <span class="fc-key fc-rentang"></span> rentang <span class="fc-key fc-paling-cepat"></span> paling cepat (terbuka ke kanan) <span class="fc-key fc-sebelum"></span> sebelum batas</p>
+    </div>
+
+    <h4 class="mini-title">Tidak memberi angka tahun</h4>
+    <ul class="noangka-list">
+      {pandangan.tanpaAngka.map((item) => (
+        <li>
+          <strong>{item.tokoh}</strong> <small>({item.tanggal})</small>
+          <p>{item.ringkasan}</p>
+          <p class="src-line">Sumber: <a href={item.sumber.url} rel="noopener noreferrer">{item.sumber.title}</a> <span class={`src-kind kind-${item.sumber.jenis}`}>{SOURCE_KIND_LABELS[item.sumber.jenis]}</span></p>
+        </li>
+      ))}
+    </ul>
+
+    <h3 class="sub-title">2. Spektrum sikap terhadap risiko</h3>
+    <p class="peta-lede">{pandangan.sikap.kriteria}</p>
+    <ol class="sp-list">
+      {pandangan.sikap.kelompok.map((group, index) => (
+        <li class="sp-group">
+          <h4><span class="sp-no">{index + 1}</span>{group.judul}</h4>
+          <ul class="sp-people">
+            {group.tokoh.map((person) => (
+              <li>
+                <details>
+                  <summary><strong>{person.nama}</strong> <small>{person.tanggal}</small></summary>
+                  <p>{person.pernyataan}</p>
+                  <p class="src-line">Sumber: <a href={person.sumber.url} rel="noopener noreferrer">{person.sumber.title}</a> <span class={`src-kind kind-${person.sumber.jenis}`}>{SOURCE_KIND_LABELS[person.sumber.jenis]}</span></p>
+                </details>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ol>
+    <p class="lv-note">{pandangan.sikap.belumDitempatkan}</p>
+
+    <h3 class="sub-title">3. Usulan kebijakan</h3>
+    <p class="peta-lede">{pandangan.kebijakan.catatan}</p>
+    <div class="lv-wrap">
+      <table class="pk-table">
+        <caption class="sr-only">Sikap tokoh terhadap usulan kebijakan AI</caption>
+        <thead><tr><th scope="col">Usulan</th>{pandangan.kebijakan.kolom.map((name) => <th scope="col">{name}</th>)}</tr></thead>
+        <tbody>
+          {policyRows.map((row) => (
+            <tr>
+              <th scope="row"><strong>{row.judul}</strong><small>{row.penjelasan}</small></th>
+              {row.cells.map((cell) => (
+                <td>
+                  {cell ? (
+                    <details class={`pk-cell pk-${cell.sikap}`}>
+                      <summary><span class="pk-badge">{POLICY_STANCE_LABELS[cell.sikap]}</span></summary>
+                      <p>{cell.ringkasan}</p>
+                      <p class="src-line"><a href={cell.sumber.url} rel="noopener noreferrer">{cell.sumber.title}</a> <span class={`src-kind kind-${cell.sumber.jenis}`}>{SOURCE_KIND_LABELS[cell.sumber.jenis]}</span></p>
+                    </details>
+                  ) : <span class="pk-empty">Belum diperiksa</span>}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-title">4. Data survei dan debat publik</h3>
+    <h4 class="mini-title">Survei {pandangan.survei.grace.responden.toLocaleString('id-ID')} peneliti AI</h4>
+    <p class="peta-lede">Grace dkk., terbit {pandangan.survei.grace.terbit}. Angka di bawah adalah agregat jawaban para peneliti yang menerbitkan makalah di forum AI terkemuka, bukan prediksi pasti.</p>
+    <dl class="sv-list">
+      {pandangan.survei.grace.ringkasan.map((item) => <div><dt>{item.label}</dt><dd>{item.nilai}</dd></div>)}
+    </dl>
+    <p class="src-line">Sumber: <a href={pandangan.survei.grace.sumber.url} rel="noopener noreferrer">{pandangan.survei.grace.sumber.title}</a> <span class={`src-kind kind-${pandangan.survei.grace.sumber.jenis}`}>{SOURCE_KIND_LABELS[pandangan.survei.grace.sumber.jenis]}</span></p>
+
+    <h4 class="mini-title">{munk.judul}</h4>
+    <p class="peta-lede">{munk.waktu}. Pihak pro: {munk.pro.join(' dan ')}. Pihak kontra: {munk.kontra.join(' dan ')}.</p>
+    <div class="mk-bars">
+      {([['Sebelum debat', munk.sebelum], ['Sesudah debat (hitungan)', munk.sesudah]] as const).map(([label, vote]) => (
+        <div class="mk-row">
+          <span class="mk-label">{label}</span>
+          <span class="mk-bar" role="img" aria-label={`${label}: ${vote.pro}% setuju ada ancaman eksistensial, ${vote.kontra}% tidak setuju`}>
+            <span class="mk-pro" style={`width:${vote.pro}%`}>{vote.pro}% pro</span>
+            <span class="mk-kontra" style={`width:${vote.kontra}%`}>{vote.kontra}% kontra</span>
+          </span>
+        </div>
+      ))}
+    </div>
+    <p class="lv-note">{munk.catatan} Sumber: <a href={munk.sumber.url} rel="noopener noreferrer">{munk.sumber.title}</a> ({SOURCE_KIND_LABELS[munk.sumber.jenis]}).</p>
   </section>
 
   <section id="graf" class="shell peta-section" aria-labelledby="graf-judul">
