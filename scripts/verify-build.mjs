@@ -9,7 +9,7 @@ const required = [
   'ensiklopedia/index.html', 'ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'ensiklopedia/tangga-evolusi/index.html', 'referensi/index.html',
   'ensiklopedia/ai/index.html', 'buku/glosarium-agentic-ai/index.html', 'buku/hermes-cli/index.html',
   'buku/katalog-skills-hermes/index.html', 'buku/nous-portal-models/index.html',
-  'robots.txt', 'sitemap-index.xml', 'search-index.json', 'data/fal-models.json'
+  'robots.txt', 'sitemap-index.xml', 'search-index.json', 'data/fal-models.json', 'data/graf-konsep.json'
 ];
 const MAX_HTML_BYTES = 400_000;
 const failures = [];
@@ -44,6 +44,17 @@ const termPages = htmlFiles.filter((file) => /^ensiklopedia\/[^/]+\/index\.html$
 if (termPages.length < 100) failures.push(`Halaman istilah terlalu sedikit: ${termPages.length}`);
 for (const file of termPages) {
   if (!readFileSync(file, 'utf8').includes('application/ld+json')) failures.push(`JSON-LD tidak ada: ${relative(root, file)}`);
+}
+// Data grafik konsep disajikan terpisah dari HTML peta-si; keduanya harus memuat simpul yang sama.
+try {
+  const graphData = JSON.parse(readFileSync(join(root, 'data/graf-konsep.json'), 'utf8'));
+  const petaHtml = readFileSync(join(root, 'ensiklopedia/peta-si/index.html'), 'utf8');
+  const svgIds = [...petaHtml.matchAll(/class="g-node[^"]*" data-id="([^"]+)"/g)].map((match) => match[1]).sort();
+  const dataIds = graphData.nodes.map((node) => node.id).sort();
+  if (svgIds.length < 100) failures.push(`Simpul grafik konsep terlalu sedikit: ${svgIds.length}`);
+  if (svgIds.join() !== dataIds.join()) failures.push(`Simpul SVG peta-si (${svgIds.length}) tidak sama dengan data/graf-konsep.json (${dataIds.length})`);
+} catch (error) {
+  failures.push(`data/graf-konsep.json tidak valid: ${error.message}`);
 }
 const catalogHtml = readFileSync(join(root, 'katalog-fal/index.html'), 'utf8');
 const staticRows = (catalogHtml.match(/class="model-card"/g) || []).length;
