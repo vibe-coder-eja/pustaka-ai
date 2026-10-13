@@ -11,6 +11,7 @@ related:
   - pencarian-semantik
   - pemotongan-dokumen
   - penambatan-sumber
+  - graf-pengetahuan
 status: catatan
 updated: 2026-07-07
 ---

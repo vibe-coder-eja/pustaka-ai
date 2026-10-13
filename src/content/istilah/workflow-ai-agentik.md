@@ -11,6 +11,7 @@ related:
   - sistem-multi-agent
   - react-pola-agent
   - evals
+  - rantai-prompt
 sources:
   - title: "Anthropic, “Building effective agents” (19 Desember 2024)"
     url: https://www.anthropic.com/engineering/building-effective-agents

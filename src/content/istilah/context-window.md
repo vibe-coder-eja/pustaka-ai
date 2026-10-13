@@ -7,6 +7,8 @@ category: dasar-ai
 related:
   - rag
   - compression
+  - tokenisasi
+  - cache-prompt
 status: catatan
 updated: 2026-07-07
 ---

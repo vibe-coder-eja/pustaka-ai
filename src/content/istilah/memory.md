@@ -4,6 +4,7 @@ summary: Penyimpanan fakta penting yang dapat digunakan kembali oleh AI pada ses
 category: hermes-agent
 related:
   - session
+  - memori-episodik
 status: catatan
 updated: 2026-07-07
 ---

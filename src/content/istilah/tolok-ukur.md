@@ -14,6 +14,8 @@ related:
   - regression
   - model-terdepan
   - hukum-penskalaan
+  - dataset-acuan
+  - evaluasi-lintasan
 sources:
   - title: "Hendrycks dkk., “Measuring Massive Multitask Language Understanding”, arXiv:2009.03300 (7 September 2020)"
     url: https://arxiv.org/abs/2009.03300
