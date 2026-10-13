@@ -9,6 +9,7 @@ related:
   - prompt-engineering
   - context
   - chain-of-thought
+  - prompt-sistem
 status: catatan
 updated: 2026-07-07
 ---

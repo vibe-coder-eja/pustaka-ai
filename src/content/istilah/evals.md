@@ -11,6 +11,8 @@ related:
   - regression
   - harness-engineering
   - refleksi-mandiri
+  - tolok-ukur
+  - uji-serang-tim-merah
 sources:
   - title: "Anthropic, “Demystifying evals for AI agents” (9 Januari 2026)"
     url: https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents

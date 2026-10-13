@@ -14,6 +14,10 @@ related:
   - rag
   - reasoning
   - multimodal-ai
+  - pra-pelatihan
+  - parameter-model
+  - temperatur-sampling
+  - prompt-sistem
 status: catatan
 updated: 2026-07-07
 ---
