@@ -92,12 +92,15 @@ const gnodes = graph.connected.map((id) => {
   };
 });
 const groupCounts = Object.fromEntries(GROUPS.map((group) => [group.id, gnodes.filter((node) => node.group === group.id).length])) as Record<GroupId, number>;
-const graphView = gnodes.map(({ id, title, summary, href, categoryTitle, group, neighbors: near }) => ({
-  id, title, summary, href, categoryTitle, group,
+// Data klien dibuat ringkas: href diturunkan dari slug, nama kategori lewat tabel kecil, judul tetangga dari simpulnya.
+const graphView = gnodes.map(({ id, title, summary, group, neighbors: near }) => ({
+  id, title, summary, group,
+  cat: termBySlug.get(id)!.category,
   aliases: termBySlug.get(id)!.aliases,
   core: layoutCore.get(id) ?? null,
   full: layoutFull.get(id)!,
-  neighbors: near.map((slug) => ({ id: slug, title: termBySlug.get(slug)!.title }))
+  // Hanya slug; judul tetangga diambil dari simpulnya sendiri di klien agar data tidak berulang.
+  neighbors: near
 }));
 
 // Peta pandangan: perkiraan waktu, spektrum sikap, usulan kebijakan, survei.
@@ -386,12 +389,12 @@ const jumps = [
       </div>
       <label class="g-search"><span class="sr-only">Cari istilah di grafik</span>
         <input id="g-search" type="search" list="g-terms" placeholder="Cari istilah di grafik…" autocomplete="off" />
-        <datalist id="g-terms">{gnodes.flatMap((node) => [node.title, ...termBySlug.get(node.id)!.aliases]).map((name) => <option value={name}></option>)}</datalist>
+        <datalist id="g-terms"></datalist>
       </label>
     </div>
 
     <div class="g-scroll" id="g-scroll" tabindex="0" role="region" aria-label="Grafik konsep. Geser ke samping untuk melihat bagian lain.">
-      <svg id="g-svg" class="g-svg" viewBox={`0 0 ${GRAPH_W} ${GRAPH_H}`} role="img" aria-label="Jaringan hubungan antar istilah ensiklopedia. Versi teks tersedia di bawah grafik.">
+      <svg id="g-svg" class="g-svg" data-term-base={indexUrl()} viewBox={`0 0 ${GRAPH_W} ${GRAPH_H}`} role="img" aria-label="Jaringan hubungan antar istilah ensiklopedia. Versi teks tersedia di bawah grafik.">
         <g class="g-edges">
           {graph.edges.map(([a, b]) => <line class={`g-edge${coreSet.has(a) && coreSet.has(b) ? '' : ' is-off'}`} data-a={a} data-b={b} x1={initialPoint(a).x} y1={initialPoint(a).y} x2={initialPoint(b).x} y2={initialPoint(b).y}></line>)}
         </g>
@@ -457,6 +460,7 @@ const jumps = [
 
   <script is:inline id="lv-data" type="application/json" set:html={jsonForScript(lvView)}></script>
   <script is:inline id="g-data" type="application/json" set:html={jsonForScript(graphView)}></script>
+  <script is:inline id="g-cats" type="application/json" set:html={jsonForScript(Object.fromEntries(CATEGORIES.map((category) => [category.slug, category.title])))}></script>
   <script>
     // Matriks tingkat kemampuan dan tingkat otonomi.
     interface Cell { label: string; contoh: string[]; tercapai: boolean }
@@ -505,14 +509,17 @@ const jumps = [
   <script>
     // Grafik konsep.
     interface Pt { x: number; y: number }
-    interface GNode { id: string; title: string; summary: string; href: string; categoryTitle: string; group: string; aliases: string[]; core: Pt | null; full: Pt; neighbors: { id: string; title: string }[] }
+    interface GNode { id: string; title: string; summary: string; group: string; cat: string; aliases: string[]; core: Pt | null; full: Pt; neighbors: string[] }
     const gdata = JSON.parse(document.getElementById('g-data')!.textContent || '[]') as GNode[];
+    const gCats = JSON.parse(document.getElementById('g-cats')!.textContent || '{}') as Record<string, string>;
     const gById = new Map(gdata.map((node) => [node.id, node]));
     const gByTitle = new Map(gdata.flatMap((node) => [node.title, ...node.aliases].map((name) => [name.toLocaleLowerCase('id-ID'), node.id] as [string, string])));
     const svg = document.getElementById('g-svg')!;
     const gScroll = document.getElementById('g-scroll')!;
     const gPanel = document.getElementById('g-detail')!;
     const gSearch = document.getElementById('g-search') as HTMLInputElement;
+    const termHref = (id: string) => `${svg.dataset.termBase}${id}/`;
+    document.getElementById('g-terms')!.append(...gdata.flatMap((node) => [node.title, ...node.aliases]).map((name) => { const option = document.createElement('option'); option.value = name; return option; }));
     const nodeEls = new Map([...svg.querySelectorAll<SVGGElement>('.g-node')].map((el) => [el.dataset.id!, el]));
     const edgeEls = [...svg.querySelectorAll<SVGLineElement>('.g-edge')];
     const gChips = [...document.querySelectorAll<HTMLButtonElement>('.g-chip')];
@@ -528,7 +535,7 @@ const jumps = [
     };
 
     function focusOn(id: string) {
-      const near = new Set<string>(id ? [id, ...gById.get(id)!.neighbors.map((n) => n.id)] : []);
+      const near = new Set<string>(id ? [id, ...gById.get(id)!.neighbors] : []);
       svg.classList.toggle('has-focus', Boolean(id));
       nodeEls.forEach((node, key) => { node.classList.toggle('is-near', near.has(key)); node.classList.toggle('is-selected', key === id); });
       edgeEls.forEach((edge) => edge.classList.toggle('is-near', Boolean(id) && (edge.dataset.a === id || edge.dataset.b === id)));
@@ -557,16 +564,16 @@ const jumps = [
 
     function renderPanel(node: GNode) {
       gPanel.replaceChildren(
-        el('p', node.categoryTitle, 'tl-meta'),
+        el('p', gCats[node.cat] ?? '', 'tl-meta'),
         el('h4', node.title),
         el('p', node.summary)
       );
-      const open = el('p'); const link = el('a', 'Buka halaman entri'); link.href = node.href; open.append(link); gPanel.append(open);
+      const open = el('p'); const link = el('a', 'Buka halaman entri'); link.href = termHref(node.id); open.append(link); gPanel.append(open);
       gPanel.append(el('p', `Terhubung dengan ${node.neighbors.length} istilah:`, 'tl-actors'));
       const list = el('ul', undefined, 'chips');
-      for (const neighbor of node.neighbors) {
-        const li = el('li'); const button = el('button', neighbor.title, 'chip-button'); button.type = 'button';
-        button.addEventListener('click', () => select(neighbor.id));
+      for (const neighborId of node.neighbors) {
+        const li = el('li'); const button = el('button', gById.get(neighborId)!.title, 'chip-button'); button.type = 'button';
+        button.addEventListener('click', () => select(neighborId));
         li.append(button); list.append(li);
       }
       gPanel.append(list);

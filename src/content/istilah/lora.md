@@ -9,6 +9,7 @@ related:
   - llm
   - distilasi-model
   - dpo
+  - kuantisasi
 sources:
   - title: "Hu dkk., “LoRA: Low-Rank Adaptation of Large Language Models”, arXiv:2106.09685 (17 Juni 2021)"
     url: https://arxiv.org/abs/2106.09685

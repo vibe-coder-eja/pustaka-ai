@@ -14,6 +14,7 @@ related:
   - manusia-dalam-putaran
   - prompt-injection
   - scope
+  - data-pribadi
 sources:
   - title: "Saltzer & Schroeder, “The Protection of Information in Computer Systems” (1975)"
     url: https://www.cs.virginia.edu/~evans/cs551/saltzer/

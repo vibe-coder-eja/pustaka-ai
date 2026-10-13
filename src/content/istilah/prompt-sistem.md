@@ -12,6 +12,7 @@ related:
   - prompt-injection
   - context-engineering
   - pembobolan-model
+  - cache-prompt
 sources:
   - title: "Wallace dkk., “The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions”, arXiv:2404.13208 (19 April 2024)"
     url: https://arxiv.org/abs/2404.13208
