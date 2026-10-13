@@ -96,7 +96,7 @@ async function updateNous(snapshots: Record<string, SnapshotInfo>) {
 
 async function updateSkills(snapshots: Record<string, SnapshotInfo>) {
   console.log('Skills Hermes: mengambil dari repositori resmi…');
-  const headers: Record<string, string> = { Accept: 'application/vnd.github+json', 'User-Agent': 'pustaka-akal-imitasi-data-update' };
+  const headers: Record<string, string> = { Accept: 'application/vnd.github+json', 'User-Agent': 'pustaka-ai-data-update' };
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const { sha } = await (await fetchRetry(`https://api.github.com/repos/${REPO}/commits/main`, { headers })).json() as { sha: string };
   const tree = await (await fetchRetry(`https://api.github.com/repos/${REPO}/git/trees/${sha}?recursive=1`, { headers })).json() as { tree: { path: string; type: string }[]; truncated?: boolean };

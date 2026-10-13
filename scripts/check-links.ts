@@ -11,7 +11,7 @@ let failed = 0;
 const manual: string[] = [];
 await Promise.all(urls.map(async (url) => {
   try {
-    const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(25_000), headers: { 'User-Agent': 'Mozilla/5.0 (pustaka-akal-imitasi link check)' } });
+    const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(25_000), headers: { 'User-Agent': 'Mozilla/5.0 (pustaka-ai link check)' } });
     if (response.status === 403 || response.status === 429) manual.push(`${response.status} ${url}`);
     else if (!response.ok && response.status !== 202) { failed++; console.error(`GAGAL ${response.status} ${url}`); }
   } catch (error) {
