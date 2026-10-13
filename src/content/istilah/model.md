@@ -8,6 +8,9 @@ related:
   - inference
   - multimodal-ai
   - auxiliary-model
+  - parameter-model
+  - bobot-terbuka
+  - model-terdepan
 status: catatan
 updated: 2026-07-07
 ---

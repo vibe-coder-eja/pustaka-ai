@@ -7,6 +7,7 @@ category: dasar-ai
 related:
   - rag
   - alignment
+  - penambatan-sumber
 status: catatan
 updated: 2026-07-07
 ---

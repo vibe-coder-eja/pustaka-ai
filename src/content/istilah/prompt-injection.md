@@ -11,6 +11,9 @@ related:
   - rag
   - alignment
   - hallucination
+  - pembobolan-model
+  - prompt-sistem
+  - kotak-pasir
 sources:
   - title: "Greshake dkk., “Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection”, arXiv:2302.12173 (23 Februari 2023)"
     url: https://arxiv.org/abs/2302.12173

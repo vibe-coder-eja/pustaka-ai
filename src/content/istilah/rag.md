@@ -6,6 +6,11 @@ summary: Retrieval-Augmented Generation; metode yang menggabungkan pencarian inf
 category: dasar-ai
 related:
   - memory
+  - representasi-vektor
+  - basis-data-vektor
+  - pencarian-semantik
+  - pemotongan-dokumen
+  - penambatan-sumber
 status: catatan
 updated: 2026-07-07
 ---
