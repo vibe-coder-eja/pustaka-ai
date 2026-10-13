@@ -55,7 +55,10 @@
         "url": "https://doi.org/10.1016/S0065-2458(08)60418-0"
       }
     ],
-    "related": []
+    "related": [
+      "ledakan-kecerdasan",
+      "superintelligence"
+    ]
   },
   {
     "id": "vinge-1993",
@@ -73,7 +76,10 @@
         "url": "https://ntrs.nasa.gov/citations/19940022856"
       }
     ],
-    "related": []
+    "related": [
+      "singularitas-teknologi",
+      "ledakan-kecerdasan"
+    ]
   },
   {
     "id": "deep-blue-1997",
@@ -131,7 +137,13 @@
         "url": "https://global.oup.com/academic/product/superintelligence-9780199678112"
       }
     ],
-    "related": []
+    "related": [
+      "superintelligence",
+      "masalah-kendali",
+      "tesis-ortogonalitas",
+      "konvergensi-instrumental",
+      "lepas-landas-ai"
+    ]
   },
   {
     "id": "alphago-2016",
@@ -178,7 +190,8 @@
       }
     ],
     "related": [
-      "alignment"
+      "alignment",
+      "reward-hacking"
     ]
   },
   {
@@ -236,7 +249,8 @@
     ],
     "related": [
       "llm",
-      "model"
+      "model",
+      "hukum-penskalaan"
     ]
   },
   {
@@ -278,7 +292,8 @@
     ],
     "related": [
       "alignment",
-      "llm"
+      "llm",
+      "rlhf"
     ]
   },
   {
@@ -317,7 +332,9 @@
       }
     ],
     "related": [
-      "alignment"
+      "alignment",
+      "constitutional-ai",
+      "rlhf"
     ]
   },
   {
@@ -340,7 +357,10 @@
         "url": "https://venturebeat.com/ai/openai-has-grand-plans-for-agi-heres-another-way-to-read-its-manifesto-the-ai-beat"
       }
     ],
-    "related": []
+    "related": [
+      "agi",
+      "lepas-landas-ai"
+    ]
   },
   {
     "id": "gpt4-2023",
@@ -401,7 +421,9 @@
         "url": "https://safe.ai/work/statement-on-ai-risk"
       }
     ],
-    "related": []
+    "related": [
+      "risiko-eksistensial"
+    ]
   },
   {
     "id": "superalignment-2023",
@@ -421,7 +443,9 @@
       }
     ],
     "related": [
-      "alignment"
+      "alignment",
+      "pengawasan-skalabel",
+      "superintelligence"
     ]
   },
   {
@@ -461,7 +485,9 @@
         "url": "https://arxiv.org/abs/2311.02462"
       }
     ],
-    "related": []
+    "related": [
+      "agi"
+    ]
   },
   {
     "id": "eu-ai-act-2024",
