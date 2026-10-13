@@ -13,6 +13,8 @@ related:
   - reasoning
   - ai-assistant
   - agentic-ai
+  - agi
+  - superintelligence
 status: catatan
 updated: 2026-07-07
 ---
