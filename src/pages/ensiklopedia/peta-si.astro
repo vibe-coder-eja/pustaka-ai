@@ -7,11 +7,11 @@ import { CATEGORIES, STATUS_LABELS, categoriesOfGroup, type TermStatus } from '.
 import { getTerms } from '../../lib/terms';
 import { indexUrl, termUrl } from '../../lib/ensiklopedia';
 import { jsonForScript } from '../../lib/json-script';
-import { SITE } from '../../lib/site';
+import { SITE, withBase } from '../../lib/site';
 import levelsData from '../../data/peta/levels.json';
 import { COLUMN_LABELS, FRONTIER_CELL, type AgiFramework, type Column } from '../../lib/agi-levels';
-import { buildGraph, layoutGraph } from '../../lib/graph';
-import { GROUPS, getCategory, type GroupId } from '../../lib/taxonomy';
+import { GRAPH_H, GRAPH_W, getConceptGraph } from '../../lib/concept-graph';
+import { GROUPS } from '../../lib/taxonomy';
 import pandanganData from '../../data/peta/pandangan.json';
 import { FORECAST_AXIS, POLICY_STANCE_LABELS, SOURCE_KIND_LABELS, forecastBar, yearToAxisPercent, type Pandangan } from '../../lib/pandangan';
 
@@ -61,47 +61,9 @@ const lvView = {
   columnLabels: COLUMN_LABELS
 };
 
-// Grafik konsep: simpul = entri yang punya hubungan, sisi = "istilah terkait".
-// Dua tata letak: "inti" (tanpa istilah perangkat lunak, tampilan awal) dan "penuh" (semua kelompok),
-// supaya titik-titik AI tidak tertekan ke satu sudut oleh puluhan istilah perangkat lunak.
-const graph = buildGraph(terms);
-const termBySlug = new Map(terms.map((term) => [term.slug, term]));
-const GRAPH_W = 1000;
-const GRAPH_H = 640;
-const groupOf = (slug: string) => getCategory(termBySlug.get(slug)!.category)!.group;
-const coreEdges = graph.edges.filter(([a, b]) => groupOf(a) !== 'perangkat-lunak' && groupOf(b) !== 'perangkat-lunak');
-const coreIds = [...new Set(coreEdges.flat())].sort();
-const toLayoutNode = (id: string) => ({ id, cluster: termBySlug.get(id)!.category });
-const layoutFull = layoutGraph(graph.connected.map(toLayoutNode), graph.edges, { width: GRAPH_W, height: GRAPH_H, iterations: 320, seed: 11 });
-const layoutCore = layoutGraph(coreIds.map(toLayoutNode), coreEdges, { width: GRAPH_W, height: GRAPH_H, iterations: 320, seed: 5 });
-const coreSet = new Set(coreIds);
-const initialPoint = (id: string) => layoutCore.get(id) ?? layoutFull.get(id)!;
-const neighbors = new Map<string, string[]>(graph.connected.map((id) => [id, []]));
-for (const [a, b] of graph.edges) { neighbors.get(a)!.push(b); neighbors.get(b)!.push(a); }
-const gnodes = graph.connected.map((id) => {
-  const term = termBySlug.get(id)!;
-  const category = getCategory(term.category)!;
-  const point = initialPoint(id);
-  const degree = graph.degree.get(id)!;
-  return {
-    id, title: term.title, summary: term.summary, href: termUrl(id),
-    categoryTitle: category.title, group: category.group,
-    x: point.x, y: point.y, r: Math.round(Math.min(15, 5 + 2 * Math.sqrt(degree)) * 10) / 10, degree,
-    off: !coreSet.has(id),
-    neighbors: neighbors.get(id)!.sort((x, y) => termBySlug.get(x)!.title.localeCompare(termBySlug.get(y)!.title, 'id'))
-  };
-});
-const groupCounts = Object.fromEntries(GROUPS.map((group) => [group.id, gnodes.filter((node) => node.group === group.id).length])) as Record<GroupId, number>;
-// Data klien dibuat ringkas: href diturunkan dari slug, nama kategori lewat tabel kecil, judul tetangga dari simpulnya.
-const graphView = gnodes.map(({ id, title, summary, group, neighbors: near }) => ({
-  id, title, summary, group,
-  cat: termBySlug.get(id)!.category,
-  aliases: termBySlug.get(id)!.aliases,
-  core: layoutCore.get(id) ?? null,
-  full: layoutFull.get(id)!,
-  // Hanya slug; judul tetangga diambil dari simpulnya sendiri di klien agar data tidak berulang.
-  neighbors: near
-}));
+// Grafik konsep: SVG awal dirender di sini; data interaktifnya disajikan terpisah di data/graf-konsep.json.
+const { graph, nodes: gnodes, termBySlug, coreSet, initialPoint, groupCounts } = await getConceptGraph();
+const graphDataUrl = withBase(import.meta.env.BASE_URL, 'data/graf-konsep.json');
 
 // Peta pandangan: perkiraan waktu, spektrum sikap, usulan kebijakan, survei.
 const pandangan = pandanganData as Pandangan;
@@ -394,7 +356,7 @@ const jumps = [
     </div>
 
     <div class="g-scroll" id="g-scroll" tabindex="0" role="region" aria-label="Grafik konsep. Geser ke samping untuk melihat bagian lain.">
-      <svg id="g-svg" class="g-svg" data-term-base={indexUrl()} viewBox={`0 0 ${GRAPH_W} ${GRAPH_H}`} role="img" aria-label="Jaringan hubungan antar istilah ensiklopedia. Versi teks tersedia di bawah grafik.">
+      <svg id="g-svg" class="g-svg" data-term-base={indexUrl()} data-graph-src={graphDataUrl} viewBox={`0 0 ${GRAPH_W} ${GRAPH_H}`} role="img" aria-label="Jaringan hubungan antar istilah ensiklopedia. Versi teks tersedia di bawah grafik.">
         <g class="g-edges">
           {graph.edges.map(([a, b]) => <line class={`g-edge${coreSet.has(a) && coreSet.has(b) ? '' : ' is-off'}`} data-a={a} data-b={b} x1={initialPoint(a).x} y1={initialPoint(a).y} x2={initialPoint(b).x} y2={initialPoint(b).y}></line>)}
         </g>
@@ -459,8 +421,6 @@ const jumps = [
   </section>
 
   <script is:inline id="lv-data" type="application/json" set:html={jsonForScript(lvView)}></script>
-  <script is:inline id="g-data" type="application/json" set:html={jsonForScript(graphView)}></script>
-  <script is:inline id="g-cats" type="application/json" set:html={jsonForScript(Object.fromEntries(CATEGORIES.map((category) => [category.slug, category.title])))}></script>
   <script>
     // Matriks tingkat kemampuan dan tingkat otonomi.
     interface Cell { label: string; contoh: string[]; tercapai: boolean }
@@ -507,25 +467,20 @@ const jumps = [
     }));
   </script>
   <script>
-    // Grafik konsep.
+    // Grafik konsep. SVG awal sudah dirender di server; data interaktifnya (ringkasan, tetangga,
+    // dua tata letak) dimuat dari berkas JSON terpisah saat grafik mendekati layar agar HTML tetap ringan.
     interface Pt { x: number; y: number }
     interface GNode { id: string; title: string; summary: string; group: string; cat: string; aliases: string[]; core: Pt | null; full: Pt; neighbors: string[] }
-    const gdata = JSON.parse(document.getElementById('g-data')!.textContent || '[]') as GNode[];
-    const gCats = JSON.parse(document.getElementById('g-cats')!.textContent || '{}') as Record<string, string>;
-    const gById = new Map(gdata.map((node) => [node.id, node]));
-    const gByTitle = new Map(gdata.flatMap((node) => [node.title, ...node.aliases].map((name) => [name.toLocaleLowerCase('id-ID'), node.id] as [string, string])));
+    interface GraphData { cats: Record<string, string>; nodes: GNode[] }
     const svg = document.getElementById('g-svg')!;
     const gScroll = document.getElementById('g-scroll')!;
     const gPanel = document.getElementById('g-detail')!;
     const gSearch = document.getElementById('g-search') as HTMLInputElement;
-    const termHref = (id: string) => `${svg.dataset.termBase}${id}/`;
-    document.getElementById('g-terms')!.append(...gdata.flatMap((node) => [node.title, ...node.aliases]).map((name) => { const option = document.createElement('option'); option.value = name; return option; }));
     const nodeEls = new Map([...svg.querySelectorAll<SVGGElement>('.g-node')].map((el) => [el.dataset.id!, el]));
     const edgeEls = [...svg.querySelectorAll<SVGLineElement>('.g-edge')];
     const gChips = [...document.querySelectorAll<HTMLButtonElement>('.g-chip')];
-    const enabled = new Set(gChips.filter((chip) => chip.getAttribute('aria-pressed') === 'true').map((chip) => chip.dataset.group!));
     const gReduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let selected = '';
+    const termHref = (id: string) => `${svg.dataset.termBase}${id}/`;
 
     const el = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string, className?: string) => {
       const node = document.createElement(tag);
@@ -534,81 +489,132 @@ const jumps = [
       return node;
     };
 
-    function focusOn(id: string) {
-      const near = new Set<string>(id ? [id, ...gById.get(id)!.neighbors] : []);
-      svg.classList.toggle('has-focus', Boolean(id));
-      nodeEls.forEach((node, key) => { node.classList.toggle('is-near', near.has(key)); node.classList.toggle('is-selected', key === id); });
-      edgeEls.forEach((edge) => edge.classList.toggle('is-near', Boolean(id) && (edge.dataset.a === id || edge.dataset.b === id)));
-    }
+    let loading: Promise<void> | null = null;
+    let ready = false;
+    let pendingId = '';
+    let pendingGroup = '';
+    const loadGraph = () => {
+      loading ??= fetch(svg.dataset.graphSrc!)
+        .then((response) => { if (!response.ok) throw new Error(`HTTP ${response.status}`); return response.json() as Promise<GraphData>; })
+        .then(initGraph)
+        .catch(() => {
+          loading = null;
+          gPanel.replaceChildren(el('p', 'Data grafik gagal dimuat. Muat ulang halaman untuk mencoba lagi; daftar hubungan versi teks di bawah grafik tetap bisa dipakai.', 'tl-detail-empty'));
+        });
+      return loading;
+    };
 
-    // Tampilan awal memakai tata letak "inti"; menyalakan perangkat lunak beralih ke tata letak "penuh".
-    const pointOf = (id: string): Pt | null => { const node = gById.get(id)!; return enabled.has('perangkat-lunak') ? node.full : node.core; };
-
-    function applyGroups() {
-      let visible = 0;
-      nodeEls.forEach((node, id) => {
-        const point = pointOf(id);
-        const on = enabled.has(gById.get(id)!.group) && point !== null;
-        node.classList.toggle('is-off', !on);
-        if (on && point) { node.setAttribute('transform', `translate(${point.x} ${point.y})`); visible++; }
-      });
-      edgeEls.forEach((edge) => {
-        const from = pointOf(edge.dataset.a!); const to = pointOf(edge.dataset.b!);
-        const on = enabled.has(gById.get(edge.dataset.a!)!.group) && enabled.has(gById.get(edge.dataset.b!)!.group) && from !== null && to !== null;
-        edge.classList.toggle('is-off', !on);
-        if (on && from && to) { edge.setAttribute('x1', String(from.x)); edge.setAttribute('y1', String(from.y)); edge.setAttribute('x2', String(to.x)); edge.setAttribute('y2', String(to.y)); }
-      });
-      svg.classList.toggle('labels-all', visible <= 60);
-      gChips.forEach((chip) => chip.setAttribute('aria-pressed', String(enabled.has(chip.dataset.group!))));
-    }
-
-    function renderPanel(node: GNode) {
-      gPanel.replaceChildren(
-        el('p', gCats[node.cat] ?? '', 'tl-meta'),
-        el('h4', node.title),
-        el('p', node.summary)
-      );
-      const open = el('p'); const link = el('a', 'Buka halaman entri'); link.href = termHref(node.id); open.append(link); gPanel.append(open);
-      gPanel.append(el('p', `Terhubung dengan ${node.neighbors.length} istilah:`, 'tl-actors'));
-      const list = el('ul', undefined, 'chips');
-      for (const neighborId of node.neighbors) {
-        const li = el('li'); const button = el('button', gById.get(neighborId)!.title, 'chip-button'); button.type = 'button';
-        button.addEventListener('click', () => select(neighborId));
-        li.append(button); list.append(li);
-      }
-      gPanel.append(list);
-    }
-
-    function select(id: string) {
-      const node = gById.get(id);
-      if (!node) return;
-      if (!enabled.has(node.group)) enabled.add(node.group);
-      if (pointOf(id) === null) enabled.add('perangkat-lunak');
-      applyGroups();
-      selected = id;
-      focusOn(id);
-      renderPanel(node);
-      const target = nodeEls.get(id)!;
-      const box = target.getBoundingClientRect(); const area = gScroll.getBoundingClientRect();
-      gScroll.scrollTo({ left: Math.max(0, gScroll.scrollLeft + (box.left - area.left) - gScroll.clientWidth / 2), behavior: gReduce ? 'auto' : 'smooth' });
-    }
-
-    nodeEls.forEach((node, id) => {
-      node.addEventListener('click', () => select(id));
-      node.addEventListener('pointerenter', (event) => { if ((event as PointerEvent).pointerType === 'mouse') focusOn(id); });
-      node.addEventListener('pointerleave', (event) => { if ((event as PointerEvent).pointerType === 'mouse') focusOn(selected); });
+    // Sebelum data siap: klik pada titik diingat lalu dijalankan setelah data dimuat.
+    svg.addEventListener('click', (event) => {
+      if (ready) return;
+      const node = (event.target as Element).closest<SVGGElement>('.g-node');
+      if (node) pendingId = node.dataset.id!;
+      loadGraph();
     });
+    gSearch.addEventListener('focus', () => { loadGraph(); }, { once: true });
+    // Tombol kelompok (mouse maupun keyboard) sebelum data siap: diingat lalu diterapkan setelah dimuat.
     gChips.forEach((chip) => chip.addEventListener('click', () => {
-      const group = chip.dataset.group!;
-      if (enabled.has(group)) enabled.delete(group); else enabled.add(group);
-      applyGroups();
-      if (selected && !enabled.has(gById.get(selected)!.group)) { selected = ''; focusOn(''); gPanel.replaceChildren(el('p', 'Pilih sebuah titik atau cari istilah untuk melihat ringkasannya dan istilah yang terhubung.', 'tl-detail-empty')); }
+      if (ready) return;
+      pendingGroup = chip.dataset.group!;
+      loadGraph();
     }));
-    gSearch.addEventListener('input', () => {
-      const id = gByTitle.get(gSearch.value.trim().toLocaleLowerCase('id-ID'));
-      if (id) select(id);
-    });
-    applyGroups();
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) { observer.disconnect(); loadGraph(); }
+      }, { rootMargin: '800px 0px' });
+      observer.observe(gScroll);
+    } else {
+      loadGraph();
+    }
+
+    function initGraph({ cats: gCats, nodes: gdata }: GraphData) {
+      const gById = new Map(gdata.map((node) => [node.id, node]));
+      const gByTitle = new Map(gdata.flatMap((node) => [node.title, ...node.aliases].map((name) => [name.toLocaleLowerCase('id-ID'), node.id] as [string, string])));
+      document.getElementById('g-terms')!.append(...gdata.flatMap((node) => [node.title, ...node.aliases]).map((name) => { const option = document.createElement('option'); option.value = name; return option; }));
+      const enabled = new Set(gChips.filter((chip) => chip.getAttribute('aria-pressed') === 'true').map((chip) => chip.dataset.group!));
+      let selected = '';
+
+      function focusOn(id: string) {
+        const near = new Set<string>(id ? [id, ...gById.get(id)!.neighbors] : []);
+        svg.classList.toggle('has-focus', Boolean(id));
+        nodeEls.forEach((node, key) => { node.classList.toggle('is-near', near.has(key)); node.classList.toggle('is-selected', key === id); });
+        edgeEls.forEach((edge) => edge.classList.toggle('is-near', Boolean(id) && (edge.dataset.a === id || edge.dataset.b === id)));
+      }
+
+      // Tampilan awal memakai tata letak "inti"; menyalakan perangkat lunak beralih ke tata letak "penuh".
+      const pointOf = (id: string): Pt | null => { const node = gById.get(id)!; return enabled.has('perangkat-lunak') ? node.full : node.core; };
+
+      function applyGroups() {
+        let visible = 0;
+        nodeEls.forEach((node, id) => {
+          const point = pointOf(id);
+          const on = enabled.has(gById.get(id)!.group) && point !== null;
+          node.classList.toggle('is-off', !on);
+          if (on && point) { node.setAttribute('transform', `translate(${point.x} ${point.y})`); visible++; }
+        });
+        edgeEls.forEach((edge) => {
+          const from = pointOf(edge.dataset.a!); const to = pointOf(edge.dataset.b!);
+          const on = enabled.has(gById.get(edge.dataset.a!)!.group) && enabled.has(gById.get(edge.dataset.b!)!.group) && from !== null && to !== null;
+          edge.classList.toggle('is-off', !on);
+          if (on && from && to) { edge.setAttribute('x1', String(from.x)); edge.setAttribute('y1', String(from.y)); edge.setAttribute('x2', String(to.x)); edge.setAttribute('y2', String(to.y)); }
+        });
+        svg.classList.toggle('labels-all', visible <= 60);
+        gChips.forEach((chip) => chip.setAttribute('aria-pressed', String(enabled.has(chip.dataset.group!))));
+      }
+
+      function renderPanel(node: GNode) {
+        gPanel.replaceChildren(
+          el('p', gCats[node.cat] ?? '', 'tl-meta'),
+          el('h4', node.title),
+          el('p', node.summary)
+        );
+        const open = el('p'); const link = el('a', 'Buka halaman entri'); link.href = termHref(node.id); open.append(link); gPanel.append(open);
+        gPanel.append(el('p', `Terhubung dengan ${node.neighbors.length} istilah:`, 'tl-actors'));
+        const list = el('ul', undefined, 'chips');
+        for (const neighborId of node.neighbors) {
+          const li = el('li'); const button = el('button', gById.get(neighborId)!.title, 'chip-button'); button.type = 'button';
+          button.addEventListener('click', () => select(neighborId));
+          li.append(button); list.append(li);
+        }
+        gPanel.append(list);
+      }
+
+      function select(id: string) {
+        const node = gById.get(id);
+        if (!node) return;
+        if (!enabled.has(node.group)) enabled.add(node.group);
+        if (pointOf(id) === null) enabled.add('perangkat-lunak');
+        applyGroups();
+        selected = id;
+        focusOn(id);
+        renderPanel(node);
+        const target = nodeEls.get(id)!;
+        const box = target.getBoundingClientRect(); const area = gScroll.getBoundingClientRect();
+        gScroll.scrollTo({ left: Math.max(0, gScroll.scrollLeft + (box.left - area.left) - gScroll.clientWidth / 2), behavior: gReduce ? 'auto' : 'smooth' });
+      }
+
+      nodeEls.forEach((node, id) => {
+        node.addEventListener('click', () => select(id));
+        node.addEventListener('pointerenter', (event) => { if ((event as PointerEvent).pointerType === 'mouse') focusOn(id); });
+        node.addEventListener('pointerleave', (event) => { if ((event as PointerEvent).pointerType === 'mouse') focusOn(selected); });
+      });
+      function toggleGroup(group: string) {
+        if (enabled.has(group)) enabled.delete(group); else enabled.add(group);
+        applyGroups();
+        if (selected && !enabled.has(gById.get(selected)!.group)) { selected = ''; focusOn(''); gPanel.replaceChildren(el('p', 'Pilih sebuah titik atau cari istilah untuk melihat ringkasannya dan istilah yang terhubung.', 'tl-detail-empty')); }
+      }
+      gChips.forEach((chip) => chip.addEventListener('click', () => toggleGroup(chip.dataset.group!)));
+      const searchNow = () => {
+        const id = gByTitle.get(gSearch.value.trim().toLocaleLowerCase('id-ID'));
+        if (id) select(id);
+      };
+      gSearch.addEventListener('input', searchNow);
+      applyGroups();
+      ready = true;
+      if (pendingGroup) toggleGroup(pendingGroup);
+      if (pendingId) select(pendingId);
+      else if (gSearch.value) searchNow();
+    }
   </script>
   <script is:inline id="tl-data" type="application/json" set:html={jsonForScript(view)}></script>
   <script>
