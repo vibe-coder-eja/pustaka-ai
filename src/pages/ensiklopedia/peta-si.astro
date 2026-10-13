@@ -285,7 +285,7 @@ const jumps = [
         </li>
       ))}
     </ol>
-    <p class="lv-note">{pandangan.sikap.belumDitempatkan}</p>
+    {pandangan.sikap.belumDitempatkan && <p class="lv-note">{pandangan.sikap.belumDitempatkan}</p>}
 
     <h3 class="sub-title">3. Usulan kebijakan</h3>
     <p class="peta-lede">{pandangan.kebijakan.catatan}</p>
@@ -325,7 +325,7 @@ const jumps = [
     <h4 class="mini-title">{munk.judul}</h4>
     <p class="peta-lede">{munk.waktu}. Pihak pro: {munk.pro.join(' dan ')}. Pihak kontra: {munk.kontra.join(' dan ')}.</p>
     <div class="mk-bars">
-      {([['Sebelum debat', munk.sebelum], ['Sesudah debat (hitungan)', munk.sesudah]] as const).map(([label, vote]) => (
+      {([['Sebelum debat', munk.sebelum], ['Sesudah debat', munk.sesudah]] as const).map(([label, vote]) => (
         <div class="mk-row">
           <span class="mk-label">{label}</span>
           <span class="mk-bar" role="img" aria-label={`${label}: ${vote.pro}% setuju ada ancaman eksistensial, ${vote.kontra}% tidak setuju`}>

@@ -72,7 +72,7 @@
       "dari": 2030,
       "sampai": 2035,
       "label": "5–10 tahun lagi (≈ 2030–2035)",
-      "ringkasan": "Dalam taklimat di kantor DeepMind London ia mengatakan AGI akan mulai muncul dalam lima sampai sepuluh tahun. Rentang tahun pada grafik dihitung dari tanggal pernyataan. Ia juga menekankan masih banyak riset yang perlu dilakukan.",
+      "ringkasan": "Dalam taklimat di kantor DeepMind London ia mengatakan AGI akan mulai muncul dalam lima sampai sepuluh tahun. Rentang tahun pada grafik dihitung dari tanggal pernyataan. Ia juga menekankan masih banyak riset yang perlu dilakukan. Pada Juli 2026 ia menulis bahwa AGI “probably only a few short years away”, tanpa menyebut tahun (lihat pernyataan tanpa angka).",
       "sumber": { "title": "NBC News (turunan liputan CNBC), “AI that can match humans at any task will be here in five to 10 years, Google DeepMind CEO says” (Maret 2025)", "url": "https://www.nbcnews.com/business/business-news/ai-can-match-humans-task-will-five-10-years-google-deepmind-ceo-says-rcna196771", "jenis": "laporan" }
     },
     {
@@ -88,28 +88,28 @@
       "sumber": { "title": "Fortune (28 April 2025), liputan wawancara Hinton dengan CBS", "url": "https://fortune.com/article/geoffrey-hinton-ai-godfather-tiger-cub", "jenis": "laporan" }
     },
     {
-      "id": "kurzweil-2024-06-a",
+      "id": "kurzweil-2024-04-a",
       "tokoh": "Ray Kurzweil",
       "lembaga": "Penulis dan futuris",
-      "tanggal": "14 Juni 2024",
-      "definisi": "AGI sebagai AI yang lulus uji Turing yang sahih (prediksinya sejak 1999).",
+      "tanggal": "April 2024",
+      "definisi": "AGI (artificial general intelligence). Ia pertama kali memperkirakan 2029 pada 1999.",
       "jenis": "titik",
       "dari": 2029,
-      "label": "2029: lulus uji Turing / AGI",
-      "ringkasan": "Mempertahankan prediksi lamanya bahwa AI mencapai tingkat manusia pada 2029, dan mengatakan banyak orang kini menganggapnya bisa lebih cepat.",
-      "sumber": { "title": "Science Friday, “Ray Kurzweil on The Singularity Is Nearer” (14 Juni 2024)", "url": "https://www.sciencefriday.com/segments/ray-kurzweil-the-singularity-is-nearer-book/", "jenis": "laporan" }
+      "label": "2029: AGI",
+      "ringkasan": "Di TED2024 ia mengingat perkiraannya pada 1999 bahwa AGI tiba pada 2029, yang saat itu disambut skeptis. Kini, katanya, banyak orang menilai AGI datang sangat cepat; ia sendiri tetap pada “lima tahun” lagi.",
+      "sumber": { "title": "Ray Kurzweil, “The last 6 decades of AI — and what comes next”, transkrip TED2024 (April 2024)", "url": "https://www.ted.com/talks/ray_kurzweil_the_last_6_decades_of_ai_and_what_comes_next/transcript", "jenis": "primer" }
     },
     {
-      "id": "kurzweil-2024-06-b",
+      "id": "kurzweil-2024-04-b",
       "tokoh": "Ray Kurzweil",
       "lembaga": "Penulis dan futuris",
-      "tanggal": "14 Juni 2024",
+      "tanggal": "April 2024",
       "definisi": "Singularitas: manusia menyatu dengan kecerdasan mesin. Ini definisi yang berbeda dari AGI.",
       "jenis": "titik",
       "dari": 2045,
       "label": "2045: singularitas",
-      "ringkasan": "Tetap pada prediksi singularitas 2045, ketika otak terhubung nirkabel ke komputasi awan dan manusia menyatu dengan mesin.",
-      "sumber": { "title": "Science Friday, “Ray Kurzweil on The Singularity Is Nearer” (14 Juni 2024)", "url": "https://www.sciencefriday.com/segments/ray-kurzweil-the-singularity-is-nearer-book/", "jenis": "laporan" }
+      "ringkasan": "Di TED2024 ia mengatakan pada 2030-an nanobot akan menghubungkan otak ke komputasi awan dan kecerdasan akan berlipat sejuta kali pada 2045, “That is the singularity.”",
+      "sumber": { "title": "Ray Kurzweil, “The last 6 decades of AI — and what comes next”, transkrip TED2024 (April 2024)", "url": "https://www.ted.com/talks/ray_kurzweil_the_last_6_decades_of_ai_and_what_comes_next/transcript", "jenis": "primer" }
     },
     {
       "id": "bengio-2025-10",
@@ -153,6 +153,12 @@
   ],
   "tanpaAngka": [
     {
+      "tokoh": "Demis Hassabis",
+      "tanggal": "14 Juli 2026",
+      "ringkasan": "Menulis bahwa AGI, yang ia definisikan sebagai sistem dengan semua kemampuan kognitif otak manusia, “probably only a few short years away”, dan bahwa kita berada di “foothills of the singularity”. Ia tidak menyebut tahun.",
+      "sumber": { "title": "Demis Hassabis, “A Framework for Frontier AI and the Dawning of a New Age” (artikel di X, 14 Juli 2026)", "url": "https://x.com/demishassabis/article/2076957440109625718", "jenis": "primer" }
+    },
+    {
       "tokoh": "Yann LeCun",
       "tanggal": "22 Januari 2026",
       "ringkasan": "AI setingkat manusia akan datang, tetapi tidak dalam satu atau dua tahun, dan tidak akan dibangun hanya di atas model bahasa besar. Menurutnya masih dibutuhkan terobosan konseptual, terutama model dunia. Ia tidak menyebut tahun.",
@@ -192,15 +198,15 @@
         "tokoh": [
           {
             "nama": "Geoffrey Hinton",
-            "tanggal": "April 2025",
-            "pernyataan": "Menilai peluang AI mengambil alih lebih dari 1% dan kurang dari 99%. Ia setuju pada kisaran 10–20% yang disebut orang lain, tetapi menyebutnya “tebakan liar”. Ia mengkritik perusahaan besar yang melobi menentang regulasi dan meminta publik menekan pemerintah.",
-            "sumber": { "title": "Fortune, 28 April 2025", "url": "https://fortune.com/article/geoffrey-hinton-ai-godfather-tiger-cub", "jenis": "laporan" }
+            "tanggal": "Desember 2024",
+            "pernyataan": "Dalam pidato jamuan Nobel ia menyebut ancaman eksistensial jangka panjang saat manusia menciptakan makhluk digital yang lebih cerdas, “We have no idea whether we can stay in control”, dan menilai perusahaan yang mengejar laba jangka pendek tidak akan menomorsatukan keselamatan. Pada April 2025 ia menaksir risiko AI mengambil alih kendali 10–20% (laporan CBS).",
+            "sumber": { "title": "Geoffrey Hinton, pidato jamuan Nobel Fisika (10 Desember 2024), NobelPrize.org", "url": "https://www.nobelprize.org/prizes/physics/2024/hinton/speech/", "jenis": "primer" }
           },
           {
             "nama": "Yoshua Bengio",
-            "tanggal": "Oktober 2025",
-            "pernyataan": "Menyatakan peluang kecil sekalipun atas hasil katastrofik, seperti kepunahan atau rusaknya demokrasi, tidak dapat diterima. Ia meminta pihak ketiga independen memeriksa metode keselamatan perusahaan AI dan mendirikan LawZero untuk mengembangkan AI “non-agentik”.",
-            "sumber": { "title": "Fortune, terbit 1 Oktober 2025", "url": "https://www.fortune.com/article/ai-godfather-warning-humanity-risks-extinction-hyperintelligent-machines/", "jenis": "laporan" }
+            "tanggal": "September 2026",
+            "pernyataan": "Menuntut “far stronger regulatory oversight to restrict potentially dangerous technologies until we have sufficiently strong safety guarantees”, evaluasi sebelum rilis yang lebih andal, mekanisme akuntabilitas bagi pengembang AI, dan cara melatih AI yang aman sejak rancangan, arah yang ia kerjakan lewat LawZero.",
+            "sumber": { "title": "Yoshua Bengio, “AI Is at a Turning Point”, TIME (9 September 2026)", "url": "https://time.com/article/2026/09/09/ai-is-at-a-turning-point/", "jenis": "primer" }
           }
         ]
       },
@@ -216,9 +222,9 @@
           },
           {
             "nama": "Demis Hassabis",
-            "tanggal": "2023 dan Juli 2026",
-            "pernyataan": "Pada 2023 ia menyerukan agar risiko AI ditanggapi seserius tantangan global lain seperti perubahan iklim. Laporan Juli 2026 menyebut ia menyerukan pengawasan pemerintah atas AI. Rincian usulannya berbeda antar-laporan dan belum kami cek ke sumber aslinya.",
-            "sumber": { "title": "OODA Loop, ringkasan liputan 2023", "url": "https://oodaloop.com/briefs/technology/ai-risk-must-be-treated-as-seriously-as-climate-crisis-says-google-deepmind-chief", "jenis": "laporan" }
+            "tanggal": "Juli 2026",
+            "pernyataan": "Menyebut “cautious optimism” sebagai strategi yang tepat. Ia menulis bahwa tindakan mendesak diperlukan untuk risiko siber, nuklir, dan biologi, serta “robust safeguards to maintain control of increasingly agentic, recursively self-improving systems”. Pada 2023 ia ikut menandatangani pernyataan CAIS tentang risiko kepunahan akibat AI.",
+            "sumber": { "title": "Demis Hassabis, “A Framework for Frontier AI and the Dawning of a New Age” (artikel di X, 14 Juli 2026)", "url": "https://x.com/demishassabis/article/2076957440109625718", "jenis": "primer" }
           }
         ]
       },
@@ -229,8 +235,14 @@
           {
             "nama": "Sam Altman",
             "tanggal": "10 Juni 2025",
-            "pernyataan": "Menulis bahwa lepas landas sudah dimulai dan umat manusia dekat dengan superintelligence digital, tetapi menggambarkan perubahannya sebagai “lembut” dan bertahap. Rincian sikapnya terhadap risiko tidak dikutip di sini dan menyusul setelah dibaca ke teks lengkap.",
+            "pernyataan": "Menulis bahwa lepas landas sudah dimulai tetapi perubahannya “lembut”. Masalah keselamatan harus diselesaikan secara teknis dan sosial: pecahkan masalah alignment, lalu jadikan superintelligence murah, tersedia luas, dan “not too concentrated with any person, company, or country”. Pada 2023 ia ikut menandatangani pernyataan CAIS.",
             "sumber": { "title": "“The Gentle Singularity”, 10 Juni 2025", "url": "https://blog.samaltman.com/the-gentle-singularity", "jenis": "primer" }
+          },
+          {
+            "nama": "Ray Kurzweil",
+            "tanggal": "Mei 2023",
+            "pernyataan": "Menolak menandatangani seruan jeda pengembangan AI: kriterianya terlalu kabur, pihak yang berhenti bisa tertinggal, dan jeda menunda manfaat bagi kesehatan, pendidikan, dan energi. Ia menyebut keselamatan “a critical issue” dan mengusulkan cara yang lebih tertarget untuk menghindari “the real perils”.",
+            "sumber": { "title": "Ray Kurzweil, “A Note From Ray Kurzweil on the Recent Call to Pause Work on AI More Powerful Than GPT-4”, Singularity Hub (5 Mei 2023)", "url": "https://singularityhub.com/2023/05/05/a-note-from-ray-kurzweil-on-the-recent-call-to-pause-work-on-ai-more-powerful-than-gpt-4/", "jenis": "primer" }
           }
         ]
       },
@@ -241,8 +253,8 @@
           {
             "nama": "Yann LeCun",
             "tanggal": "Juni 2023",
-            "pernyataan": "Berada di pihak kontra dalam Munk Debate bahwa riset dan pengembangan AI merupakan ancaman eksistensial. Pada 2026 ia mengatakan model bahasa besar tidak akan sampai ke AI setingkat manusia dan kini mengembangkan model dunia.",
-            "sumber": { "title": "The Hub, 28 Juni 2023", "url": "https://thehub.ca/2023/06/28/most-audience-members-unwilling-to-change-their-minds-about-the-threats-posed-by-ai-at-the-munk-debates/", "jenis": "laporan" }
+            "pernyataan": "Berada di pihak kontra dalam Munk Debate atas mosi bahwa riset dan pengembangan AI merupakan ancaman eksistensial. Pada 2026 ia mengatakan model bahasa besar tidak akan sampai ke AI setingkat manusia dan kini mengembangkan model dunia (laporan MIT Technology Review).",
+            "sumber": { "title": "Munk Debates, “Artificial Intelligence Debate” (22 Juni 2023), halaman hasil resmi", "url": "https://munkdebates.com/debates/artificial-intelligence/", "jenis": "primer" }
           },
           {
             "nama": "Arvind Narayanan dan Sayash Kapoor",
@@ -253,11 +265,11 @@
         ]
       }
     ],
-    "belumDitempatkan": "Ray Kurzweil belum ditempatkan di spektrum ini karena kami belum membaca pernyataan primernya tentang risiko. Ia akan ditambahkan setelah sumbernya diverifikasi."
+    "belumDitempatkan": ""
   },
   "kebijakan": {
     "catatan": "Matriks hanya mengisi sel yang pernah kami baca langsung dari sumbernya. Sel kosong berarti “belum diperiksa”, bukan “menolak” atau “tidak peduli”. Kolom tokoh lain akan ditambah seiring verifikasi.",
-    "kolom": ["Dario Amodei", "Eliezer Yudkowsky", "Narayanan dan Kapoor", "Yoshua Bengio"],
+    "kolom": ["Dario Amodei", "Eliezer Yudkowsky", "Narayanan dan Kapoor", "Yoshua Bengio", "Demis Hassabis"],
     "usulan": [
       {
         "id": "transparansi",
@@ -266,7 +278,8 @@
         "posisi": [
           { "tokoh": "Dario Amodei", "sikap": "mendukung", "ringkasan": "Menjadikannya titik awal yang disukai Anthropic; ia menyebut SB 53 California dan RAISE Act New York.", "sumber": { "title": "The Adolescence of Technology", "url": "https://www.darioamodei.com/essay/the-adolescence-of-technology", "jenis": "primer" } },
           { "tokoh": "Narayanan dan Kapoor", "sikap": "mendukung", "ringkasan": "Memasukkan transparansi dari pengembang berisiko tinggi sebagai prasyarat pertahanan masyarakat.", "sumber": { "title": "AI as Normal Technology", "url": "https://www.knightcolumbia.org/content/ai-as-normal-technology", "jenis": "primer" } },
-          { "tokoh": "Yoshua Bengio", "sikap": "mendukung", "ringkasan": "Menghendaki pihak ketiga independen memeriksa metode keselamatan perusahaan AI.", "sumber": { "title": "Fortune, 1 Oktober 2025", "url": "https://www.fortune.com/article/ai-godfather-warning-humanity-risks-extinction-hyperintelligent-machines/", "jenis": "laporan" } }
+          { "tokoh": "Yoshua Bengio", "sikap": "mendukung", "ringkasan": "Menghendaki evaluasi sebelum rilis yang lebih andal, pengawasan regulasi yang jauh lebih kuat, dan mekanisme akuntabilitas bagi pengembang AI.", "sumber": { "title": "Yoshua Bengio, “AI Is at a Turning Point”, TIME (9 September 2026)", "url": "https://time.com/article/2026/09/09/ai-is-at-a-turning-point/", "jenis": "primer" } },
+          { "tokoh": "Demis Hassabis", "sikap": "bersyarat", "ringkasan": "Mengusulkan badan standar bergaya FINRA yang dipimpin AS: lab menyerahkan model secara sukarela hingga 30 hari sebelum rilis, dan pengujian bisa diwajibkan setelah protokolnya terbukti andal. Ia juga mendorong praktik seperti menerbitkan model card.", "sumber": { "title": "Demis Hassabis, “A Framework for Frontier AI and the Dawning of a New Age” (artikel di X, 14 Juli 2026)", "url": "https://x.com/demishassabis/article/2076957440109625718", "jenis": "primer" } }
         ]
       },
       {
@@ -274,7 +287,7 @@
         "judul": "Membatasi akses ke chip dan model",
         "penjelasan": "Kontrol ekspor, perizinan, pelacakan penjualan GPU, atau larangan merilis model terbuka.",
         "posisi": [
-          { "tokoh": "Dario Amodei", "sikap": "bersyarat", "ringkasan": "Mendukung larangan menjual chip, perkakas pembuat chip, dan pusat data canggih kepada pemerintah Tiongkok. Pandangannya soal model terbuka belum kami baca.", "sumber": { "title": "The Adolescence of Technology", "url": "https://www.darioamodei.com/essay/the-adolescence-of-technology", "jenis": "primer" } },
+          { "tokoh": "Dario Amodei", "sikap": "bersyarat", "ringkasan": "Mendukung larangan menjual chip, perkakas pembuat chip, dan pusat data canggih kepada pemerintah Tiongkok. Esai ini tidak membahas model terbuka.", "sumber": { "title": "The Adolescence of Technology", "url": "https://www.darioamodei.com/essay/the-adolescence-of-technology", "jenis": "primer" } },
           { "tokoh": "Eliezer Yudkowsky", "sikap": "mendukung", "ringkasan": "Menuntut pelacakan penjualan GPU dan batas komputasi pelatihan yang diturunkan dari waktu ke waktu.", "sumber": { "title": "TIME, 29 Maret 2023", "url": "https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/", "jenis": "primer" } },
           { "tokoh": "Narayanan dan Kapoor", "sikap": "menolak", "ringkasan": "Menilai pendekatan nonproliferasi sulit ditegakkan dan menciptakan titik kegagalan tunggal; menurut mereka sebagian besar langkah itu mengurangi ketahanan.", "sumber": { "title": "AI as Normal Technology", "url": "https://www.knightcolumbia.org/content/ai-as-normal-technology", "jenis": "primer" } }
         ]
@@ -285,7 +298,9 @@
         "penjelasan": "Menghentikan sementara atau tanpa batas waktu pelatihan model berskala frontier.",
         "posisi": [
           { "tokoh": "Eliezer Yudkowsky", "sikap": "mendukung", "ringkasan": "Menuntut moratorium tanpa batas waktu di seluruh dunia, tanpa pengecualian bagi pemerintah atau militer.", "sumber": { "title": "TIME, 29 Maret 2023", "url": "https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/", "jenis": "primer" } },
-          { "tokoh": "Narayanan dan Kapoor", "sikap": "menolak", "ringkasan": "Menilai langkah drastis yang bertumpu pada superintelligence tak terkendali bisa memperburuk keadaan bila AI ternyata teknologi biasa.", "sumber": { "title": "AI as Normal Technology", "url": "https://www.knightcolumbia.org/content/ai-as-normal-technology", "jenis": "primer" } }
+          { "tokoh": "Narayanan dan Kapoor", "sikap": "menolak", "ringkasan": "Menilai langkah drastis yang bertumpu pada superintelligence tak terkendali bisa memperburuk keadaan bila AI ternyata teknologi biasa.", "sumber": { "title": "AI as Normal Technology", "url": "https://www.knightcolumbia.org/content/ai-as-normal-technology", "jenis": "primer" } },
+          { "tokoh": "Yoshua Bengio", "sikap": "bersyarat", "ringkasan": "Meminta teknologi yang berpotensi berbahaya dibatasi sampai ada jaminan keselamatan yang cukup kuat; ini pembatasan bersyarat, bukan moratorium menyeluruh.", "sumber": { "title": "Yoshua Bengio, “AI Is at a Turning Point”, TIME (9 September 2026)", "url": "https://time.com/article/2026/09/09/ai-is-at-a-turning-point/", "jenis": "primer" } },
+          { "tokoh": "Demis Hassabis", "sikap": "bersyarat", "ringkasan": "Badan standar yang ia usulkan dapat diperketat bila keadaan menuntut, termasuk mengoordinasikan perlambatan pengembangan di antara lab frontier bila dianggap perlu.", "sumber": { "title": "Demis Hassabis, “A Framework for Frontier AI and the Dawning of a New Age” (artikel di X, 14 Juli 2026)", "url": "https://x.com/demishassabis/article/2076957440109625718", "jenis": "primer" } }
         ]
       },
       {
@@ -295,7 +310,8 @@
         "posisi": [
           { "tokoh": "Dario Amodei", "sikap": "mendukung", "ringkasan": "Mengusulkan tabu internasional terhadap penyalahgunaan terburuk, seperti pengawasan totaliter; sebagian bisa diperlakukan sebagai kejahatan terhadap kemanusiaan.", "sumber": { "title": "The Adolescence of Technology", "url": "https://www.darioamodei.com/essay/the-adolescence-of-technology", "jenis": "primer" } },
           { "tokoh": "Eliezer Yudkowsky", "sikap": "mendukung", "ringkasan": "Menuntut perjanjian multinasional agar kegiatan terlarang tidak pindah ke negara lain.", "sumber": { "title": "TIME, 29 Maret 2023", "url": "https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/", "jenis": "primer" } },
-          { "tokoh": "Narayanan dan Kapoor", "sikap": "mendukung", "ringkasan": "Menyebut kerja sama internasional sebagai bagian prasyarat pertahanan.", "sumber": { "title": "AI as Normal Technology", "url": "https://www.knightcolumbia.org/content/ai-as-normal-technology", "jenis": "primer" } }
+          { "tokoh": "Narayanan dan Kapoor", "sikap": "mendukung", "ringkasan": "Menyebut kerja sama internasional sebagai bagian prasyarat pertahanan.", "sumber": { "title": "AI as Normal Technology", "url": "https://www.knightcolumbia.org/content/ai-as-normal-technology", "jenis": "primer" } },
+          { "tokoh": "Demis Hassabis", "sikap": "mendukung", "ringkasan": "Menyerukan kebijakan yang “fosters international collaboration on key safety issues”; kerangka yang ia usulkan dapat berlaku untuk model frontier dari negara mana pun.", "sumber": { "title": "Demis Hassabis, “A Framework for Frontier AI and the Dawning of a New Age” (artikel di X, 14 Juli 2026)", "url": "https://x.com/demishassabis/article/2076957440109625718", "jenis": "primer" } }
         ]
       },
       {
@@ -331,13 +347,13 @@
     },
     "munk": {
       "judul": "Munk Debate: apakah riset dan pengembangan AI merupakan ancaman eksistensial?",
-      "waktu": "Juni 2023, Roy Thomson Hall, Toronto (satu laporan menyebut 22 Juni)",
+      "waktu": "22 Juni 2023, Roy Thomson Hall, Toronto",
       "pro": ["Yoshua Bengio", "Max Tegmark"],
       "kontra": ["Yann LeCun", "Melanie Mitchell"],
       "sebelum": { "pro": 67, "kontra": 33 },
       "sesudah": { "pro": 64, "kontra": 36 },
-      "catatan": "Angka “sesudah” adalah hitungan dari laporan bahwa 3% penonton berpindah pihak; sumber lain melaporkan selisih yang sedikit berbeda dan kami tidak menemukan angka resmi dari penyelenggara. Pemenang ditentukan dari pergeseran suara, sehingga pihak kontra dinyatakan menang walau mayoritas penonton tetap di pihak pro.",
-      "sumber": { "title": "The Hub, 28 Juni 2023", "url": "https://thehub.ca/2023/06/28/most-audience-members-unwilling-to-change-their-minds-about-the-threats-posed-by-ai-at-the-munk-debates/", "jenis": "laporan" }
+      "catatan": "Angka sebelum dan sesudah debat berasal dari halaman hasil resmi Munk Debates, dengan pergeseran −3%. Pemenang ditentukan dari pergeseran suara, sehingga pihak kontra dinyatakan menang walau mayoritas penonton tetap di pihak pro.",
+      "sumber": { "title": "Munk Debates, “Artificial Intelligence Debate” (22 Juni 2023), halaman hasil resmi", "url": "https://munkdebates.com/debates/artificial-intelligence/", "jenis": "primer" }
     }
   }
 }
