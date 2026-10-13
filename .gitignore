@@ -40,3 +40,6 @@ pr-body.md
 # Skill desain lokal (hallmark, emilkowalski/skill); tidak ikut repo
 .agents/
 skills-lock.json
+
+# Hasil generate gambar logo (mentah, ±8 MB); aset final ada di public/
+images_gen_chatgpt/

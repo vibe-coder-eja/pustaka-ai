@@ -1,6 +1,6 @@
-# Pustaka Akal Imitasi
+# Pustaka AI
 
-> Catatan belajar teknologi, disusun untuk dibaca kembali.
+> Pahami AI, selangkah demi selangkah.
 
 Ensiklopedia mini berbahasa Indonesia tentang kecerdasan buatan (AI, atau akal imitasi) dan superintelligence (SI), karya **Reza Syahputra**. Dibangun dengan Astro dan diterbitkan di GitHub Pages: <https://pustakaai.xyz/>. Selain entri ensiklopedia, situs memuat referensi Hermes Agent dan katalog model dengan pencarian, filter, serta pagination di browser.
 
