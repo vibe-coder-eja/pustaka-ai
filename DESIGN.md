@@ -29,6 +29,7 @@ Ruang baca editorial yang hangat: latar ivory, tinta navy, aksen ungu tertahan, 
 - Fokus memakai outline 3 px dengan offset 4 px.
 - Tema: system → light → dark, disimpan lokal.
 - Gerak hover dan smooth scroll dinonaktifkan saat `prefers-reduced-motion: reduce`.
+- Hero beranda: buku terbuka simetris (SVG statis, `src/lib/hero-book.ts`) yang memancarkan titik pengetahuan menjadi jaringan dan memadat ke satu inti (canvas, `src/lib/hero-network.ts`, siklus 16 detik). Hanya memakai token tema; berhenti saat tidak terlihat; dengan `prefers-reduced-motion: reduce` hanya bingkai akhir yang digambar.
 - Search dialog memiliki label, live results, pintasan `/`, dan penutupan native dengan Escape.
 
 ## Larangan

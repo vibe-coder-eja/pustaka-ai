@@ -95,14 +95,15 @@
   .hero-stats dt { font-family: var(--serif); font-size: 1.7rem; }
   .hero-stats dd { margin: 0; color: var(--muted); font-size: .78rem; }
   .hero-art { position: relative; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--purple) 14%, transparent), transparent 67%); }
-  .orbit { position: absolute; inset: 15%; border: 1px solid color-mix(in srgb, var(--purple) 33%, transparent); border-radius: 50%; transform: rotate(28deg) skew(-12deg); }
-  .orbit-two { inset: 28% 8%; transform: rotate(-24deg) skew(10deg); }
-  .open-book { position: absolute; top: 34%; left: 18%; width: 64%; height: 35%; filter: drop-shadow(0 24px 20px rgb(30 20 50 / .17)); transform: rotate(-4deg); }
-  .open-book span { position: absolute; width: 50%; height: 100%; background: var(--paper); border: 2px solid var(--navy); }
-  .open-book span:first-child { left: 0; border-radius: 8px 1px 1px 28px; transform: skewY(7deg); }
-  .open-book span:nth-child(2) { right: 0; border-radius: 1px 8px 28px 1px; transform: skewY(-7deg); }
-  .open-book i { position: absolute; z-index: 2; left: 44%; top: 32%; color: var(--purple-dark); font-family: var(--serif); font-size: 1.2rem; font-style: normal; }
-  .spark { position: absolute; color: var(--purple-dark); font-size: 2rem; }.s1{left:12%;top:20%}.s2{right:15%;top:22%}.s3{right:11%;bottom:19%}
+  .hero-book, .hero-net { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hb-cover { fill: var(--navy); }
+  .hb-leaf { fill: var(--paper); stroke: color-mix(in srgb, var(--navy) 35%, transparent); stroke-width: 2; }
+  .hb-leaf.alt { fill: var(--paper-2); }
+  .hb-page { fill: var(--paper); stroke: var(--navy); stroke-width: 4; stroke-linejoin: round; }
+  .hb-gutter { fill: color-mix(in srgb, var(--purple) 8%, transparent); }
+  .hb-spine { stroke: color-mix(in srgb, var(--navy) 60%, transparent); stroke-width: 3; }
+  .hb-text { fill: none; stroke: color-mix(in srgb, var(--navy) 22%, transparent); stroke-width: 2.5; stroke-linecap: round; }
+  .hb-ribbon { fill: var(--accent); }
   .collection { padding-block: 6rem; content-visibility: auto; contain-intrinsic-size: auto 800px; }
   .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.4rem; }
   .section-heading h2 { margin: .35rem 0 0; }.section-heading > p { max-width: 420px; color: var(--muted); }
