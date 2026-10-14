@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroNetwork from '../components/HeroNetwork.astro';
 import { withBase } from '../lib/site';
 import { categoriesOfGroup } from '../lib/taxonomy';
 import { getTerms } from '../lib/terms';
@@ -28,11 +29,7 @@ const count = (slug: string) => terms.filter((term) => term.category === slug).l
         <div><dt>{(snapshots.skills.count + snapshots.nous.count + catalog.length).toLocaleString('id-ID')}</dt><dd>entri referensi</dd></div>
       </dl>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-      <div class="open-book"><span></span><span></span><i>AI</i></div>
-      <span class="spark s1">✦</span><span class="spark s2">·</span><span class="spark s3">✧</span>
-    </div>
+    <HeroNetwork />
   </section>
 
   <section id="topik" class="home-enc shell" aria-labelledby="topik-title">

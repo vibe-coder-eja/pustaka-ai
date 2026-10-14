@@ -1,0 +1,32 @@
+---
+// Ilustrasi hero beranda: buku terbuka (SVG statis) yang memancarkan titik pengetahuan,
+// lalu tersambung menjadi jaringan dan memadat ke satu inti (canvas, src/lib/hero-network.ts).
+import { BOOK, VIEW, TEXT_ROWS, pagePath, textLinePath, gutterPath, ribbonPath, type Side } from '../lib/hero-book';
+
+const sides: Side[] = [-1, 1];
+const stack = [4, 3, 2, 1];
+const { x, y, h } = BOOK;
+---
+<div class="hero-art" aria-hidden="true">
+  <svg class="hero-book" viewBox={`0 0 ${VIEW} ${VIEW}`} focusable="false">
+    <g class="hb-cover">
+      {sides.map((side) => <path d={pagePath(side, 28, 24)} />)}
+      <rect x={x - 6} y={y + h * 0.3} width="12" height={h * 0.36} />
+    </g>
+    {stack.map((k) => sides.map((side) => <path class={k % 2 ? 'hb-leaf alt' : 'hb-leaf'} d={pagePath(side, k * 5.2, k * 2.8)} />))}
+    {sides.map((side) => <path class="hb-page" d={pagePath(side)} />)}
+    {sides.map((side) => <path class="hb-gutter" d={gutterPath(side)} />)}
+    <path class="hb-spine" d={`M${x} ${y - h * 0.34}L${x} ${y + h * 0.5}`} />
+    <g class="hb-text">
+      {sides.map((side) => TEXT_ROWS.map((row) => <path d={textLinePath(side, row.v, row.end)} />))}
+    </g>
+    <path class="hb-ribbon" d={ribbonPath()} />
+  </svg>
+  <canvas class="hero-net"></canvas>
+</div>
+
+<script>
+  import { startHeroNetwork } from '../lib/hero-network';
+  const canvas = document.querySelector<HTMLCanvasElement>('.hero-net');
+  if (canvas) startHeroNetwork(canvas);
+</script>
