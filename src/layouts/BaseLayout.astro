@@ -90,12 +90,11 @@ const searchIndexUrl = withBase(base, 'search-index.json');
     <footer class="site-footer">
       <div><LogoMark size={34} /><p><strong>{SITE.name}</strong><br /><span>{SITE.tagline}</span></p></div>
       <nav aria-label="Tautan footer">
-        <a href={SITE.github} rel="me noopener noreferrer">GitHub</a>
-        <a href={SITE.website} rel="me noopener noreferrer">Website Reza</a>
-        <a href={SITE.discussions} rel="noopener noreferrer">Diskusi</a>
+        <a href={withBase(base, 'tentang/')}>Tentang {SITE.name}</a>
         <a href={withBase(base, 'tentang/#lisensi')}>Lisensi</a>
+        <a href={SITE.discussions} rel="noopener noreferrer">Diskusi</a>
       </nav>
-      <small>Kode MIT · Konten editorial asli CC BY 4.0 · Snapshot pihak ketiga tetap milik pemegang haknya.</small>
+      <small>© {new Date().getFullYear()} {SITE.name} · Dibangun oleh <a href={SITE.website} rel="author noopener noreferrer">{SITE.author}</a>. Kode berlisensi MIT dan konten editorial asli berlisensi CC BY 4.0; materi serta snapshot pihak ketiga tetap milik pemegang haknya.</small>
     </footer>
 
     <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title" data-index-url={searchIndexUrl}>
