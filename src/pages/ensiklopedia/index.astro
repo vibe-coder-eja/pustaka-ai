@@ -10,7 +10,7 @@ const count = (slug: string) => terms.filter((term) => term.category === slug).l
 const letters = groupByLetter(terms).map((group) => group.letter);
 const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 ---
-<BaseLayout title={ENSIKLOPEDIA_NAME} description="Ensiklopedia mini berbahasa Indonesia tentang kecerdasan buatan (AI, atau akal imitasi) dan superintelligence (SI): istilah, konsep, dan arah perkembangannya.">
+<BaseLayout title={[`${ENSIKLOPEDIA_NAME} berbahasa Indonesia`, ENSIKLOPEDIA_NAME]} description="Ensiklopedia mini berbahasa Indonesia tentang kecerdasan buatan (AI, atau akal imitasi) dan superintelligence (SI): istilah, konsep, dan arah perkembangannya.">
   <header class="enc-hero shell">
     <p class="kicker">Ensiklopedia mini</p>
     <h1>Kecerdasan buatan dan superintelligence</h1>

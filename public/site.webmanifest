@@ -1,0 +1,16 @@
+{
+  "name": "Pustaka AI",
+  "short_name": "Pustaka AI",
+  "description": "Pahami AI, selangkah demi selangkah. Ensiklopedia berbahasa Indonesia tentang AI dan superintelligence.",
+  "lang": "id",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#f7f1e5",
+  "theme_color": "#f7f1e5",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

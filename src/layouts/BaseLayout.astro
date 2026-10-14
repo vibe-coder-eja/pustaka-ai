@@ -1,19 +1,21 @@
 ---
 import { SITE, withBase } from '../lib/site';
 import { jsonForScript } from '../lib/json-script';
+import { pageTitle as buildTitle } from '../lib/seo';
 import '../styles/global.css';
 import '../styles/ensiklopedia.css';
 import LogoMark from '../components/LogoMark.astro';
 
 interface Props {
-  title?: string;
+  /** Judul halaman; boleh daftar kandidat dari yang terlengkap ke terpendek (lihat src/lib/seo.ts). */
+  title?: string | string[];
   description?: string;
   image?: string;
   noindex?: boolean;
   jsonLd?: Record<string, unknown>;
 }
 const { title, description = SITE.description, image = 'og-cover.png', noindex = false, jsonLd } = Astro.props;
-const pageTitle = title ? `${title} · ${SITE.name}` : SITE.name;
+const pageTitle = buildTitle(...[title ?? []].flat());
 const base = import.meta.env.BASE_URL;
 const home = withBase(base);
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -44,8 +46,10 @@ const searchIndexUrl = withBase(base, 'search-index.json');
     <meta name="twitter:card" content="summary_large_image" />
     {noindex && <meta name="robots" content="noindex,follow" />}
     {jsonLd && <script is:inline type="application/ld+json" set:html={jsonForScript(jsonLd)} />}
+    <link rel="icon" href={withBase(base, 'favicon.ico')} sizes="48x48" />
     <link rel="icon" href={withBase(base, 'favicon.svg')} type="image/svg+xml" />
     <link rel="apple-touch-icon" href={withBase(base, 'apple-touch-icon.png')} />
+    <link rel="manifest" href={withBase(base, 'site.webmanifest')} />
     <title>{pageTitle}</title>
     <script is:inline>
       (() => {
@@ -65,7 +69,7 @@ const searchIndexUrl = withBase(base, 'search-index.json');
     <header class="site-header">
       <a class="brand" href={home} aria-label={`${SITE.name}, beranda`}>
         <LogoMark size={42} />
-        <span><strong>{SITE.name}</strong><small>oleh {SITE.author}</small></span>
+        <span><strong>{SITE.name}</strong><small>{SITE.tagline}</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Navigasi utama">
         <a href={withBase(base, 'ensiklopedia/')}>Ensiklopedia</a>

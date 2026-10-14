@@ -9,7 +9,7 @@ const terms = await getTerms();
 const groups = groupByLetter(terms);
 const anchor = (letter: string) => `huruf-${letter === '#' ? 'angka' : letter.toLowerCase()}`;
 ---
-<BaseLayout title="Indeks A–Z" description={`Indeks abjad seluruh ${terms.length} entri Ensiklopedia AI dan SI.`}>
+<BaseLayout title={['Indeks A–Z istilah AI dan teknologi', 'Indeks A–Z']} description={`Indeks abjad seluruh ${terms.length} entri Ensiklopedia AI dan SI.`}>
   <div class="shell enc-hero">
     <ol class="crumbs"><li><a href={indexUrl()}>Ensiklopedia</a></li><li aria-current="page">Indeks A–Z</li></ol>
     <p class="kicker">Indeks abjad</p>

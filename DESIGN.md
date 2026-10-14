@@ -36,5 +36,6 @@ Ruang baca editorial yang hangat: latar ivory, tinta navy, aksen ungu tertahan, 
 
 - Tidak memakai font CDN, tracking, gambar stok, gradien neon, glassmorphism dominan, atau UI download.
 - Logo adalah monogram "P" dari halaman buku + node AI khusus proyek ini (`src/components/LogoMark.astro`, `public/logo-mark.svg`); jangan diganti dengan merek pihak ketiga.
-- Tagline resmi: "Pahami AI, selangkah demi selangkah". Nama tampilan: "Pustaka AI".
+- Tagline resmi: "Pahami AI, selangkah demi selangkah". Nama tampilan: "Pustaka AI". Tagline tampil di bawah nama pada header dan footer.
+- Judul tab: kata kunci di depan, merek di belakang (`… | Pustaka AI`), maksimal 60 karakter, unik per halaman (`src/lib/seo.ts`, diperiksa `verify:build`). Entri ensiklopedia memakai pola "Apa itu …? Pengertian dan penjelasan".
 - Lambang di header dan footer berupa SVG inline yang memakai token `--ink` dan `--accent`, sehingga mengikuti tema terang dan gelap.
