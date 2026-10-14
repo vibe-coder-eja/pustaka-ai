@@ -71,6 +71,8 @@
   .site-footer p span, .site-footer small { color: var(--muted); }
   .site-footer nav { display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 2rem 0; }
   .site-footer nav a { font-weight: 700; }
+  .site-footer small { display: block; max-width: 760px; line-height: 1.6; }
+  .site-footer small a { color: var(--ink); text-underline-offset: 2px; }
   .search-dialog { width: min(700px, calc(100% - 24px)); max-height: min(80vh, 700px); margin-top: 9vh; padding: 0; border: 1px solid var(--line); border-radius: 20px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgb(10 10 20 / .38); }
   .search-dialog::backdrop { background: rgb(15 17 28 / .68); backdrop-filter: blur(4px); }
   .search-head { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1rem .5rem 1.35rem; font-weight: 800; }
