@@ -6,6 +6,7 @@ import { RESERVED_SLUGS, metaDescription, resolveRelated, termJsonLd } from '../
 import { categoryUrl, ENSIKLOPEDIA_NAME, indexUrl, termUrl } from '../../lib/ensiklopedia';
 import { formatDateId } from '../../lib/catalog';
 import { SITE } from '../../lib/site';
+import { termTitle } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const terms = await getTerms();
@@ -31,7 +32,7 @@ const jsonLd = termJsonLd({
 const editUrl = `${SITE.repo}/edit/main/src/content/istilah/${term.slug}.md`;
 const issueUrl = `${SITE.repo}/issues/new?title=${encodeURIComponent(`Koreksi entri: ${data.title}`)}`;
 ---
-<BaseLayout title={data.title} description={metaDescription(data.summary)} jsonLd={jsonLd}>
+<BaseLayout title={termTitle(data.title)} description={metaDescription(data.summary)} jsonLd={jsonLd}>
   <article class="term-page shell">
     <ol class="crumbs">
       <li><a href={indexUrl()}>Ensiklopedia</a></li>

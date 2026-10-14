@@ -54,7 +54,7 @@
   .brand svg { width: 42px; height: 42px; flex: none; }
   .brand span { display: grid; line-height: 1.1; }
   .brand strong { font-family: var(--serif); font-size: 1.03rem; }
-  .brand small { margin-top: .25rem; color: var(--muted); font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; }
+  .brand small { margin-top: .25rem; color: var(--muted); font-size: .74rem; letter-spacing: .01em; }
   .desktop-nav { display: flex; gap: 1.8rem; }
   .desktop-nav a, .mobile-menu a { color: var(--muted); font-size: .88rem; font-weight: 700; text-decoration: none; }
   .desktop-nav a:hover { color: var(--purple-dark); }

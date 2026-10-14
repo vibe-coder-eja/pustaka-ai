@@ -15,6 +15,7 @@ const MAX_HTML_BYTES = 400_000;
 const failures = [];
 for (const path of required) if (!statSafe(join(root, path))) failures.push(`Artefak wajib hilang: ${path}`);
 
+const titles = new Map();
 const htmlFiles = walk(root).filter((path) => path.endsWith('.html'));
 for (const file of htmlFiles) {
   const html = readFileSync(file, 'utf8');
@@ -28,6 +29,9 @@ for (const file of htmlFiles) {
   if (!/<html lang="id"/.test(html)) failures.push(`Bahasa dokumen tidak ada: ${relative(root, file)}`);
   if (!/<meta name="description"/.test(html)) failures.push(`Meta description tidak ada: ${relative(root, file)}`);
   if (!/<link rel="canonical"/.test(html)) failures.push(`Canonical tidak ada: ${relative(root, file)}`);
+  const title = /<title>([^<]+)<\/title>/.exec(html)?.[1];
+  if (!title) failures.push(`Judul halaman tidak ada: ${relative(root, file)}`);
+  else titles.set(title, [...(titles.get(title) ?? []), relative(root, file)]);
   if (/<a\b[^>]*\bdownload(?:\s|=|>)/i.test(html)) failures.push(`UI download terdeteksi: ${relative(root, file)}`);
   for (const match of html.matchAll(/(?:href|src)="([^"#?]+)(?:[?#][^"]*)?"/g)) {
     const url = match[1];
@@ -39,6 +43,7 @@ for (const file of htmlFiles) {
     if (!candidates.some(statSafe)) failures.push(`Tautan internal rusak pada ${relative(root, file)}: ${url}`);
   }
 }
+for (const [title, files] of titles) if (files.length > 1) failures.push(`Judul halaman ganda "${title}": ${files.join(', ')}`);
 const posix = (file) => relative(root, file).split(/[\\/]/).join('/');
 const termPages = htmlFiles.filter((file) => /^ensiklopedia\/[^/]+\/index\.html$/.test(posix(file)) && !['ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'ensiklopedia/tangga-evolusi/index.html'].includes(posix(file)));
 if (termPages.length < 100) failures.push(`Halaman istilah terlalu sedikit: ${termPages.length}`);

@@ -16,7 +16,7 @@ const { category } = Astro.props;
 const terms = (await getTerms()).filter((term) => term.category === category.slug);
 const group = getGroup(category.group);
 ---
-<BaseLayout title={category.title} description={`${category.description} ${terms.length} entri di Ensiklopedia AI dan SI.`}>
+<BaseLayout title={[`${category.title}: kumpulan istilah`, category.title]} description={`${category.description} ${terms.length} entri di Ensiklopedia AI dan SI.`}>
   <div class="shell enc-hero">
     <ol class="crumbs"><li><a href={indexUrl()}>Ensiklopedia</a></li><li>{group.title}</li><li aria-current="page">{category.title}</li></ol>
     <p class="kicker">Kategori · {terms.length} entri</p>
