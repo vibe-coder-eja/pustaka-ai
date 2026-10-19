@@ -21,6 +21,8 @@ related:
   - rlhf
   - temperatur-sampling
   - prompt-sistem
+  - transformer
+  - pembelajaran-mendalam
 sources:
   - title: "Vaswani dkk., “Attention Is All You Need”, arXiv:1706.03762 (12 Juni 2017)"
     url: https://arxiv.org/abs/1706.03762
@@ -41,7 +43,7 @@ LLM (*large language model*, model bahasa besar) adalah [model](/ensiklopedia/mo
 
 Teks dipecah menjadi potongan kecil yang disebut [token](/ensiklopedia/token/). Pada tahap [pra-pelatihan](/ensiklopedia/pra-pelatihan/), model berulang kali menebak token berikutnya dari teks yang ada dan menyesuaikan parameternya setiap kali tebakannya meleset. Tugas sederhana yang diulang dalam skala sangat besar ini memaksa model menyerap tata bahasa, fakta, dan pola penalaran yang terkandung dalam data.
 
-Hampir semua LLM modern memakai arsitektur **transformer** yang diperkenalkan Vaswani dkk. pada 2017. Mekanisme *attention* di dalamnya membuat model dapat menimbang hubungan antarkata di seluruh teks sekaligus. Brown dkk. (2020) menunjukkan bahwa model sebesar GPT-3, dengan 175 miliar parameter, sudah dapat mengerjakan tugas baru hanya dari beberapa contoh di dalam [prompt](/ensiklopedia/prompt/), tanpa pelatihan ulang.
+Hampir semua LLM modern memakai arsitektur [transformer](/ensiklopedia/transformer/) yang diperkenalkan Vaswani dkk. pada 2017. Mekanisme *attention* di dalamnya membuat model dapat menimbang hubungan antarkata di seluruh teks sekaligus. Brown dkk. (2020) menunjukkan bahwa model sebesar GPT-3, dengan 175 miliar parameter, sudah dapat mengerjakan tugas baru hanya dari beberapa contoh di dalam [prompt](/ensiklopedia/prompt/), tanpa pelatihan ulang.
 
 ## Dari model mentah ke asisten
 

@@ -16,6 +16,9 @@ related:
   - agi
   - superintelligence
   - alignment
+  - pembelajaran-mesin
+  - pembelajaran-mendalam
+  - jaringan-saraf
 sources:
   - title: "McCarthy, Minsky, Rochester, Shannon, “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence” (31 Agustus 1955)"
     url: http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html
@@ -40,7 +43,7 @@ Tidak ada satu definisi yang disepakati semua pihak. Rumusan yang banyak dirujuk
 
 ## Dari aturan ke pembelajaran
 
-Sistem AI awal banyak bertumpu pada aturan yang ditulis manusia. Sebagian besar AI masa kini dibangun dengan **pembelajaran mesin**: [model](/ensiklopedia/model/) mempelajari pola dari data dalam jumlah besar, bukan diprogram langkah demi langkah. Gelombang AI generatif saat ini, termasuk [LLM](/ensiklopedia/llm/), adalah hasil pendekatan ini.
+Sistem AI awal banyak bertumpu pada aturan yang ditulis manusia. Sebagian besar AI masa kini dibangun dengan [pembelajaran mesin](/ensiklopedia/pembelajaran-mesin/): [model](/ensiklopedia/model/) mempelajari pola dari data dalam jumlah besar, bukan diprogram langkah demi langkah. Gelombang AI generatif saat ini, termasuk [LLM](/ensiklopedia/llm/), adalah hasil [pembelajaran mendalam](/ensiklopedia/pembelajaran-mendalam/), yaitu pembelajaran mesin dengan [jaringan saraf](/ensiklopedia/jaringan-saraf/) berlapis banyak.
 
 ## Hubungan dengan istilah lain
 

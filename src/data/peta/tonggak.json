@@ -117,7 +117,9 @@
       }
     ],
     "related": [
-      "model"
+      "model",
+      "pembelajaran-mendalam",
+      "jaringan-saraf"
     ]
   },
   {
@@ -167,7 +169,9 @@
         "url": "https://britgo.org/node/5458"
       }
     ],
-    "related": []
+    "related": [
+      "pembelajaran-mendalam"
+    ]
   },
   {
     "id": "concrete-problems-2016",
@@ -210,7 +214,8 @@
       }
     ],
     "related": [
-      "llm"
+      "llm",
+      "transformer"
     ]
   },
   {
@@ -551,7 +556,10 @@
         "url": "https://www.nobelprize.org/prizes/chemistry/2024/press-release/"
       }
     ],
-    "related": []
+    "related": [
+      "jaringan-saraf",
+      "pembelajaran-mesin"
+    ]
   },
   {
     "id": "deepseek-r1-2025",
