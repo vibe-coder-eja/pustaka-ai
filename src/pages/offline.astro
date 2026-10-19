@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/site';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Sedang offline" description="Halaman ini tampil ketika Pustaka AI dibuka tanpa koneksi internet." noindex>
+  <section class="not-found offline-page shell">
+    <p class="kicker">Tanpa koneksi</p>
+    <h1>Anda sedang offline.</h1>
+    <p>Halaman ini belum tersimpan di perangkat Anda. Sambungkan kembali ke internet, atau buka entri yang pernah Anda baca di bawah ini.</p>
+    <div><a class="button" href={withBase(base)}>Ke beranda</a><button class="button secondary" id="offline-retry" type="button">Coba lagi</button></div>
+    <section class="offline-saved" aria-labelledby="offline-saved-title" hidden>
+      <h2 id="offline-saved-title">Tersimpan untuk dibaca offline</h2>
+      <ul class="chips" id="offline-saved-list"></ul>
+    </section>
+  </section>
+  <script>
+    document.querySelector('#offline-retry')?.addEventListener('click', () => location.reload());
+    // Daftar entri ensiklopedia yang tersimpan di Cache Storage perangkat ini (lihat public/sw.js).
+    (async () => {
+      if (!('caches' in window)) return;
+      const names = (await caches.keys()).filter((name) => name.startsWith('pustaka-pages-'));
+      const items: { href: string; title: string }[] = [];
+      for (const name of names) {
+        const cache = await caches.open(name);
+        for (const request of await cache.keys()) {
+          const { pathname } = new URL(request.url);
+          if (!/^\/ensiklopedia\/[^/]+\/$/.test(pathname)) continue;
+          const html = await (await cache.match(request))?.text();
+          const title = /<h1[^>]*>([^<]+)<\/h1>/.exec(html ?? '')?.[1]?.trim();
+          if (title) items.push({ href: pathname, title });
+        }
+      }
+      if (!items.length) return;
+      const list = document.querySelector<HTMLUListElement>('#offline-saved-list')!;
+      for (const item of items.sort((a, b) => a.title.localeCompare(b.title, 'id'))) {
+        const li = document.createElement('li'); const a = document.createElement('a');
+        a.href = item.href; a.textContent = item.title; li.append(a); list.append(li);
+      }
+      list.closest<HTMLElement>('.offline-saved')!.hidden = false;
+    })().catch(() => {});
+  </script>
+</BaseLayout>
