@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { readNoindexSlugs } from '../src/lib/indexing.mjs';
 
 const dist = new URL('../dist/', import.meta.url);
 const root = dist.pathname.replace(/^\/(?:[A-Za-z]:)/, (value) => value.slice(1));
@@ -47,8 +48,25 @@ for (const [title, files] of titles) if (files.length > 1) failures.push(`Judul 
 const posix = (file) => relative(root, file).split(/[\\/]/).join('/');
 const termPages = htmlFiles.filter((file) => /^ensiklopedia\/[^/]+\/index\.html$/.test(posix(file)) && !['ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'ensiklopedia/tangga-evolusi/index.html'].includes(posix(file)));
 if (termPages.length < 100) failures.push(`Halaman istilah terlalu sedikit: ${termPages.length}`);
+// Entri catatan (belum berisi) wajib noindex dan absen dari sitemap; entri lain sebaliknya.
+const noindexSlugs = readNoindexSlugs(new URL('../src/content/istilah/', import.meta.url));
+const sitemapXml = statSafe(join(root, 'sitemap-0.xml')) ? readFileSync(join(root, 'sitemap-0.xml'), 'utf8') : '';
+const sitemapPaths = new Set([...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => new URL(match[1]).pathname));
+let noindexPages = 0;
 for (const file of termPages) {
-  if (!readFileSync(file, 'utf8').includes('application/ld+json')) failures.push(`JSON-LD tidak ada: ${relative(root, file)}`);
+  const html = readFileSync(file, 'utf8');
+  if (!html.includes('application/ld+json')) failures.push(`JSON-LD tidak ada: ${relative(root, file)}`);
+  const slug = posix(file).split('/')[1];
+  const path = `${base}ensiklopedia/${slug}/`;
+  const hasNoindex = html.includes('<meta name="robots" content="noindex,follow"');
+  if (noindexSlugs.has(slug)) {
+    noindexPages++;
+    if (!hasNoindex) failures.push(`Entri catatan tanpa noindex: ${posix(file)}`);
+    if (sitemapPaths.has(path)) failures.push(`Entri catatan masih ada di sitemap: ${path}`);
+  } else {
+    if (hasNoindex) failures.push(`Entri berisi diberi noindex: ${posix(file)}`);
+    if (!sitemapPaths.has(path)) failures.push(`Entri berisi tidak ada di sitemap: ${path}`);
+  }
 }
 // Data grafik konsep disajikan terpisah dari HTML peta-si; keduanya harus memuat simpul yang sama.
 try {
@@ -70,7 +88,7 @@ if (failures.length) {
   console.error(`Verifikasi build gagal (${failures.length}):\n- ${failures.join('\n- ')}`);
   process.exit(1);
 }
-console.log(`Verifikasi build lulus: ${htmlFiles.length} HTML (${termPages.length} halaman istilah), ${required.length} artefak wajib, ${staticRows} baris katalog awal, seluruh URL internal memakai base ${base}.`);
+console.log(`Verifikasi build lulus: ${htmlFiles.length} HTML (${termPages.length} halaman istilah: ${termPages.length - noindexPages} terindeks, ${noindexPages} noindex), ${sitemapPaths.size} URL sitemap, ${required.length} artefak wajib, ${staticRows} baris katalog awal, seluruh URL internal memakai base ${base}.`);
 
 function statSafe(path) { try { return statSync(path).isFile(); } catch { return false; } }
 function walk(dir) { return readdirSync(dir).flatMap((name) => { const path = join(dir, name); return statSync(path).isDirectory() ? walk(path) : [path]; }); }
