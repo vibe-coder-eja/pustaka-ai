@@ -10,7 +10,8 @@ const required = [
   'ensiklopedia/index.html', 'ensiklopedia/abjad/index.html', 'ensiklopedia/peta-si/index.html', 'ensiklopedia/tangga-evolusi/index.html', 'referensi/index.html',
   'ensiklopedia/ai/index.html', 'buku/glosarium-agentic-ai/index.html', 'buku/hermes-cli/index.html',
   'buku/katalog-skills-hermes/index.html', 'buku/nous-portal-models/index.html',
-  'robots.txt', 'sitemap-index.xml', 'search-index.json', 'data/fal-models.json', 'data/graf-konsep.json'
+  'robots.txt', 'sitemap-index.xml', 'search-index.json', 'data/fal-models.json', 'data/graf-konsep.json',
+  'offline/index.html', 'sw.js', 'site.webmanifest', 'icon-maskable-192.png', 'icon-maskable-512.png'
 ];
 const MAX_HTML_BYTES = 400_000;
 const failures = [];
@@ -83,6 +84,19 @@ const catalogHtml = readFileSync(join(root, 'katalog-fal/index.html'), 'utf8');
 const staticRows = (catalogHtml.match(/class="model-card"/g) || []).length;
 if (staticRows > 24) failures.push(`DOM katalog awal tidak bounded: ${staticRows} kartu`);
 if (!statSafe(join(root, 'sitemap-0.xml'))) failures.push('Sitemap konten tidak dibuat.');
+// Aplikasi web: service worker terdaftar di halaman, berkas yang di-precache ada, dan halaman offline tidak diindeks.
+if (statSafe(join(root, 'sw.js'))) {
+  const swSource = readFileSync(join(root, 'sw.js'), 'utf8');
+  const precached = [...swSource.matchAll(/const SHELL_(?:PAGES|FILES) = \[([^\]]*)\]/g)].flatMap((match) => [...match[1].matchAll(/'([^']+)'/g)].map((item) => item[1]));
+  if (!swSource.includes("const OFFLINE_URL = '/offline/'")) failures.push('sw.js tidak memakai /offline/ sebagai halaman cadangan.');
+  for (const path of [...precached, '/offline/']) {
+    const target = path.slice(base.length);
+    if (![join(root, target), join(root, target, 'index.html')].some(statSafe)) failures.push(`Berkas precache service worker tidak ada: ${path}`);
+  }
+}
+if (!readFileSync(join(root, 'index.html'), 'utf8').includes(`data-sw="${base}sw.js"`)) failures.push('Beranda tidak mendaftarkan service worker.');
+if (sitemapPaths.has(`${base}offline/`)) failures.push('Halaman offline masuk sitemap.');
+if (statSafe(join(root, 'offline/index.html')) && !readFileSync(join(root, 'offline/index.html'), 'utf8').includes('content="noindex,follow"')) failures.push('Halaman offline tidak diberi noindex.');
 
 if (failures.length) {
   console.error(`Verifikasi build gagal (${failures.length}):\n- ${failures.join('\n- ')}`);
