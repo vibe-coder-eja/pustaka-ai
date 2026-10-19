@@ -11,6 +11,8 @@ related:
   - representasi-vektor
   - computer-use
   - prompt-injection
+  - transformer
+  - model-difusi
 sources:
   - title: "Radford dkk., “Learning Transferable Visual Models From Natural Language Supervision” (CLIP), arXiv:2103.00020 (26 Februari 2021)"
     url: https://arxiv.org/abs/2103.00020

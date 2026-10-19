@@ -15,6 +15,8 @@ related:
   - bobot-terbuka
   - model-terdepan
   - auxiliary-model
+  - pembelajaran-mesin
+  - jaringan-saraf
 sources:
   - title: "Google for Developers, “Machine Learning Glossary”: entri model dan inference"
     url: https://developers.google.com/machine-learning/glossary
