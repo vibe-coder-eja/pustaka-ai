@@ -7,6 +7,7 @@ import { categoryUrl, ENSIKLOPEDIA_NAME, indexUrl, termUrl } from '../../lib/ens
 import { formatDateId } from '../../lib/catalog';
 import { SITE } from '../../lib/site';
 import { termTitle } from '../../lib/seo';
+import { isIndexable } from '../../lib/indexing.mjs';
 
 export async function getStaticPaths() {
   const terms = await getTerms();
@@ -32,7 +33,7 @@ const jsonLd = termJsonLd({
 const editUrl = `${SITE.repo}/edit/main/src/content/istilah/${term.slug}.md`;
 const issueUrl = `${SITE.repo}/issues/new?title=${encodeURIComponent(`Koreksi entri: ${data.title}`)}`;
 ---
-<BaseLayout title={termTitle(data.title)} description={metaDescription(data.summary)} jsonLd={jsonLd}>
+<BaseLayout title={termTitle(data.title)} description={metaDescription(data.summary)} jsonLd={jsonLd} noindex={!isIndexable(data.status)}>
   <article class="term-page shell">
     <ol class="crumbs">
       <li><a href={indexUrl()}>Ensiklopedia</a></li>
