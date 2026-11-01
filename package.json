@@ -20,7 +20,7 @@
     "@astrojs/sitemap": "3.7.4",
     "astro": "7.3.8",
     "marked": "18.1.1",
-    "sanitize-html": "2.18.0",
+    "sanitize-html": "2.18.1",
     "yaml": "2.9.1"
   },
   "devDependencies": {
