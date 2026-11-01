@@ -1,6 +1,6 @@
 # Katalog Skills Hermes Agent
 
-> Snapshot katalog: 12 Oktober 2026 · versi kode `7cc3fb8`. Hanya skill resmi dari repositori Hermes Agent milik Nous Research: 58 skill bawaan dan 152 skill opsional resmi. Skill komunitas pihak ketiga dan skill pribadi tidak dimuat.
+> Snapshot katalog: 1 November 2026 · versi kode `a4994d4`. Hanya skill resmi dari repositori Hermes Agent milik Nous Research: 44 skill bawaan dan 146 skill opsional resmi. Skill komunitas pihak ketiga dan skill pribadi tidak dimuat.
 
 ## Cara membaca
 
@@ -16,7 +16,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** macos
 - **Tag:** Notes, Apple, macOS, note-taking
-- **Sumber:** [skills/apple/apple-notes/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/apple/apple-notes/SKILL.md)
+- **Sumber:** [skills/apple/apple-notes/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/apple/apple-notes/SKILL.md)
 
 #### `apple-reminders`
 
@@ -24,7 +24,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** macos
 - **Tag:** Reminders, tasks, todo, macOS, Apple
-- **Sumber:** [skills/apple/apple-reminders/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/apple/apple-reminders/SKILL.md)
+- **Sumber:** [skills/apple/apple-reminders/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/apple/apple-reminders/SKILL.md)
 
 #### `findmy`
 
@@ -32,7 +32,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** macos
 - **Tag:** FindMy, AirTag, location, tracking, macOS, Apple
-- **Sumber:** [skills/apple/findmy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/apple/findmy/SKILL.md)
+- **Sumber:** [skills/apple/findmy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/apple/findmy/SKILL.md)
 
 #### `imessage`
 
@@ -40,7 +40,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** macos
 - **Tag:** iMessage, SMS, messaging, macOS, Apple
-- **Sumber:** [skills/apple/imessage/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/apple/imessage/SKILL.md)
+- **Sumber:** [skills/apple/imessage/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/apple/imessage/SKILL.md)
 
 ### autonomous-ai-agents
 
@@ -50,7 +50,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Multi-Agent, Git, Merge-Conflict, Kanban, Arbitration
-- **Sumber:** [optional-skills/autonomous-ai-agents/agent-merge-conflict-arbiter/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/autonomous-ai-agents/agent-merge-conflict-arbiter/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/agent-merge-conflict-arbiter/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/agent-merge-conflict-arbiter/SKILL.md)
 
 #### `antigravity-cli`
 
@@ -58,7 +58,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Coding-Agent, Antigravity, CLI, Auth, Plugins, Sandbox
-- **Sumber:** [optional-skills/autonomous-ai-agents/antigravity-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/autonomous-ai-agents/antigravity-cli/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/antigravity-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/antigravity-cli/SKILL.md)
 
 #### `blackbox`
 
@@ -66,7 +66,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Coding-Agent, Blackbox, Multi-Agent, Judge, Multi-Model
-- **Sumber:** [optional-skills/autonomous-ai-agents/blackbox/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/autonomous-ai-agents/blackbox/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/blackbox/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/blackbox/SKILL.md)
 
 #### `claude-code`
 
@@ -74,7 +74,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Coding-Agent, Claude, Anthropic, Code-Review, Refactoring, PTY, Automation
-- **Sumber:** [skills/autonomous-ai-agents/claude-code/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/autonomous-ai-agents/claude-code/SKILL.md)
+- **Sumber:** [skills/autonomous-ai-agents/claude-code/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/autonomous-ai-agents/claude-code/SKILL.md)
 
 #### `codex`
 
@@ -82,7 +82,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Coding-Agent, Codex, OpenAI, Code-Review, Refactoring
-- **Sumber:** [skills/autonomous-ai-agents/codex/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/autonomous-ai-agents/codex/SKILL.md)
+- **Sumber:** [skills/autonomous-ai-agents/codex/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/autonomous-ai-agents/codex/SKILL.md)
 
 #### `computer-use`
 
@@ -90,7 +90,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** macos, windows, linux
 - **Tag:** computer-use, desktop, automation, gui, cross-platform
-- **Sumber:** [skills/autonomous-ai-agents/computer-use/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/autonomous-ai-agents/computer-use/SKILL.md)
+- **Sumber:** [skills/autonomous-ai-agents/computer-use/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/autonomous-ai-agents/computer-use/SKILL.md)
 
 #### `dynamic-workflow`
 
@@ -98,7 +98,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** orchestration, fan-out, subagents, delegation, verification, migration, audit, research, campaign
-- **Sumber:** [optional-skills/autonomous-ai-agents/dynamic-workflow/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/autonomous-ai-agents/dynamic-workflow/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/dynamic-workflow/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/dynamic-workflow/SKILL.md)
 
 #### `grok`
 
@@ -106,7 +106,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Coding-Agent, Grok, xAI, Code-Review, Refactoring, Automation
-- **Sumber:** [optional-skills/autonomous-ai-agents/grok/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/autonomous-ai-agents/grok/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/grok/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/grok/SKILL.md)
 
 #### `hermes-agent`
 
@@ -114,7 +114,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** hermes, setup, configuration, multi-agent, spawning, cli, gateway, bots, bot-mode, features, themes, skins, desktop-plugins, tui-widgets, petdex, development
-- **Sumber:** [skills/autonomous-ai-agents/hermes-agent/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/autonomous-ai-agents/hermes-agent/SKILL.md)
+- **Sumber:** [skills/autonomous-ai-agents/hermes-agent/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/autonomous-ai-agents/hermes-agent/SKILL.md)
 
 #### `honcho`
 
@@ -122,15 +122,15 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Honcho, Memory, Profiles, Observation, Dialectic, User-Modeling, Session-Summary
-- **Sumber:** [optional-skills/autonomous-ai-agents/honcho/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/autonomous-ai-agents/honcho/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/honcho/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/honcho/SKILL.md)
 
 #### `opencode`
 
 - **Deskripsi:** Mendelegasikan pemrograman ke OpenCode CLI (fitur, tinjauan PR).
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Coding-Agent, OpenCode, Autonomous, Refactoring, Code-Review
-- **Sumber:** [skills/autonomous-ai-agents/opencode/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/autonomous-ai-agents/opencode/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/opencode/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/opencode/SKILL.md)
 
 #### `openhands`
 
@@ -138,7 +138,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Coding-Agent, OpenHands, Model-Agnostic, LiteLLM
-- **Sumber:** [optional-skills/autonomous-ai-agents/openhands/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/autonomous-ai-agents/openhands/SKILL.md)
+- **Sumber:** [optional-skills/autonomous-ai-agents/openhands/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/autonomous-ai-agents/openhands/SKILL.md)
 
 ### blockchain
 
@@ -148,7 +148,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** EVM, Ethereum, BNB, BSC, Base, Arbitrum, Polygon, Optimism, Avalanche, zkSync, Blockchain, Crypto, Web3, DeFi, NFT, ENS, Whale, Security
-- **Sumber:** [optional-skills/blockchain/evm/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/blockchain/evm/SKILL.md)
+- **Sumber:** [optional-skills/blockchain/evm/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/blockchain/evm/SKILL.md)
 
 #### `hyperliquid`
 
@@ -156,7 +156,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Hyperliquid, Blockchain, Crypto, Trading, Perpetuals, Spot, DeFi
-- **Sumber:** [optional-skills/blockchain/hyperliquid/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/blockchain/hyperliquid/SKILL.md)
+- **Sumber:** [optional-skills/blockchain/hyperliquid/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/blockchain/hyperliquid/SKILL.md)
 
 #### `solana`
 
@@ -164,7 +164,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Solana, Blockchain, Crypto, Web3, RPC, DeFi, NFT
-- **Sumber:** [optional-skills/blockchain/solana/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/blockchain/solana/SKILL.md)
+- **Sumber:** [optional-skills/blockchain/solana/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/blockchain/solana/SKILL.md)
 
 ### communication
 
@@ -174,7 +174,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** communication, decision-making, proposals, trade-offs
-- **Sumber:** [optional-skills/communication/one-three-one-rule/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/communication/one-three-one-rule/SKILL.md)
+- **Sumber:** [optional-skills/communication/one-three-one-rule/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/communication/one-three-one-rule/SKILL.md)
 
 ### creative
 
@@ -184,7 +184,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** video, presenter, avatar, lipsync, tts, captions, creative
-- **Sumber:** [optional-skills/creative/ai-presenter-video/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/ai-presenter-video/SKILL.md)
+- **Sumber:** [optional-skills/creative/ai-presenter-video/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/ai-presenter-video/SKILL.md)
 
 #### `anatomy`
 
@@ -192,7 +192,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** isometric, svg, webgl, 3d, diagram, explainer, illustration, docs, html, react
-- **Sumber:** [optional-skills/creative/anatomy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/anatomy/SKILL.md)
+- **Sumber:** [optional-skills/creative/anatomy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/anatomy/SKILL.md)
 
 #### `archify`
 
@@ -200,7 +200,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** diagram, architecture, workflow, sequence, dataflow, state-machine, mermaid, html, svg
-- **Sumber:** [optional-skills/creative/archify/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/archify/SKILL.md)
+- **Sumber:** [optional-skills/creative/archify/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/archify/SKILL.md)
 
 #### `architecture-diagram`
 
@@ -208,7 +208,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** architecture, diagrams, SVG, HTML, visualization, infrastructure, cloud
-- **Sumber:** [skills/creative/architecture-diagram/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/architecture-diagram/SKILL.md)
+- **Sumber:** [skills/creative/architecture-diagram/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/architecture-diagram/SKILL.md)
 
 #### `ascii-art`
 
@@ -216,7 +216,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** ASCII, Art, Banners, Creative, Unicode, Text-Art, pyfiglet, figlet, cowsay, boxes
-- **Sumber:** [optional-skills/creative/ascii-art/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/ascii-art/SKILL.md)
+- **Sumber:** [optional-skills/creative/ascii-art/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/ascii-art/SKILL.md)
 
 #### `ascii-video`
 
@@ -224,15 +224,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** ASCII, Video, FFmpeg, Terminal-Art
-- **Sumber:** [skills/creative/ascii-video/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/ascii-video/SKILL.md)
-
-#### `audiocraft-audio-generation`
-
-- **Deskripsi:** AudioCraft: MusicGen (teks ke musik) dan AudioGen (teks ke suara).
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos
-- **Tag:** Multimodal, Audio Generation, Text-to-Music, Text-to-Audio, MusicGen
-- **Sumber:** [optional-skills/creative/audiocraft-audio-generation/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/audiocraft-audio-generation/SKILL.md)
+- **Sumber:** [skills/creative/ascii-video/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/ascii-video/SKILL.md)
 
 #### `auteur`
 
@@ -240,7 +232,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** web-design, cinematic, scroll-animation, design-system, anti-slop, frontend
-- **Sumber:** [optional-skills/creative/auteur/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/auteur/SKILL.md)
+- **Sumber:** [optional-skills/creative/auteur/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/auteur/SKILL.md)
 
 #### `baoyu-article-illustrator`
 
@@ -248,7 +240,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** article-illustration, creative, image-generation
-- **Sumber:** [optional-skills/creative/baoyu-article-illustrator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/baoyu-article-illustrator/SKILL.md)
+- **Sumber:** [optional-skills/creative/baoyu-article-illustrator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/baoyu-article-illustrator/SKILL.md)
 
 #### `baoyu-comic`
 
@@ -256,7 +248,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** comic, knowledge-comic, creative, image-generation
-- **Sumber:** [optional-skills/creative/baoyu-comic/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/baoyu-comic/SKILL.md)
+- **Sumber:** [optional-skills/creative/baoyu-comic/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/baoyu-comic/SKILL.md)
 
 #### `baoyu-infographic`
 
@@ -264,7 +256,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** infographic, visual-summary, creative, image-generation
-- **Sumber:** [skills/creative/baoyu-infographic/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/baoyu-infographic/SKILL.md)
+- **Sumber:** [skills/creative/baoyu-infographic/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/baoyu-infographic/SKILL.md)
 
 #### `brag`
 
@@ -272,7 +264,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** video, launch-video, marketing, hyperframes, motion-graphics, share-copy
-- **Sumber:** [optional-skills/creative/brag/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/brag/SKILL.md)
+- **Sumber:** [optional-skills/creative/brag/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/brag/SKILL.md)
 
 #### `brag-slim`
 
@@ -280,7 +272,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** video, launch-video, marketing, motion-graphics, share-copy
-- **Sumber:** [optional-skills/creative/brag-slim/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/brag-slim/SKILL.md)
+- **Sumber:** [optional-skills/creative/brag-slim/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/brag-slim/SKILL.md)
 
 #### `claude-design`
 
@@ -288,7 +280,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** design, html, prototype, ux, ui, creative, artifact, deck, motion, design-system
-- **Sumber:** [skills/creative/claude-design/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/claude-design/SKILL.md)
+- **Sumber:** [skills/creative/claude-design/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/claude-design/SKILL.md)
 
 #### `comfyui`
 
@@ -296,7 +288,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** macos, linux, windows
 - **Tag:** comfyui, image-generation, stable-diffusion, flux, sd3, wan-video, hunyuan-video, creative, generative-ai, video-generation
-- **Sumber:** [optional-skills/creative/comfyui/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/comfyui/SKILL.md)
+- **Sumber:** [optional-skills/creative/comfyui/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/comfyui/SKILL.md)
 
 #### `concept-diagrams`
 
@@ -304,7 +296,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** diagrams, svg, visualization, education, physics, chemistry, engineering
-- **Sumber:** [optional-skills/creative/concept-diagrams/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/concept-diagrams/SKILL.md)
+- **Sumber:** [optional-skills/creative/concept-diagrams/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/concept-diagrams/SKILL.md)
 
 #### `creative-ideation`
 
@@ -312,15 +304,15 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Creative, Ideation, Brainstorming, Methods, Inspiration
-- **Sumber:** [optional-skills/creative/creative-ideation/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/creative-ideation/SKILL.md)
+- **Sumber:** [optional-skills/creative/creative-ideation/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/creative-ideation/SKILL.md)
 
 #### `design-md`
 
 - **Deskripsi:** Menulis, memvalidasi, dan mengekspor berkas spesifikasi token DESIGN.md dari Google.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** design, design-system, tokens, ui, accessibility, wcag, tailwind, dtcg, google
-- **Sumber:** [skills/creative/design-md/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/design-md/SKILL.md)
+- **Sumber:** [optional-skills/creative/design-md/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/design-md/SKILL.md)
 
 #### `draw-your-font`
 
@@ -328,7 +320,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** font, handwriting, typography, ttf, woff, vision, creative
-- **Sumber:** [optional-skills/creative/draw-your-font/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/draw-your-font/SKILL.md)
+- **Sumber:** [optional-skills/creative/draw-your-font/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/draw-your-font/SKILL.md)
 
 #### `dream-loop`
 
@@ -336,7 +328,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** 3d, games, webgl, threejs, image-generation, visual-fidelity, creative
-- **Sumber:** [optional-skills/creative/dream-loop/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/dream-loop/SKILL.md)
+- **Sumber:** [optional-skills/creative/dream-loop/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/dream-loop/SKILL.md)
 
 #### `excalidraw`
 
@@ -344,7 +336,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Excalidraw, Diagrams, Flowcharts, Architecture, Visualization, JSON
-- **Sumber:** [optional-skills/creative/excalidraw/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/excalidraw/SKILL.md)
+- **Sumber:** [optional-skills/creative/excalidraw/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/excalidraw/SKILL.md)
 
 #### `heartmula`
 
@@ -352,7 +344,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** music, audio, generation, ai, heartmula, heartcodec, lyrics, songs
-- **Sumber:** [optional-skills/creative/heartmula/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/heartmula/SKILL.md)
+- **Sumber:** [optional-skills/creative/heartmula/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/heartmula/SKILL.md)
 
 #### `humanizer`
 
@@ -360,7 +352,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** writing, editing, humanize, anti-ai-slop, voice, prose, text
-- **Sumber:** [skills/creative/humanizer/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/humanizer/SKILL.md)
+- **Sumber:** [skills/creative/humanizer/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/humanizer/SKILL.md)
 
 #### `hyperframes`
 
@@ -368,7 +360,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** creative, video, animation, html, gsap, motion-graphics
-- **Sumber:** [optional-skills/creative/hyperframes/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/hyperframes/SKILL.md)
+- **Sumber:** [optional-skills/creative/hyperframes/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/hyperframes/SKILL.md)
 
 #### `impeccable`
 
@@ -376,7 +368,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** design, frontend, ui, ux, web-design, anti-slop
-- **Sumber:** [optional-skills/creative/impeccable/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/impeccable/SKILL.md)
+- **Sumber:** [optional-skills/creative/impeccable/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/impeccable/SKILL.md)
 
 #### `ip-as-logo`
 
@@ -384,7 +376,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** logo, mascot, branding, ip-character, image-generation, creative
-- **Sumber:** [optional-skills/creative/ip-as-logo/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/ip-as-logo/SKILL.md)
+- **Sumber:** [optional-skills/creative/ip-as-logo/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/ip-as-logo/SKILL.md)
 
 #### `kanban-video-orchestrator`
 
@@ -392,7 +384,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** video, kanban, multi-agent, orchestration, production-pipeline
-- **Sumber:** [optional-skills/creative/kanban-video-orchestrator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/kanban-video-orchestrator/SKILL.md)
+- **Sumber:** [optional-skills/creative/kanban-video-orchestrator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/kanban-video-orchestrator/SKILL.md)
 
 #### `manim-video`
 
@@ -400,7 +392,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Manim, Animation, Math, Video
-- **Sumber:** [skills/creative/manim-video/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/manim-video/SKILL.md)
+- **Sumber:** [skills/creative/manim-video/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/manim-video/SKILL.md)
 
 #### `meme-generation`
 
@@ -408,7 +400,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** creative, memes, humor, images
-- **Sumber:** [optional-skills/creative/meme-generation/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/meme-generation/SKILL.md)
+- **Sumber:** [optional-skills/creative/meme-generation/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/meme-generation/SKILL.md)
 
 #### `mono-color`
 
@@ -416,7 +408,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** design, poster, print, duotone, risograph, editorial, image-generation
-- **Sumber:** [optional-skills/creative/mono-color/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/mono-color/SKILL.md)
+- **Sumber:** [optional-skills/creative/mono-color/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/mono-color/SKILL.md)
 
 #### `p5js`
 
@@ -424,7 +416,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** creative-coding, generative-art, p5js, canvas, interactive, visualization, webgl, shaders, animation
-- **Sumber:** [skills/creative/p5js/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/p5js/SKILL.md)
+- **Sumber:** [skills/creative/p5js/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/p5js/SKILL.md)
 
 #### `pixel-art`
 
@@ -432,14 +424,14 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** creative, pixel-art, arcade, snes, nes, gameboy, retro, image, video
-- **Sumber:** [optional-skills/creative/pixel-art/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/pixel-art/SKILL.md)
+- **Sumber:** [optional-skills/creative/pixel-art/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/pixel-art/SKILL.md)
 
 #### `popular-web-designs`
 
 - **Deskripsi:** 54 sistem desain nyata (Stripe, Linear, Vercel) dalam HTML/CSS.
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
-- **Sumber:** [skills/creative/popular-web-designs/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/popular-web-designs/SKILL.md)
+- **Sumber:** [skills/creative/popular-web-designs/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/popular-web-designs/SKILL.md)
 
 #### `pretext`
 
@@ -447,7 +439,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** creative-coding, typography, pretext, ascii-art, canvas, generative, text-layout, kinetic-typography
-- **Sumber:** [optional-skills/creative/pretext/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/pretext/SKILL.md)
+- **Sumber:** [optional-skills/creative/pretext/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/pretext/SKILL.md)
 
 #### `simple-english`
 
@@ -455,7 +447,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** writing, documentation, ste, asd-ste100, technical-writing, editing, anti-ai-slop
-- **Sumber:** [optional-skills/creative/simple-english/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/simple-english/SKILL.md)
+- **Sumber:** [optional-skills/creative/simple-english/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/simple-english/SKILL.md)
 
 #### `sketch`
 
@@ -463,7 +455,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** sketch, mockup, design, ui, prototype, html, variants, exploration, wireframe, comparison
-- **Sumber:** [optional-skills/creative/sketch/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/sketch/SKILL.md)
+- **Sumber:** [optional-skills/creative/sketch/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/sketch/SKILL.md)
 
 #### `social-media-content-calendar`
 
@@ -471,14 +463,14 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Social-Media, Content-Calendar, Campaigns, Publishing
-- **Sumber:** [optional-skills/creative/social-media-content-calendar/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/social-media-content-calendar/SKILL.md)
+- **Sumber:** [optional-skills/creative/social-media-content-calendar/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/social-media-content-calendar/SKILL.md)
 
 #### `songwriting-and-ai-music`
 
 - **Deskripsi:** Seni menulis lagu dan prompt musik Suno AI.
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
-- **Sumber:** [skills/creative/songwriting-and-ai-music/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/creative/songwriting-and-ai-music/SKILL.md)
+- **Sumber:** [skills/creative/songwriting-and-ai-music/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/creative/songwriting-and-ai-music/SKILL.md)
 
 #### `system-atlas`
 
@@ -486,7 +478,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** architecture, diagrams, isometric, documentation
-- **Sumber:** [optional-skills/creative/system-atlas/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/system-atlas/SKILL.md)
+- **Sumber:** [optional-skills/creative/system-atlas/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/system-atlas/SKILL.md)
 
 #### `tldraw-offline`
 
@@ -494,7 +486,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** tldraw, canvas, whiteboard, document-script, diagramming
-- **Sumber:** [optional-skills/creative/tldraw-offline/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/tldraw-offline/SKILL.md)
+- **Sumber:** [optional-skills/creative/tldraw-offline/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/tldraw-offline/SKILL.md)
 
 #### `unreal-mcp`
 
@@ -502,7 +494,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** unreal, unreal-engine, ue5, 3d, mcp, scenes, cinematics, lighting, gamedev
-- **Sumber:** [optional-skills/creative/unreal-mcp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/creative/unreal-mcp/SKILL.md)
+- **Sumber:** [optional-skills/creative/unreal-mcp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/creative/unreal-mcp/SKILL.md)
 
 ### data-science
 
@@ -512,7 +504,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** jupyter, notebook, repl, data-science, exploration, iterative
-- **Sumber:** [optional-skills/data-science/jupyter-notebook/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/data-science/jupyter-notebook/SKILL.md)
+- **Sumber:** [optional-skills/data-science/jupyter-notebook/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/data-science/jupyter-notebook/SKILL.md)
 
 ### devops
 
@@ -522,7 +514,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** actual, actual-inc, provider, local-inference, relay, gguf, setup
-- **Sumber:** [optional-skills/devops/actual-setup/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/devops/actual-setup/SKILL.md)
+- **Sumber:** [optional-skills/devops/actual-setup/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/devops/actual-setup/SKILL.md)
 
 #### `docker-management`
 
@@ -530,7 +522,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** docker, containers, devops, infrastructure, compose, images, volumes, networks, debugging
-- **Sumber:** [optional-skills/devops/docker-management/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/devops/docker-management/SKILL.md)
+- **Sumber:** [optional-skills/devops/docker-management/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/devops/docker-management/SKILL.md)
 
 #### `hermes-s6-container-supervision`
 
@@ -538,7 +530,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux
 - **Tag:** docker, s6, supervision, gateway, profiles
-- **Sumber:** [optional-skills/devops/hermes-s6-container-supervision/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/devops/hermes-s6-container-supervision/SKILL.md)
+- **Sumber:** [optional-skills/devops/hermes-s6-container-supervision/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/devops/hermes-s6-container-supervision/SKILL.md)
 
 #### `inference-sh-cli`
 
@@ -546,7 +538,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** AI, image-generation, video, LLM, search, inference, FLUX, Veo, Claude
-- **Sumber:** [optional-skills/devops/inference-sh-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/devops/inference-sh-cli/SKILL.md)
+- **Sumber:** [optional-skills/devops/inference-sh-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/devops/inference-sh-cli/SKILL.md)
 
 #### `pinggy-tunnel`
 
@@ -554,7 +546,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Pinggy, Tunnel, Networking, SSH, Webhook, Localhost
-- **Sumber:** [optional-skills/devops/pinggy-tunnel/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/devops/pinggy-tunnel/SKILL.md)
+- **Sumber:** [optional-skills/devops/pinggy-tunnel/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/devops/pinggy-tunnel/SKILL.md)
 
 #### `sdlc-review`
 
@@ -562,7 +554,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** kanban, review, quality, verification
-- **Sumber:** [skills/devops/sdlc-review/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/devops/sdlc-review/SKILL.md)
+- **Sumber:** [skills/devops/sdlc-review/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/devops/sdlc-review/SKILL.md)
 
 #### `setup-wizard-generator`
 
@@ -570,7 +562,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** wizard, setup, onboarding, credentials, secrets, migration, bash, human-in-the-loop
-- **Sumber:** [optional-skills/devops/setup-wizard-generator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/devops/setup-wizard-generator/SKILL.md)
+- **Sumber:** [optional-skills/devops/setup-wizard-generator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/devops/setup-wizard-generator/SKILL.md)
 
 #### `watchers`
 
@@ -578,7 +570,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** cron, polling, rss, github, http, automation, monitoring
-- **Sumber:** [optional-skills/devops/watchers/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/devops/watchers/SKILL.md)
+- **Sumber:** [optional-skills/devops/watchers/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/devops/watchers/SKILL.md)
 
 ### dogfood
 
@@ -588,7 +580,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** qa, ux, testing, adversarial, dogfood, personas, user-testing
-- **Sumber:** [optional-skills/dogfood/adversarial-ux-test/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/dogfood/adversarial-ux-test/SKILL.md)
+- **Sumber:** [optional-skills/dogfood/adversarial-ux-test/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/dogfood/adversarial-ux-test/SKILL.md)
 
 ### email
 
@@ -598,7 +590,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Email, CLI, AgentMail, Communication
-- **Sumber:** [optional-skills/email/agentmail/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/email/agentmail/SKILL.md)
+- **Sumber:** [optional-skills/email/agentmail/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/email/agentmail/SKILL.md)
 
 #### `email-inbox-triage`
 
@@ -606,7 +598,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Email, Inbox, Triage, Replies, Productivity
-- **Sumber:** [skills/email/email-inbox-triage/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/email/email-inbox-triage/SKILL.md)
+- **Sumber:** [skills/email/email-inbox-triage/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/email/email-inbox-triage/SKILL.md)
 
 #### `himalaya`
 
@@ -614,7 +606,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Email, IMAP, SMTP, CLI, Communication
-- **Sumber:** [skills/email/himalaya/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/email/himalaya/SKILL.md)
+- **Sumber:** [skills/email/himalaya/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/email/himalaya/SKILL.md)
 
 ### finance
 
@@ -624,7 +616,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** finance, three-statement, income-statement, balance-sheet, cash-flow, excel, openpyxl, modeling
-- **Sumber:** [optional-skills/finance/3-statement-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/3-statement-model/SKILL.md)
+- **Sumber:** [optional-skills/finance/3-statement-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/3-statement-model/SKILL.md)
 
 #### `comps-analysis`
 
@@ -632,7 +624,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** finance, valuation, comps, excel, openpyxl, modeling, investment-banking
-- **Sumber:** [optional-skills/finance/comps-analysis/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/comps-analysis/SKILL.md)
+- **Sumber:** [optional-skills/finance/comps-analysis/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/comps-analysis/SKILL.md)
 
 #### `dcf-model`
 
@@ -640,7 +632,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** finance, valuation, dcf, excel, openpyxl, modeling, investment-banking
-- **Sumber:** [optional-skills/finance/dcf-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/dcf-model/SKILL.md)
+- **Sumber:** [optional-skills/finance/dcf-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/dcf-model/SKILL.md)
 
 #### `excel-author`
 
@@ -648,7 +640,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** excel, openpyxl, finance, spreadsheet, modeling
-- **Sumber:** [optional-skills/finance/excel-author/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/excel-author/SKILL.md)
+- **Sumber:** [optional-skills/finance/excel-author/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/excel-author/SKILL.md)
 
 #### `lbo-model`
 
@@ -656,7 +648,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** finance, valuation, lbo, private-equity, excel, openpyxl, modeling
-- **Sumber:** [optional-skills/finance/lbo-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/lbo-model/SKILL.md)
+- **Sumber:** [optional-skills/finance/lbo-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/lbo-model/SKILL.md)
 
 #### `merger-model`
 
@@ -664,14 +656,14 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** finance, m-and-a, merger, accretion-dilution, excel, openpyxl, modeling, investment-banking
-- **Sumber:** [optional-skills/finance/merger-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/merger-model/SKILL.md)
+- **Sumber:** [optional-skills/finance/merger-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/merger-model/SKILL.md)
 
 #### `polymarket`
 
 - **Deskripsi:** Menanyakan Polymarket: pasar, harga, buku order, riwayat.
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
-- **Sumber:** [optional-skills/finance/polymarket/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/polymarket/SKILL.md)
+- **Sumber:** [optional-skills/finance/polymarket/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/polymarket/SKILL.md)
 
 #### `pptx-author`
 
@@ -679,7 +671,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** powerpoint, pptx, python-pptx, presentation, finance
-- **Sumber:** [optional-skills/finance/pptx-author/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/pptx-author/SKILL.md)
+- **Sumber:** [optional-skills/finance/pptx-author/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/pptx-author/SKILL.md)
 
 #### `stocks`
 
@@ -687,7 +679,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Stocks, Finance, Market, Crypto, Investing
-- **Sumber:** [optional-skills/finance/stocks/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/finance/stocks/SKILL.md)
+- **Sumber:** [optional-skills/finance/stocks/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/finance/stocks/SKILL.md)
 
 ### gaming
 
@@ -696,14 +688,14 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Deskripsi:** Menjalankan server Minecraft bermod (CurseForge, Modrinth).
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
-- **Sumber:** [optional-skills/gaming/minecraft-modpack-server/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/gaming/minecraft-modpack-server/SKILL.md)
+- **Sumber:** [optional-skills/gaming/minecraft-modpack-server/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/gaming/minecraft-modpack-server/SKILL.md)
 
 #### `pokemon-player`
 
 - **Deskripsi:** Memainkan Pokemon lewat emulator tanpa antarmuka dan pembacaan RAM.
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
-- **Sumber:** [optional-skills/gaming/pokemon-player/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/gaming/pokemon-player/SKILL.md)
+- **Sumber:** [optional-skills/gaming/pokemon-player/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/gaming/pokemon-player/SKILL.md)
 
 ### health
 
@@ -713,7 +705,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** health, fitness, nutrition, gym, workout, diet, exercise
-- **Sumber:** [optional-skills/health/fitness-nutrition/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/health/fitness-nutrition/SKILL.md)
+- **Sumber:** [optional-skills/health/fitness-nutrition/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/health/fitness-nutrition/SKILL.md)
 
 #### `neuroskill-bci`
 
@@ -721,7 +713,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** BCI, neurofeedback, health, focus, EEG, cognitive-state, biometrics, neuroskill
-- **Sumber:** [optional-skills/health/neuroskill-bci/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/health/neuroskill-bci/SKILL.md)
+- **Sumber:** [optional-skills/health/neuroskill-bci/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/health/neuroskill-bci/SKILL.md)
 
 ### mcp
 
@@ -731,7 +723,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** MCP, FastMCP, Python, Tools, Resources, Prompts, Deployment
-- **Sumber:** [optional-skills/mcp/fastmcp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mcp/fastmcp/SKILL.md)
+- **Sumber:** [optional-skills/mcp/fastmcp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mcp/fastmcp/SKILL.md)
 
 #### `mcp-oauth-remote-gateway`
 
@@ -739,7 +731,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** MCP, OAuth, PKCE, Remote-Deployment
-- **Sumber:** [optional-skills/mcp/mcp-oauth-remote-gateway/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mcp/mcp-oauth-remote-gateway/SKILL.md)
+- **Sumber:** [optional-skills/mcp/mcp-oauth-remote-gateway/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mcp/mcp-oauth-remote-gateway/SKILL.md)
 
 #### `mcporter`
 
@@ -747,25 +739,25 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** MCP, Tools, API, Integrations, Interop
-- **Sumber:** [optional-skills/mcp/mcporter/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mcp/mcporter/SKILL.md)
+- **Sumber:** [optional-skills/mcp/mcporter/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mcp/mcporter/SKILL.md)
 
 ### media
 
 #### `gif-search`
 
 - **Deskripsi:** Mencari dan mengunduh GIF dari Tenor lewat curl dan jq.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** GIF, Media, Search, Tenor, API
-- **Sumber:** [skills/media/gif-search/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/media/gif-search/SKILL.md)
+- **Sumber:** [optional-skills/media/gif-search/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/media/gif-search/SKILL.md)
 
 #### `songsee`
 
 - **Deskripsi:** Spektrogram dan fitur audio (mel, chroma, MFCC) lewat CLI.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Audio, Visualization, Spectrogram, Music, Analysis
-- **Sumber:** [skills/media/songsee/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/media/songsee/SKILL.md)
+- **Sumber:** [optional-skills/media/songsee/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/media/songsee/SKILL.md)
 
 #### `youtube-content`
 
@@ -773,17 +765,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** YouTube, Video, Transcripts, Media
-- **Sumber:** [skills/media/youtube-content/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/media/youtube-content/SKILL.md)
-
-### migration
-
-#### `openclaw-migration`
-
-- **Deskripsi:** Mengimpor penyiapan OpenClaw (memori, skill) ke Hermes.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Migration, OpenClaw, Hermes, Memory, Persona, Import
-- **Sumber:** [optional-skills/migration/openclaw-migration/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/migration/openclaw-migration/SKILL.md)
+- **Sumber:** [skills/media/youtube-content/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/media/youtube-content/SKILL.md)
 
 ### mlops
 
@@ -793,7 +775,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Distributed Training, HuggingFace, Accelerate, DeepSpeed, FSDP, Mixed Precision, PyTorch, DDP, Unified API, Simple
-- **Sumber:** [optional-skills/mlops/accelerate/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/accelerate/SKILL.md)
+- **Sumber:** [optional-skills/mlops/accelerate/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/accelerate/SKILL.md)
 
 #### `axolotl`
 
@@ -801,7 +783,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Fine-Tuning, Axolotl, LLM, LoRA, QLoRA, DPO, KTO, ORPO, GRPO, YAML, HuggingFace, DeepSpeed, Multimodal
-- **Sumber:** [optional-skills/mlops/training/axolotl/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/training/axolotl/SKILL.md)
+- **Sumber:** [optional-skills/mlops/training/axolotl/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/training/axolotl/SKILL.md)
 
 #### `chroma`
 
@@ -809,15 +791,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** RAG, Chroma, Vector Database, Embeddings, Semantic Search, Open Source, Self-Hosted, Document Retrieval, Metadata Filtering
-- **Sumber:** [optional-skills/mlops/chroma/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/chroma/SKILL.md)
-
-#### `clip`
-
-- **Deskripsi:** Klasifikasi gambar zero-shot dan pencarian gambar-teks.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Multimodal, CLIP, Vision-Language, Zero-Shot, Image Classification, OpenAI, Image Search, Cross-Modal Retrieval, Content Moderation
-- **Sumber:** [optional-skills/mlops/clip/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/clip/SKILL.md)
+- **Sumber:** [optional-skills/mlops/chroma/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/chroma/SKILL.md)
 
 #### `dspy`
 
@@ -825,7 +799,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Prompt Engineering, DSPy, Declarative Programming, RAG, Agents, Prompt Optimization, LM Programming, Stanford NLP, Automatic Optimization, Modular AI
-- **Sumber:** [optional-skills/mlops/research/dspy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/research/dspy/SKILL.md)
+- **Sumber:** [optional-skills/mlops/research/dspy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/research/dspy/SKILL.md)
 
 #### `evaluating-llms-harness`
 
@@ -833,7 +807,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Evaluation, LM Evaluation Harness, Benchmarking, MMLU, HumanEval, GSM8K, EleutherAI, Model Quality, Academic Benchmarks, Industry Standard
-- **Sumber:** [optional-skills/mlops/evaluation/evaluating-llms-harness/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/evaluation/evaluating-llms-harness/SKILL.md)
+- **Sumber:** [optional-skills/mlops/evaluation/evaluating-llms-harness/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/evaluation/evaluating-llms-harness/SKILL.md)
 
 #### `faiss`
 
@@ -841,7 +815,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** RAG, FAISS, Similarity Search, Vector Search, Facebook AI, GPU Acceleration, Billion-Scale, K-NN, HNSW, High Performance, Large Scale
-- **Sumber:** [optional-skills/mlops/faiss/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/faiss/SKILL.md)
+- **Sumber:** [optional-skills/mlops/faiss/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/faiss/SKILL.md)
 
 #### `flash-attention`
 
@@ -849,38 +823,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Optimization, Flash Attention, Attention Optimization, Memory Efficiency, Speed Optimization, Long Context, PyTorch, SDPA, H100, FP8, Transformers
-- **Sumber:** [optional-skills/mlops/flash-attention/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/flash-attention/SKILL.md)
-
-#### `guidance`
-
-- **Deskripsi:** Membatasi keluaran LLM dengan tata bahasa; menjamin JSON valid.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Prompt Engineering, Guidance, Constrained Generation, Structured Output, JSON Validation, Grammar, Microsoft Research, Format Enforcement, Multi-Step Workflows
-- **Sumber:** [optional-skills/mlops/guidance/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/guidance/SKILL.md)
-
-#### `huggingface-hub`
-
-- **Deskripsi:** CLI hf HuggingFace: mencari, mengunduh, dan mengunggah model serta dataset.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Sumber:** [optional-skills/mlops/models/huggingface-hub/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/models/huggingface-hub/SKILL.md)
-
-#### `huggingface-tokenizers`
-
-- **Deskripsi:** Tokenisasi BPE/WordPiece cepat dan pelatihan kosakata khusus.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Tokenization, HuggingFace, BPE, WordPiece, Unigram, Fast Tokenization, Rust, Custom Tokenizer, Alignment Tracking, Production
-- **Sumber:** [optional-skills/mlops/huggingface-tokenizers/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/huggingface-tokenizers/SKILL.md)
-
-#### `instructor`
-
-- **Deskripsi:** Keluaran LLM terstruktur yang divalidasi dengan Pydantic.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Prompt Engineering, Instructor, Structured Output, Pydantic, Data Extraction, JSON Parsing, Type Safety, Validation, Streaming, OpenAI, Anthropic
-- **Sumber:** [optional-skills/mlops/instructor/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/instructor/SKILL.md)
+- **Sumber:** [optional-skills/mlops/flash-attention/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/flash-attention/SKILL.md)
 
 #### `lambda-labs`
 
@@ -888,7 +831,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Infrastructure, GPU Cloud, Training, Inference, Lambda Labs
-- **Sumber:** [optional-skills/mlops/lambda-labs/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/lambda-labs/SKILL.md)
+- **Sumber:** [optional-skills/mlops/lambda-labs/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/lambda-labs/SKILL.md)
 
 #### `llama-cpp`
 
@@ -896,15 +839,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** llama.cpp, GGUF, Quantization, Hugging Face Hub, CPU Inference, Apple Silicon, Edge Deployment, AMD GPUs, Intel GPUs, NVIDIA, URL-first
-- **Sumber:** [optional-skills/mlops/inference/llama-cpp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/inference/llama-cpp/SKILL.md)
-
-#### `llava`
-
-- **Deskripsi:** Percakapan visi-bahasa: VQA, pembuatan keterangan gambar, dialog gambar.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** LLaVA, Vision-Language, Multimodal, Visual Question Answering, Image Chat, CLIP, Vicuna, Conversational AI, Instruction Tuning, VQA
-- **Sumber:** [optional-skills/mlops/llava/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/llava/SKILL.md)
+- **Sumber:** [optional-skills/mlops/inference/llama-cpp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/inference/llama-cpp/SKILL.md)
 
 #### `modal`
 
@@ -912,7 +847,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Infrastructure, Serverless, GPU, Cloud, Deployment, Modal
-- **Sumber:** [optional-skills/mlops/modal/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/modal/SKILL.md)
+- **Sumber:** [optional-skills/mlops/modal/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/modal/SKILL.md)
 
 #### `nemo-curator`
 
@@ -920,15 +855,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Data Processing, NeMo Curator, Data Curation, GPU Acceleration, Deduplication, Quality Filtering, NVIDIA, RAPIDS, PII Redaction, Multimodal, LLM Training Data
-- **Sumber:** [optional-skills/mlops/nemo-curator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/nemo-curator/SKILL.md)
-
-#### `outlines`
-
-- **Deskripsi:** Outlines: pembuatan keluaran LLM terstruktur (JSON/regex/Pydantic).
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Prompt Engineering, Outlines, Structured Generation, JSON Schema, Pydantic, Local Models, Grammar-Based Generation, vLLM, Transformers, Type Safety
-- **Sumber:** [optional-skills/mlops/inference/outlines/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/inference/outlines/SKILL.md)
+- **Sumber:** [optional-skills/mlops/nemo-curator/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/nemo-curator/SKILL.md)
 
 #### `peft`
 
@@ -936,15 +863,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Fine-Tuning, PEFT, LoRA, QLoRA, Parameter-Efficient, Adapters, Low-Rank, Memory Optimization, Multi-Adapter
-- **Sumber:** [optional-skills/mlops/peft/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/peft/SKILL.md)
-
-#### `pinecone`
-
-- **Deskripsi:** Basis data vektor terkelola untuk RAG dan pencarian di produksi.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** RAG, Pinecone, Vector Database, Managed Service, Serverless, Hybrid Search, Production, Auto-Scaling, Low Latency, Recommendations
-- **Sumber:** [optional-skills/mlops/pinecone/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/pinecone/SKILL.md)
+- **Sumber:** [optional-skills/mlops/peft/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/peft/SKILL.md)
 
 #### `pytorch-fsdp`
 
@@ -952,7 +871,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Distributed Training, PyTorch, FSDP, Data Parallel, Sharding, Mixed Precision, CPU Offloading, FSDP2, Large-Scale Training
-- **Sumber:** [optional-skills/mlops/pytorch-fsdp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/pytorch-fsdp/SKILL.md)
+- **Sumber:** [optional-skills/mlops/pytorch-fsdp/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/pytorch-fsdp/SKILL.md)
 
 #### `pytorch-lightning`
 
@@ -960,15 +879,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** PyTorch Lightning, Training Framework, Distributed Training, DDP, FSDP, DeepSpeed, High-Level API, Callbacks, Best Practices, Scalable
-- **Sumber:** [optional-skills/mlops/pytorch-lightning/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/pytorch-lightning/SKILL.md)
-
-#### `qdrant`
-
-- **Deskripsi:** Mesin pencarian vektor untuk sistem RAG di produksi.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** RAG, Vector Search, Qdrant, Semantic Search, Embeddings, Similarity Search, HNSW, Production, Distributed
-- **Sumber:** [optional-skills/mlops/qdrant/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/qdrant/SKILL.md)
+- **Sumber:** [optional-skills/mlops/pytorch-lightning/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/pytorch-lightning/SKILL.md)
 
 #### `saelens`
 
@@ -976,7 +887,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Sparse Autoencoders, SAE, Mechanistic Interpretability, Feature Discovery, Superposition
-- **Sumber:** [optional-skills/mlops/saelens/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/saelens/SKILL.md)
+- **Sumber:** [optional-skills/mlops/saelens/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/saelens/SKILL.md)
 
 #### `segment-anything-model`
 
@@ -984,7 +895,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Multimodal, Image Segmentation, Computer Vision, SAM, Zero-Shot
-- **Sumber:** [optional-skills/mlops/models/segment-anything-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/models/segment-anything-model/SKILL.md)
+- **Sumber:** [optional-skills/mlops/models/segment-anything-model/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/models/segment-anything-model/SKILL.md)
 
 #### `serving-llms-vllm`
 
@@ -992,7 +903,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** vLLM, Inference Serving, PagedAttention, Continuous Batching, High Throughput, Production, OpenAI API, Quantization, Tensor Parallelism
-- **Sumber:** [optional-skills/mlops/inference/serving-llms-vllm/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/inference/serving-llms-vllm/SKILL.md)
+- **Sumber:** [optional-skills/mlops/inference/serving-llms-vllm/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/inference/serving-llms-vllm/SKILL.md)
 
 #### `simpo`
 
@@ -1000,7 +911,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Post-Training, SimPO, Preference Optimization, Alignment, DPO Alternative, Reference-Free, LLM Alignment, Efficient Training
-- **Sumber:** [optional-skills/mlops/simpo/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/simpo/SKILL.md)
+- **Sumber:** [optional-skills/mlops/simpo/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/simpo/SKILL.md)
 
 #### `slime`
 
@@ -1008,15 +919,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Reinforcement Learning, Megatron-LM, SGLang, GRPO, Post-Training, GLM
-- **Sumber:** [optional-skills/mlops/slime/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/slime/SKILL.md)
-
-#### `stable-diffusion`
-
-- **Deskripsi:** Pembuatan gambar dari teks, inpainting, dan img2img.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Image Generation, Stable Diffusion, Diffusers, Text-to-Image, Multimodal, Computer Vision
-- **Sumber:** [optional-skills/mlops/stable-diffusion/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/stable-diffusion/SKILL.md)
+- **Sumber:** [optional-skills/mlops/slime/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/slime/SKILL.md)
 
 #### `tensorrt-llm`
 
@@ -1024,7 +927,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux
 - **Tag:** Inference Serving, TensorRT-LLM, NVIDIA, Inference Optimization, High Throughput, Low Latency, Production, FP8, INT4, In-Flight Batching, Multi-GPU
-- **Sumber:** [optional-skills/mlops/tensorrt-llm/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/tensorrt-llm/SKILL.md)
+- **Sumber:** [optional-skills/mlops/tensorrt-llm/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/tensorrt-llm/SKILL.md)
 
 #### `torchtitan`
 
@@ -1032,15 +935,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Model Architecture, Distributed Training, TorchTitan, FSDP2, Tensor Parallel, Pipeline Parallel, Context Parallel, Float8, Llama, Pretraining
-- **Sumber:** [optional-skills/mlops/torchtitan/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/torchtitan/SKILL.md)
-
-#### `trl-fine-tuning`
-
-- **Deskripsi:** TRL: SFT, DPO, GRPO, RLOO, dan pemodelan reward untuk RLHF pada LLM.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** Post-Training, TRL, Reinforcement Learning, Fine-Tuning, SFT, DPO, GRPO, RLOO, RLHF, Preference Alignment, HuggingFace
-- **Sumber:** [optional-skills/mlops/training/trl-fine-tuning/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/training/trl-fine-tuning/SKILL.md)
+- **Sumber:** [optional-skills/mlops/torchtitan/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/torchtitan/SKILL.md)
 
 #### `unsloth`
 
@@ -1048,23 +943,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Fine-Tuning, Unsloth, Fast Training, LoRA, QLoRA, Memory-Efficient, Optimization, Llama, Mistral, Gemma, Qwen
-- **Sumber:** [optional-skills/mlops/training/unsloth/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/training/unsloth/SKILL.md)
-
-#### `weights-and-biases`
-
-- **Deskripsi:** W&B: mencatat eksperimen ML, sweep, registri model, dasbor.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** MLOps, Weights And Biases, WandB, Experiment Tracking, Hyperparameter Tuning, Model Registry, Collaboration, Real-Time Visualization, PyTorch, TensorFlow, HuggingFace
-- **Sumber:** [optional-skills/mlops/evaluation/weights-and-biases/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/evaluation/weights-and-biases/SKILL.md)
-
-#### `whisper`
-
-- **Deskripsi:** Mentranskripsi dan menerjemahkan ucapan dalam 99 bahasa.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos
-- **Tag:** Whisper, Speech Recognition, ASR, Multimodal, Multilingual, OpenAI, Speech-To-Text, Transcription, Translation, Audio Processing
-- **Sumber:** [optional-skills/mlops/whisper/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/mlops/whisper/SKILL.md)
+- **Sumber:** [optional-skills/mlops/training/unsloth/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/mlops/training/unsloth/SKILL.md)
 
 ### note-taking
 
@@ -1074,7 +953,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Obsidian, Notes, Markdown, Vault
-- **Sumber:** [skills/note-taking/obsidian/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/note-taking/obsidian/SKILL.md)
+- **Sumber:** [skills/note-taking/obsidian/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/note-taking/obsidian/SKILL.md)
 
 ### payments
 
@@ -1084,7 +963,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Payments, MPP, HTTP-402, Tempo, Stripe
-- **Sumber:** [optional-skills/payments/mpp-agent/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/payments/mpp-agent/SKILL.md)
+- **Sumber:** [optional-skills/payments/mpp-agent/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/payments/mpp-agent/SKILL.md)
 
 #### `stripe-link-cli`
 
@@ -1092,7 +971,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Payments, Stripe, Link, Checkout, MPP
-- **Sumber:** [optional-skills/payments/stripe-link-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/payments/stripe-link-cli/SKILL.md)
+- **Sumber:** [optional-skills/payments/stripe-link-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/payments/stripe-link-cli/SKILL.md)
 
 #### `stripe-projects`
 
@@ -1100,25 +979,25 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Payments, Stripe, Projects, Provisioning, Infrastructure
-- **Sumber:** [optional-skills/payments/stripe-projects/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/payments/stripe-projects/SKILL.md)
+- **Sumber:** [optional-skills/payments/stripe-projects/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/payments/stripe-projects/SKILL.md)
 
 ### productivity
 
 #### `airtable`
 
 - **Deskripsi:** REST API Airtable lewat curl. CRUD rekaman, filter, upsert.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Airtable, Productivity, Database, API
-- **Sumber:** [skills/productivity/airtable/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/airtable/SKILL.md)
+- **Sumber:** [optional-skills/productivity/airtable/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/airtable/SKILL.md)
 
 #### `box`
 
 - **Deskripsi:** Box mengelola berkas cloud, berbagi, pencarian, dan metadata.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Box, Productivity, Cloud Storage, Collaboration, Metadata, Content Extraction, CLI, SDK
-- **Sumber:** [skills/productivity/box/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/box/SKILL.md)
+- **Sumber:** [optional-skills/productivity/box/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/box/SKILL.md)
 
 #### `canvas`
 
@@ -1126,7 +1005,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Canvas, LMS, Education, Courses, Assignments
-- **Sumber:** [optional-skills/productivity/canvas/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/canvas/SKILL.md)
+- **Sumber:** [optional-skills/productivity/canvas/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/canvas/SKILL.md)
 
 #### `decision-questionnaire`
 
@@ -1134,7 +1013,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** questionnaire, decision, async, stakeholder, discovery, communication
-- **Sumber:** [optional-skills/productivity/decision-questionnaire/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/decision-questionnaire/SKILL.md)
+- **Sumber:** [optional-skills/productivity/decision-questionnaire/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/decision-questionnaire/SKILL.md)
 
 #### `document-to-action-items`
 
@@ -1142,23 +1021,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Documents, OCR, Action-Items, Deadlines, Extraction
-- **Sumber:** [skills/productivity/document-to-action-items/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/document-to-action-items/SKILL.md)
-
-#### `docx`
-
-- **Deskripsi:** Membuat, membaca, mengedit, membuat templat, dan meninjau berkas Word .docx.
-- **Tingkat:** Bawaan
-- **Platform:** linux, macos, windows
-- **Tag:** word, docx, documents, office, templates, revisions, comments
-- **Sumber:** [skills/productivity/docx/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/docx/SKILL.md)
-
-#### `first-task`
-
-- **Deskripsi:** Menjalankan percakapan tugas pertama yang diserahkan oleh penyiapan.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** onboarding, first-run, desktop, handoff
-- **Sumber:** [optional-skills/productivity/first-task/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/first-task/SKILL.md)
+- **Sumber:** [skills/productivity/document-to-action-items/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/document-to-action-items/SKILL.md)
 
 #### `google-workspace`
 
@@ -1166,7 +1029,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Google, Gmail, Calendar, Drive, Sheets, Docs, Contacts, Email, OAuth
-- **Sumber:** [skills/productivity/google-workspace/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/google-workspace/SKILL.md)
+- **Sumber:** [skills/productivity/google-workspace/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/google-workspace/SKILL.md)
 
 #### `here-now`
 
@@ -1174,15 +1037,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** macos, linux
 - **Tag:** here.now, herenow, publish, deploy, hosting, static-site, web, share, URL, drive, storage
-- **Sumber:** [optional-skills/productivity/here-now/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/here-now/SKILL.md)
-
-#### `initiate-setup`
-
-- **Deskripsi:** Menjalankan percakapan penyiapan pertama di aplikasi desktop Hermes.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** onboarding, setup, first-run, desktop, handoff
-- **Sumber:** [optional-skills/productivity/initiate-setup/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/initiate-setup/SKILL.md)
+- **Sumber:** [optional-skills/productivity/here-now/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/here-now/SKILL.md)
 
 #### `live-dashboard`
 
@@ -1190,7 +1045,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** dashboards, monitoring, status, automation, reporting
-- **Sumber:** [optional-skills/productivity/live-dashboard/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/live-dashboard/SKILL.md)
+- **Sumber:** [optional-skills/productivity/live-dashboard/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/live-dashboard/SKILL.md)
 
 #### `maps`
 
@@ -1198,7 +1053,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** maps, geocoding, places, routing, distance, directions, nearby, location, openstreetmap, nominatim, overpass, osrm
-- **Sumber:** [skills/productivity/maps/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/maps/SKILL.md)
+- **Sumber:** [skills/productivity/maps/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/maps/SKILL.md)
 
 #### `meeting-action-items`
 
@@ -1206,7 +1061,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Meetings, Action-Items, Follow-Up, Productivity
-- **Sumber:** [skills/productivity/meeting-action-items/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/meeting-action-items/SKILL.md)
+- **Sumber:** [skills/productivity/meeting-action-items/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/meeting-action-items/SKILL.md)
 
 #### `memento-flashcards`
 
@@ -1214,15 +1069,23 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** macos, linux
 - **Tag:** Education, Flashcards, Spaced Repetition, Learning, Quiz, YouTube
-- **Sumber:** [optional-skills/productivity/memento-flashcards/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/memento-flashcards/SKILL.md)
+- **Sumber:** [optional-skills/productivity/memento-flashcards/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/memento-flashcards/SKILL.md)
+
+#### `microsoft-office`
+
+- **Deskripsi:** Create, read, and edit Word, PowerPoint, and Excel files.
+- **Tingkat:** Bawaan
+- **Platform:** linux, macos, windows
+- **Tag:** office, word, docx, powerpoint, pptx, excel, xlsx, csv, documents, slides, spreadsheets
+- **Sumber:** [skills/productivity/microsoft-office/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/microsoft-office/SKILL.md)
 
 #### `notion`
 
 - **Deskripsi:** API Notion dan CLI ntn: halaman, basis data, markdown, Workers.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Notion, Productivity, Notes, Database, API, CLI, Workers
-- **Sumber:** [skills/productivity/notion/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/notion/SKILL.md)
+- **Sumber:** [optional-skills/productivity/notion/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/notion/SKILL.md)
 
 #### `pdf`
 
@@ -1230,15 +1093,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** pdf, documents, forms, ocr, text-extraction, reportlab, pypdf, pdfplumber, pymupdf, marker
-- **Sumber:** [skills/productivity/pdf/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/pdf/SKILL.md)
-
-#### `powerpoint`
-
-- **Deskripsi:** Membuat, membaca, dan mengedit dek .pptx dengan python-pptx.
-- **Tingkat:** Bawaan
-- **Platform:** linux, macos, windows
-- **Tag:** pptx, powerpoint, presentations, slides, office, python-pptx
-- **Sumber:** [skills/productivity/powerpoint/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/powerpoint/SKILL.md)
+- **Sumber:** [skills/productivity/pdf/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/pdf/SKILL.md)
 
 #### `product-price-monitor`
 
@@ -1246,7 +1101,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Prices, Availability, Shopping, Travel, Alerts
-- **Sumber:** [skills/productivity/product-price-monitor/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/product-price-monitor/SKILL.md)
+- **Sumber:** [skills/productivity/product-price-monitor/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/product-price-monitor/SKILL.md)
 
 #### `property-listings`
 
@@ -1254,7 +1109,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** property, rental, real-estate, listings, desktop, cards
-- **Sumber:** [optional-skills/productivity/property-listings/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/property-listings/SKILL.md)
+- **Sumber:** [optional-skills/productivity/property-listings/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/property-listings/SKILL.md)
 
 #### `shop`
 
@@ -1262,7 +1117,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Shopping, E-commerce, Shop, Products, Orders, Returns, Checkout, Reorder
-- **Sumber:** [optional-skills/productivity/shop/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/shop/SKILL.md)
+- **Sumber:** [optional-skills/productivity/shop/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/shop/SKILL.md)
 
 #### `shopify`
 
@@ -1270,7 +1125,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Shopify, E-commerce, Commerce, API, GraphQL
-- **Sumber:** [optional-skills/productivity/shopify/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/shopify/SKILL.md)
+- **Sumber:** [optional-skills/productivity/shopify/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/shopify/SKILL.md)
 
 #### `siyuan`
 
@@ -1278,7 +1133,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** SiYuan, Notes, Knowledge Base, PKM, API
-- **Sumber:** [optional-skills/productivity/siyuan/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/siyuan/SKILL.md)
+- **Sumber:** [optional-skills/productivity/siyuan/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/siyuan/SKILL.md)
 
 #### `teams-meeting-pipeline`
 
@@ -1286,7 +1141,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Teams, Microsoft Graph, Meetings, Productivity, Operations
-- **Sumber:** [skills/productivity/teams-meeting-pipeline/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/teams-meeting-pipeline/SKILL.md)
+- **Sumber:** [skills/productivity/teams-meeting-pipeline/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/teams-meeting-pipeline/SKILL.md)
 
 #### `telephony`
 
@@ -1294,7 +1149,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** telephony, phone, sms, mms, voice, twilio, bland.ai, vapi, calling, texting
-- **Sumber:** [optional-skills/productivity/telephony/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/productivity/telephony/SKILL.md)
+- **Sumber:** [optional-skills/productivity/telephony/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/productivity/telephony/SKILL.md)
 
 #### `weekly-review-planning`
 
@@ -1302,15 +1157,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Weekly-Review, Planning, Tasks, Calendar, Productivity
-- **Sumber:** [skills/productivity/weekly-review-planning/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/weekly-review-planning/SKILL.md)
-
-#### `xlsx`
-
-- **Deskripsi:** Membuat, membaca, dan mengedit buku kerja Excel .xlsx dan CSV.
-- **Tingkat:** Bawaan
-- **Platform:** linux, macos, windows
-- **Tag:** excel, spreadsheet, xlsx, csv, openpyxl, productivity
-- **Sumber:** [skills/productivity/xlsx/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/productivity/xlsx/SKILL.md)
+- **Sumber:** [skills/productivity/weekly-review-planning/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/productivity/weekly-review-planning/SKILL.md)
 
 ### research
 
@@ -1320,7 +1167,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Research, Arxiv, Papers, Academic, Science, API
-- **Sumber:** [skills/research/arxiv/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/research/arxiv/SKILL.md)
+- **Sumber:** [skills/research/arxiv/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/research/arxiv/SKILL.md)
 
 #### `bioinformatics`
 
@@ -1328,7 +1175,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** bioinformatics, genomics, sequencing, biology, research, science
-- **Sumber:** [optional-skills/research/bioinformatics/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/bioinformatics/SKILL.md)
+- **Sumber:** [optional-skills/research/bioinformatics/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/bioinformatics/SKILL.md)
 
 #### `blogwatcher`
 
@@ -1336,7 +1183,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** RSS, Blogs, Feed-Reader, Monitoring
-- **Sumber:** [optional-skills/research/blogwatcher/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/blogwatcher/SKILL.md)
+- **Sumber:** [optional-skills/research/blogwatcher/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/blogwatcher/SKILL.md)
 
 #### `competitor-news-monitor`
 
@@ -1344,7 +1191,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Competitors, News, Market-Research, Monitoring
-- **Sumber:** [skills/research/competitor-news-monitor/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/research/competitor-news-monitor/SKILL.md)
+- **Sumber:** [skills/research/competitor-news-monitor/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/research/competitor-news-monitor/SKILL.md)
 
 #### `darwinian-evolver`
 
@@ -1352,7 +1199,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** evolution, optimization, prompt-engineering, research
-- **Sumber:** [optional-skills/research/darwinian-evolver/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/darwinian-evolver/SKILL.md)
+- **Sumber:** [optional-skills/research/darwinian-evolver/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/darwinian-evolver/SKILL.md)
 
 #### `domain-intel`
 
@@ -1360,7 +1207,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Domains, OSINT, DNS, Research
-- **Sumber:** [optional-skills/research/domain-intel/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/domain-intel/SKILL.md)
+- **Sumber:** [optional-skills/research/domain-intel/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/domain-intel/SKILL.md)
 
 #### `drug-discovery`
 
@@ -1368,7 +1215,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** science, chemistry, pharmacology, research, health
-- **Sumber:** [optional-skills/research/drug-discovery/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/drug-discovery/SKILL.md)
+- **Sumber:** [optional-skills/research/drug-discovery/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/drug-discovery/SKILL.md)
 
 #### `duckduckgo-search`
 
@@ -1376,7 +1223,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** search, duckduckgo, web-search, free, fallback
-- **Sumber:** [optional-skills/research/duckduckgo-search/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/duckduckgo-search/SKILL.md)
+- **Sumber:** [optional-skills/research/duckduckgo-search/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/duckduckgo-search/SKILL.md)
 
 #### `gitnexus-explorer`
 
@@ -1384,7 +1231,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** gitnexus, code-intelligence, knowledge-graph, visualization
-- **Sumber:** [optional-skills/research/gitnexus-explorer/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/gitnexus-explorer/SKILL.md)
+- **Sumber:** [optional-skills/research/gitnexus-explorer/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/gitnexus-explorer/SKILL.md)
 
 #### `grounded-citations`
 
@@ -1392,15 +1239,15 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Research, Citations, Grounding, Sources, Web, Reports
-- **Sumber:** [skills/research/grounded-citations/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/research/grounded-citations/SKILL.md)
+- **Sumber:** [skills/research/grounded-citations/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/research/grounded-citations/SKILL.md)
 
 #### `llm-wiki`
 
 - **Deskripsi:** LLM Wiki ala Karpathy: membangun dan menanyakan basis pengetahuan markdown yang saling tertaut.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** wiki, knowledge-base, research, notes, markdown, rag-alternative
-- **Sumber:** [skills/research/llm-wiki/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/research/llm-wiki/SKILL.md)
+- **Sumber:** [optional-skills/research/llm-wiki/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/llm-wiki/SKILL.md)
 
 #### `osint-investigation`
 
@@ -1408,7 +1255,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** osint, investigation, public-records, sec, sanctions, corporate-registry, property, courts, due-diligence, journalism
-- **Sumber:** [optional-skills/research/osint-investigation/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/osint-investigation/SKILL.md)
+- **Sumber:** [optional-skills/research/osint-investigation/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/osint-investigation/SKILL.md)
 
 #### `parallel-cli`
 
@@ -1416,15 +1263,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Research, Web, Search, Deep-Research, Enrichment, CLI
-- **Sumber:** [optional-skills/research/parallel-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/parallel-cli/SKILL.md)
-
-#### `pinecone-research`
-
-- **Deskripsi:** RAG agen dan memori jangka panjang dengan Pinecone.
-- **Tingkat:** Resmi opsional
-- **Platform:** linux, macos, windows
-- **Tag:** RAG, Pinecone, Memory, Research, Vector Database, Agent, Retrieval
-- **Sumber:** [optional-skills/research/pinecone-research/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/pinecone-research/SKILL.md)
+- **Sumber:** [optional-skills/research/parallel-cli/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/parallel-cli/SKILL.md)
 
 #### `qmd`
 
@@ -1432,7 +1271,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** macos, linux
 - **Tag:** Search, Knowledge-Base, RAG, Notes, MCP, Local-AI
-- **Sumber:** [optional-skills/research/qmd/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/qmd/SKILL.md)
+- **Sumber:** [optional-skills/research/qmd/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/qmd/SKILL.md)
 
 #### `research-paper-writing`
 
@@ -1440,7 +1279,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Research, Paper Writing, Experiments, ML, AI, NeurIPS, ICML, ICLR, ACL, AAAI, COLM, LaTeX, Citations, Statistical Analysis
-- **Sumber:** [optional-skills/research/research-paper-writing/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/research-paper-writing/SKILL.md)
+- **Sumber:** [optional-skills/research/research-paper-writing/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/research-paper-writing/SKILL.md)
 
 #### `rss-feeds`
 
@@ -1448,7 +1287,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** RSS, Atom, Feeds, Monitoring, Research, Blogs, Releases
-- **Sumber:** [optional-skills/research/rss-feeds/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/rss-feeds/SKILL.md)
+- **Sumber:** [optional-skills/research/rss-feeds/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/rss-feeds/SKILL.md)
 
 #### `searxng-search`
 
@@ -1456,7 +1295,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** search, searxng, meta-search, self-hosted, free, fallback
-- **Sumber:** [optional-skills/research/searxng-search/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/research/searxng-search/SKILL.md)
+- **Sumber:** [optional-skills/research/searxng-search/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/research/searxng-search/SKILL.md)
 
 ### security
 
@@ -1466,7 +1305,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** security, secrets, 1password, op, cli
-- **Sumber:** [optional-skills/security/1password/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/security/1password/SKILL.md)
+- **Sumber:** [optional-skills/security/1password/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/security/1password/SKILL.md)
 
 #### `oss-forensics`
 
@@ -1474,7 +1313,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Security, Forensics, GitHub, Supply-Chain
-- **Sumber:** [optional-skills/security/oss-forensics/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/security/oss-forensics/SKILL.md)
+- **Sumber:** [optional-skills/security/oss-forensics/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/security/oss-forensics/SKILL.md)
 
 #### `sherlock`
 
@@ -1482,7 +1321,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** osint, security, username, social-media, reconnaissance
-- **Sumber:** [optional-skills/security/sherlock/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/security/sherlock/SKILL.md)
+- **Sumber:** [optional-skills/security/sherlock/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/security/sherlock/SKILL.md)
 
 #### `unbroker`
 
@@ -1490,7 +1329,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** privacy, data-broker, opt-out, ccpa, gdpr, security, doxxing
-- **Sumber:** [optional-skills/security/unbroker/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/security/unbroker/SKILL.md)
+- **Sumber:** [optional-skills/security/unbroker/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/security/unbroker/SKILL.md)
 
 #### `web-pentest`
 
@@ -1498,7 +1337,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** Security, Pentest, Web, Recon
-- **Sumber:** [optional-skills/security/web-pentest/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/security/web-pentest/SKILL.md)
+- **Sumber:** [optional-skills/security/web-pentest/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/security/web-pentest/SKILL.md)
 
 ### smart-home
 
@@ -1508,7 +1347,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Smart-Home, Hue, Lights, IoT, Automation
-- **Sumber:** [optional-skills/smart-home/openhue/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/smart-home/openhue/SKILL.md)
+- **Sumber:** [optional-skills/smart-home/openhue/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/smart-home/openhue/SKILL.md)
 
 ### social-media
 
@@ -1518,7 +1357,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Reddit, Social Media, Research, Discussions, Community
-- **Sumber:** [optional-skills/social-media/reddit-reading/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/social-media/reddit-reading/SKILL.md)
+- **Sumber:** [optional-skills/social-media/reddit-reading/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/social-media/reddit-reading/SKILL.md)
 
 #### `xurl`
 
@@ -1526,7 +1365,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos
 - **Tag:** twitter, x, social-media, xurl, official-api
-- **Sumber:** [skills/social-media/xurl/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/social-media/xurl/SKILL.md)
+- **Sumber:** [skills/social-media/xurl/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/social-media/xurl/SKILL.md)
 
 ### software-development
 
@@ -1536,7 +1375,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** ast, codemod, refactoring, structural-search, code-search, rewrite, tree-sitter
-- **Sumber:** [optional-skills/software-development/ast-grep/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/software-development/ast-grep/SKILL.md)
+- **Sumber:** [optional-skills/software-development/ast-grep/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/ast-grep/SKILL.md)
 
 #### `code-wiki`
 
@@ -1544,7 +1383,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Documentation, Mermaid, Architecture, Diagrams, Wiki, Code-Analysis
-- **Sumber:** [optional-skills/software-development/code-wiki/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/software-development/code-wiki/SKILL.md)
+- **Sumber:** [optional-skills/software-development/code-wiki/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/code-wiki/SKILL.md)
 
 #### `codebase-inspection`
 
@@ -1552,7 +1391,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** LOC, Code Analysis, pygount, Codebase, Metrics, Repository
-- **Sumber:** [skills/software-development/codebase-inspection/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/codebase-inspection/SKILL.md)
+- **Sumber:** [skills/software-development/codebase-inspection/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/codebase-inspection/SKILL.md)
 
 #### `dogfood`
 
@@ -1560,7 +1399,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** qa, testing, browser, web, dogfood
-- **Sumber:** [skills/software-development/dogfood/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/dogfood/SKILL.md)
+- **Sumber:** [skills/software-development/dogfood/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/dogfood/SKILL.md)
 
 #### `github`
 
@@ -1568,7 +1407,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** github, gh, git, pull-requests, issues, code-review, repos, auth, ci
-- **Sumber:** [skills/software-development/github/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/github/SKILL.md)
+- **Sumber:** [skills/software-development/github/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/github/SKILL.md)
 
 #### `grill-me`
 
@@ -1576,31 +1415,31 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** planning, adversarial, interview, decision-tree, pre-implementation, review, alignment
-- **Sumber:** [optional-skills/software-development/grill-me/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/software-development/grill-me/SKILL.md)
+- **Sumber:** [optional-skills/software-development/grill-me/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/grill-me/SKILL.md)
 
 #### `hermes-agent-skill-authoring`
 
 - **Deskripsi:** Menulis berkas SKILL.md di dalam repositori: frontmatter dan struktur.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** skills, authoring, hermes-agent, conventions, skill-md
-- **Sumber:** [skills/software-development/hermes-agent-skill-authoring/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/hermes-agent-skill-authoring/SKILL.md)
+- **Sumber:** [optional-skills/software-development/hermes-agent-skill-authoring/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/hermes-agent-skill-authoring/SKILL.md)
 
 #### `inspecting-hermes-desktop-dom`
 
 - **Deskripsi:** Membaca DOM/CSS aplikasi desktop Hermes secara langsung lewat CDP.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** desktop, electron, cdp, dom, ui-verification, self-inspection
-- **Sumber:** [skills/software-development/inspecting-hermes-desktop-dom/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/inspecting-hermes-desktop-dom/SKILL.md)
+- **Sumber:** [optional-skills/software-development/inspecting-hermes-desktop-dom/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/inspecting-hermes-desktop-dom/SKILL.md)
 
 #### `node-inspect-debugger`
 
 - **Deskripsi:** Men-debug Node.js lewat --inspect dan CLI Chrome DevTools Protocol.
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** debugging, nodejs, node-inspect, cdp, breakpoints, ui-tui
-- **Sumber:** [skills/software-development/node-inspect-debugger/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/node-inspect-debugger/SKILL.md)
+- **Sumber:** [optional-skills/software-development/node-inspect-debugger/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/node-inspect-debugger/SKILL.md)
 
 #### `pr-lens`
 
@@ -1608,15 +1447,15 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** diagrams, pull-requests, code-review, svg
-- **Sumber:** [optional-skills/software-development/pr-lens/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/software-development/pr-lens/SKILL.md)
+- **Sumber:** [optional-skills/software-development/pr-lens/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/pr-lens/SKILL.md)
 
 #### `python-debugpy`
 
 - **Deskripsi:** Debug Python: REPL pdb dan debugpy jarak jauh (DAP).
-- **Tingkat:** Bawaan
+- **Tingkat:** Resmi opsional
 - **Platform:** linux, macos
 - **Tag:** debugging, python, pdb, debugpy, breakpoints, dap, post-mortem
-- **Sumber:** [skills/software-development/python-debugpy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/python-debugpy/SKILL.md)
+- **Sumber:** [optional-skills/software-development/python-debugpy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/python-debugpy/SKILL.md)
 
 #### `requesting-code-review`
 
@@ -1624,7 +1463,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** code-review, security, verification, quality, pre-commit, auto-fix
-- **Sumber:** [skills/software-development/requesting-code-review/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/requesting-code-review/SKILL.md)
+- **Sumber:** [skills/software-development/requesting-code-review/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/requesting-code-review/SKILL.md)
 
 #### `rest-graphql-debug`
 
@@ -1632,7 +1471,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** api, rest, graphql, http, debugging, testing, curl, integration
-- **Sumber:** [optional-skills/software-development/rest-graphql-debug/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/software-development/rest-graphql-debug/SKILL.md)
+- **Sumber:** [optional-skills/software-development/rest-graphql-debug/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/rest-graphql-debug/SKILL.md)
 
 #### `simplify-code`
 
@@ -1640,7 +1479,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** code-review, cleanup, refactor, delegation, subagent, parallel, simplify
-- **Sumber:** [skills/software-development/simplify-code/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/simplify-code/SKILL.md)
+- **Sumber:** [skills/software-development/simplify-code/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/simplify-code/SKILL.md)
 
 #### `spike`
 
@@ -1648,7 +1487,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** spike, prototype, experiment, feasibility, throwaway, exploration, research, planning, mvp, proof-of-concept
-- **Sumber:** [skills/software-development/spike/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/spike/SKILL.md)
+- **Sumber:** [skills/software-development/spike/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/spike/SKILL.md)
 
 #### `subagent-driven-development`
 
@@ -1656,7 +1495,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** delegation, subagent, implementation, workflow, parallel
-- **Sumber:** [optional-skills/software-development/subagent-driven-development/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/software-development/subagent-driven-development/SKILL.md)
+- **Sumber:** [optional-skills/software-development/subagent-driven-development/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/software-development/subagent-driven-development/SKILL.md)
 
 #### `systematic-debugging`
 
@@ -1664,7 +1503,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** debugging, troubleshooting, problem-solving, root-cause, investigation
-- **Sumber:** [skills/software-development/systematic-debugging/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/systematic-debugging/SKILL.md)
+- **Sumber:** [skills/software-development/systematic-debugging/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/systematic-debugging/SKILL.md)
 
 #### `test-driven-development`
 
@@ -1672,7 +1511,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** testing, tdd, development, quality, red-green-refactor
-- **Sumber:** [skills/software-development/test-driven-development/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/software-development/test-driven-development/SKILL.md)
+- **Sumber:** [skills/software-development/test-driven-development/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/software-development/test-driven-development/SKILL.md)
 
 ### umum
 
@@ -1682,7 +1521,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** yuanbao, mention, at, group, members, 元宝, 派, 艾特
-- **Sumber:** [optional-skills/yuanbao/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/yuanbao/SKILL.md)
+- **Sumber:** [optional-skills/yuanbao/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/yuanbao/SKILL.md)
 
 ### web
 
@@ -1692,7 +1531,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Bawaan
 - **Platform:** linux, macos, windows
 - **Tag:** Research, Archives, Wayback, Paywall, WAF, Fallback
-- **Sumber:** [skills/web/blocked-page-recovery/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/skills/web/blocked-page-recovery/SKILL.md)
+- **Sumber:** [skills/web/blocked-page-recovery/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/skills/web/blocked-page-recovery/SKILL.md)
 
 ### web-development
 
@@ -1702,7 +1541,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** cloudflare, workers, wrangler, deploy, temporary, agent, serverless, web-development
-- **Sumber:** [optional-skills/web-development/cloudflare-temporary-deploy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/web-development/cloudflare-temporary-deploy/SKILL.md)
+- **Sumber:** [optional-skills/web-development/cloudflare-temporary-deploy/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/web-development/cloudflare-temporary-deploy/SKILL.md)
 
 #### `har-derived-api-client`
 
@@ -1710,7 +1549,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** Browser, HAR, API, Reverse-Engineering, Playwright
-- **Sumber:** [optional-skills/web-development/har-derived-api-client/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/web-development/har-derived-api-client/SKILL.md)
+- **Sumber:** [optional-skills/web-development/har-derived-api-client/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/web-development/har-derived-api-client/SKILL.md)
 
 #### `page-agent`
 
@@ -1718,7 +1557,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** web, javascript, agent, browser, gui, alibaba, embed, copilot, saas
-- **Sumber:** [optional-skills/web-development/page-agent/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/web-development/page-agent/SKILL.md)
+- **Sumber:** [optional-skills/web-development/page-agent/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/web-development/page-agent/SKILL.md)
 
 #### `publish-site`
 
@@ -1726,7 +1565,7 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** publish, deploy, hosting, github-pages, cloudflare-pages, netlify, static-site, versioning, rollback, web-development
-- **Sumber:** [optional-skills/web-development/publish-site/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/web-development/publish-site/SKILL.md)
+- **Sumber:** [optional-skills/web-development/publish-site/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/web-development/publish-site/SKILL.md)
 
 #### `scrollcraft`
 
@@ -1734,4 +1573,4 @@ Skills dikelompokkan berdasarkan bidang penggunaan. **Bawaan** berarti ikut terp
 - **Tingkat:** Resmi opsional
 - **Platform:** linux, macos, windows
 - **Tag:** web-development, landing-page, scrollytelling, animation, design, frontend
-- **Sumber:** [optional-skills/web-development/scrollcraft/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/7cc3fb8cb55898747dd1dfa56fda3e16ebba028e/optional-skills/web-development/scrollcraft/SKILL.md)
+- **Sumber:** [optional-skills/web-development/scrollcraft/SKILL.md](https://github.com/NousResearch/hermes-agent/blob/a4994d4ead8f9c915b485cec5689909b349a49df/optional-skills/web-development/scrollcraft/SKILL.md)
